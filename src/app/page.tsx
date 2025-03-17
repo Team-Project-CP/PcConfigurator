@@ -1,6 +1,6 @@
 "use client";
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
-// npm install react-icons --> use this in terminal for install icons in other cays will be erros)
+// npm install react-icons --> use this in terminal for install icons in other cays will be erros) Misha pisun
 import { useState, useEffect } from "react";
 import Loader from "./loader";
 export default function Navbar() {
