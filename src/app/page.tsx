@@ -1,6 +1,5 @@
 "use client";
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
-//mikita test comment
 import { useState, useEffect } from "react";
 import Loader from "./loader";
 export default function Navbar() {
