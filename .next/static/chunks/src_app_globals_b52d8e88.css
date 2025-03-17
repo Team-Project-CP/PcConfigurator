@@ -325,16 +325,8 @@
     top: calc(var(--spacing) * 1);
   }
 
-  .top-1\/2 {
-    top: 50%;
-  }
-
   .left-1 {
     left: calc(var(--spacing) * 1);
-  }
-
-  .left-1\/2 {
-    left: 50%;
   }
 
   .isolate {
@@ -363,18 +355,6 @@
 
   .z-50 {
     z-index: 50;
-  }
-
-  .z-\[-1\] {
-    z-index: -1;
-  }
-
-  .z-\[0\] {
-    z-index: 0;
-  }
-
-  .z-\[1\] {
-    z-index: 1;
   }
 
   .order-first {
@@ -529,64 +509,12 @@
     display: table;
   }
 
-  .h-\[60\%\] {
-    height: 60%;
-  }
-
-  .h-\[300px\] {
-    height: 300px;
-  }
-
-  .h-\[500px\] {
-    height: 500px;
-  }
-
-  .max-h-\[400px\] {
-    max-height: 400px;
-  }
-
-  .min-h-\[200px\] {
-    min-height: 200px;
-  }
-
-  .min-h-\[400px\] {
-    min-height: 400px;
-  }
-
   .min-h-\[450px\] {
     min-height: 450px;
   }
 
-  .w-\[60\%\] {
-    width: 60%;
-  }
-
   .w-\[100\%\] {
     width: 100%;
-  }
-
-  .w-\[120\%\] {
-    width: 120%;
-  }
-
-  .w-\[150\%\] {
-    width: 150%;
-  }
-
-  .w-\[200\%\] {
-    width: 200%;
-  }
-
-  .w-\[250\%\] {
-    width: 250%;
-  }
-
-  .w-\[300px\] {
-    width: 300px;
-  }
-
-  .w-\[500px\] {
-    width: 500px;
   }
 
   .w-full {
@@ -595,10 +523,6 @@
 
   .max-w-7xl {
     max-width: var(--container-7xl);
-  }
-
-  .max-w-\[400px\] {
-    max-width: 400px;
   }
 
   .max-w-lg {
@@ -630,18 +554,8 @@
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 
-  .-translate-x-1\/2 {
-    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-
   .-translate-y-1 {
     --tw-translate-y: calc(var(--spacing) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-
-  .-translate-y-1\/2 {
-    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 
@@ -848,20 +762,12 @@
     padding-block: calc(var(--spacing) * 32);
   }
 
-  .py-\[1\%\] {
-    padding-block: 1%;
-  }
-
   .py-\[3\%\] {
     padding-block: 3%;
   }
 
   .py-\[5\%\] {
     padding-block: 5%;
-  }
-
-  .py-\[6\%\] {
-    padding-block: 6%;
   }
 
   .text-center {
@@ -912,16 +818,6 @@
     line-height: calc(var(--spacing) * 7);
   }
 
-  .text-base\/8 {
-    font-size: var(--text-base);
-    line-height: calc(var(--spacing) * 8);
-  }
-
-  .text-base\/100 {
-    font-size: var(--text-base);
-    line-height: calc(var(--spacing) * 100);
-  }
-
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -941,16 +837,8 @@
     font-size: 2vw;
   }
 
-  .text-\[6vw\] {
-    font-size: 6vw;
-  }
-
   .text-\[7vw\] {
     font-size: 7vw;
-  }
-
-  .text-\[8vw\] {
-    font-size: 8vw;
   }
 
   .leading-tight {
@@ -1065,16 +953,6 @@
     filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
   }
 
-  .blur-\[80px\] {
-    --tw-blur: blur(80px);
-    filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
-  }
-
-  .blur-\[120px\] {
-    --tw-blur: blur(120px);
-    filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
-  }
-
   .filter {
     filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
   }
@@ -1116,11 +994,6 @@
     top: 60%;
   }
 
-  .before\:-z-10:before {
-    content: var(--tw-content);
-    z-index: calc(10 * -1);
-  }
-
   .before\:h-\[400px\]:before {
     content: var(--tw-content);
     height: 400px;
@@ -1131,39 +1004,9 @@
     width: 400px;
   }
 
-  .before\:translate-y-\[-10\%\]:before {
-    content: var(--tw-content);
-    --tw-translate-y: -10%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-
-  .before\:translate-y-\[-50\%\]:before {
-    content: var(--tw-content);
-    --tw-translate-y: -50%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-
   .before\:translate-y-\[-70\%\]:before {
     content: var(--tw-content);
     --tw-translate-y: -70%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-
-  .before\:translate-y-\[-80\%\]:before {
-    content: var(--tw-content);
-    --tw-translate-y: -80%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-
-  .before\:translate-y-\[10\%\]:before {
-    content: var(--tw-content);
-    --tw-translate-y: 10%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-
-  .before\:translate-y-\[50\%\]:before {
-    content: var(--tw-content);
-    --tw-translate-y: 50%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 
@@ -1175,21 +1018,6 @@
   .before\:bg-purple-600:before {
     content: var(--tw-content);
     background-color: var(--color-purple-600);
-  }
-
-  .before\:opacity-10:before {
-    content: var(--tw-content);
-    opacity: .1;
-  }
-
-  .before\:opacity-40:before {
-    content: var(--tw-content);
-    opacity: .4;
-  }
-
-  .before\:opacity-50:before {
-    content: var(--tw-content);
-    opacity: .5;
   }
 
   .before\:opacity-90:before {
@@ -1234,12 +1062,6 @@
   }
 
   @media (width >= 40rem) {
-    .sm\:py-\[8\%\] {
-      padding-block: 8%;
-    }
-  }
-
-  @media (width >= 40rem) {
     .sm\:text-5xl {
       font-size: var(--text-5xl);
       line-height: var(--tw-leading, var(--text-5xl--line-height));
@@ -1266,20 +1088,8 @@
   }
 
   @media (width >= 64rem) {
-    .lg\:h-\[400px\] {
-      height: 400px;
-    }
-  }
-
-  @media (width >= 64rem) {
     .lg\:w-1\/2 {
       width: 50%;
-    }
-  }
-
-  @media (width >= 64rem) {
-    .lg\:w-\[400px\] {
-      width: 400px;
     }
   }
 
@@ -1298,12 +1108,6 @@
   @media (width >= 64rem) {
     .lg\:px-8 {
       padding-inline: calc(var(--spacing) * 8);
-    }
-  }
-
-  @media (width >= 64rem) {
-    .lg\:px-\[4\%\] {
-      padding-inline: 4%;
     }
   }
 }
