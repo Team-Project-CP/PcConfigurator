@@ -2,6 +2,7 @@
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import Loader from "./loader";
+//this will be test commit form Alex136201
 export default function Navbar() {
 
   const [loading, setLoading] = useState(true);
