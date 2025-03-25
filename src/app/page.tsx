@@ -2,6 +2,7 @@
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import Loader from "./loader";
+import { FaHammer, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
 
 export default function Navbar() {
 
@@ -79,8 +80,6 @@ export default function Navbar() {
   </div>
 
   {/* Right Side - Image */}
-  {/* Right Side - Image with Blurred Background */}
-{/* Right Side - Image with Lowered Blurred Background */}
 <div className="lg:w-1/2 flex justify-center relative mt-[3%] lg:mt-0 before:absolute before:content-[''] before:w-[400px] before:h-[400px] before:bg-purple-600 before:blur-[100px] before:opacity-90 before:rounded-full before:top-[60%] before:translate-y-[-70%] ">
   
   {/* Image */}
@@ -115,8 +114,71 @@ export default function Navbar() {
     </dl>
   </div>
 </div>
-     </div>
 
 
+
+{/* Feature section */}
+<div className="flex space-x-8 justify-center items-center mt-12 min-h-[500px]">
+  <div className="flex flex-col items-center bg-gray-100 rounded-xl p-6 shadow-lg w-100 h-[400px] justify-center"> {/* Added justify-center to center the content */}
+    <FaHammer className="text-4xl text-blue-500 mb-4" />
+    <h1 className="text-xl font-semibold mb-2">Quality test</h1>
+    <p className="text-center text-gray-600">Every product undergoes thorough testing to <br />ensure top-notch quality and durability, <br />meeting the highest standards</p>
+  </div>
+
+  <div className="flex flex-col items-center bg-gray-100 rounded-xl p-6 shadow-lg w-100 h-[400px] justify-center"> {/* Added justify-center to center the content */}
+    <FaShieldAlt className="text-4xl text-green-500 mb-4" />
+    <h1 className="text-xl font-semibold mb-2">2-Year-Warranty</h1>
+    <p className="text-center text-gray-600">Enjoy peace of mind with our 2-year warranty. <br /> We're here to support you if any  <br />issues arise within this period</p>
+  </div>
+
+  <div className="flex flex-col items-center bg-gray-100 rounded-xl p-6 shadow-lg w-100 h-[400px] justify-center"> {/* Added justify-center to center the content */}
+    <FaTachometerAlt className="text-4xl text-red-500 mb-4" />
+    <h1 className="text-xl font-semibold mb-2">Fast-Build-Service</h1>
+    <p className="text-center text-gray-600">Our fast-build service ensures quick <br /> delivery without sacrificing quality, <br /> getting your project done on time</p>
+  </div>
+</div>
+
+{/* Some Advertisment*/}
+<div className="bg-white py-16">
+
+  
+  <div className="mx-8">
+    {/* Rectangle with stuff inside */}
+    <div className="bg-black text-white p-8 rounded-lg flex items-center mx-auto w-full max-w-[1200px]">
+      {/* Left Side*/}
+      <div className="flex flex-col w-2/3 mr-6">
+        <h1 className="text-5xl font-semibold mb-4">More Games More Glory</h1>
+        <p className="text-lg mb-6">
+          Get Spider-Man 2™ when you buy select AMD Ryzen™ <br />
+          processors, AMD Radeon™ RX Series graphics cards, or AMD <br />
+          configured systems.*
+        </p>
+
+        {/* Learn More Button */}
+        <a
+          href="#"
+          className="border-2 border-white text-xl text-white py-3 px-10 rounded-md hover:bg-white hover:text-black transition-colors duration-300 self-start"
+        >
+          Learn more
+        </a>
+      </div>
+
+    {/* Image  */}
+      <div className="w-1/3">
+        <img
+          src="/game1.jpg" 
+          alt="Spider-Man 2 Game"
+          className="w-full h-auto rounded-lg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
   );
 }
+
