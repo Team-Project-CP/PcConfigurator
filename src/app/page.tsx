@@ -15,20 +15,20 @@ export default function Navbar() {
   }, []);
 
   if (loading) {
-    return <Loader />; // Show loader while loading
+    return <Loader />; // loading
   }
   
   
   return (
     <div>
-      {/* Top Banner */}
+      {/* top banner */}
       <div className="bg-purple-600 text-white text-center text-sm py-2">
         Certified Refurbished Gaming PCs. <a href="#" className="underline">Shop now &gt;</a>
       </div>
       
-      {/* Main Navbar */}
+      {/* nav */}
       <nav className="text-white bg-black px-8 py-4 flex justify-center items-center">
-        {/* Left Section: Logo and Links */}
+        {/* logo and links */}
         <div className="flex items-center space-x-8">
           <span className="text-2xl font-bold">Domino</span>
           <div className="hidden md:flex space-x-6">
@@ -42,7 +42,7 @@ export default function Navbar() {
           </div>
         </div>
         
-        {/* Right Section: Icons */}
+        {/* icons */}
         <div className="flex space-x-6 ml-auto">
           <FaSearch className="text-xl hover:text-gray-400 cursor-pointer" />
           <FaQuestionCircle className="text-xl hover:text-gray-400 cursor-pointer" />
@@ -51,7 +51,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Brand Section */}
+      {/* brands */}
       <div className="bg-gray-100 py-4 flex justify-center space-x-6 items-center">
         <div className="bg-blue-600 text-white px-4 py-2 rounded flex items-center space-x-2">
           <span className="font-bold">Windows</span>
@@ -62,11 +62,11 @@ export default function Navbar() {
         <span className="font-bold text-black">intel</span>
       </div>
 
-{/* Customize Pc Preview Part */}
+{/* main pc section */}
 
 <div className="bg-white px-[5%] py-[5%] flex flex-col lg:flex-row items-center justify-between  w-full">
   
-  {/* Left Side - Text */}
+  {/* left text */}
   <div className="text-left">
     <h1 className="font-bold text-black text-[7vw] leading-tight">
       Build Your <br /> Custom PC
@@ -79,10 +79,10 @@ export default function Navbar() {
     </button>
   </div>
 
-  {/* Right Side - Image */}
+  {/* right image */}
 <div className="lg:w-1/2 flex justify-center relative mt-[3%] lg:mt-0 before:absolute before:content-[''] before:w-[400px] before:h-[400px] before:bg-purple-600 before:blur-[100px] before:opacity-90 before:rounded-full before:top-[60%] before:translate-y-[-70%] ">
   
-  {/* Image */}
+  {/* pc image */}
   <img 
     src="/main-pc.png" 
     className="w-[100%] relative"
@@ -95,7 +95,7 @@ export default function Navbar() {
 
 
 
-{/*small info block */}
+{/*stats */}
       <div className="bg-black py-24 sm:py-20">
   <div className="mx-auto max-w-7xl px-6 lg:px-8">
     <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
@@ -117,35 +117,35 @@ export default function Navbar() {
 
 
 
-{/* Feature section */}
+{/* features */}
 <div className="flex space-x-8 justify-center items-center mt-12 min-h-[500px]">
-  <div className="flex flex-col items-center bg-gray-100 rounded-xl p-6 shadow-lg w-100 h-[400px] justify-center"> {/* Added justify-center to center the content */}
+  <div className="flex flex-col items-center bg-gray-100 rounded-xl p-6 shadow-lg w-100 h-[400px] justify-center">
     <FaHammer className="text-4xl text-blue-500 mb-4" />
     <h1 className="text-xl font-semibold mb-2">Quality test</h1>
     <p className="text-center text-gray-600">Every product undergoes thorough testing to <br />ensure top-notch quality and durability, <br />meeting the highest standards</p>
   </div>
 
-  <div className="flex flex-col items-center bg-gray-100 rounded-xl p-6 shadow-lg w-100 h-[400px] justify-center"> {/* Added justify-center to center the content */}
+  <div className="flex flex-col items-center bg-gray-100 rounded-xl p-6 shadow-lg w-100 h-[400px] justify-center">
     <FaShieldAlt className="text-4xl text-green-500 mb-4" />
     <h1 className="text-xl font-semibold mb-2">2-Year-Warranty</h1>
     <p className="text-center text-gray-600">Enjoy peace of mind with our 2-year warranty. <br /> We're here to support you if any  <br />issues arise within this period</p>
   </div>
 
-  <div className="flex flex-col items-center bg-gray-100 rounded-xl p-6 shadow-lg w-100 h-[400px] justify-center"> {/* Added justify-center to center the content */}
+  <div className="flex flex-col items-center bg-gray-100 rounded-xl p-6 shadow-lg w-100 h-[400px] justify-center">
     <FaTachometerAlt className="text-4xl text-red-500 mb-4" />
     <h1 className="text-xl font-semibold mb-2">Fast-Build-Service</h1>
     <p className="text-center text-gray-600">Our fast-build service ensures quick <br /> delivery without sacrificing quality, <br /> getting your project done on time</p>
   </div>
 </div>
 
-{/* Some Advertisment*/}
+{/* promo */}
 <div className="bg-white py-16">
 
   
   <div className="mx-8">
-    {/* Rectangle with stuff inside */}
+    {/* promo box */}
     <div className="bg-black text-white p-8 rounded-lg flex items-center mx-auto w-full max-w-[1200px]">
-      {/* Left Side*/}
+      {/* promo text */}
       <div className="flex flex-col w-2/3 mr-6">
         <h1 className="text-5xl font-semibold mb-4">More Games More Glory</h1>
         <p className="text-lg mb-6">
@@ -154,7 +154,7 @@ export default function Navbar() {
           configured systems.*
         </p>
 
-        {/* Learn More Button */}
+        {/* button */}
         <a
           href="#"
           className="border-2 border-white text-xl text-white py-3 px-10 rounded-md hover:bg-white hover:text-black transition-colors duration-300 self-start"
@@ -163,7 +163,7 @@ export default function Navbar() {
         </a>
       </div>
 
-    {/* Image  */}
+    {/* promo image */}
       <div className="w-1/3">
         <img
           src="/game1.jpg" 
@@ -175,8 +175,127 @@ export default function Navbar() {
   </div>
 </div>
 
+{/* build together */}
+<div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
+  <h1 className="text-center text-5xl font-bold mb-16">Let's Build Together!</h1>
+  
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+      {/* left pc */}
+      <div className="lg:w-1/2 relative">
+        <img 
+          src="/images/gaming-pc.png" 
+          alt="Custom Gaming PC" 
+          className="w-full"
+        />
+      </div>
+      
+      {/* right features */}
+      <div className="lg:w-1/2 space-y-8">
+        <h2 className="text-4xl font-bold mb-8">Customize Your Gaming PC</h2>
+        
+        <div className="space-y-6">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 flex items-center justify-center">
+              <img src="/wrench-star.svg" alt="Curated Parts" className="w-8 h-8" />
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">Curated Parts</h3>
+              <p className="text-gray-300">Take your pick of top-of-the-line components like the latest GPUs, CPUs, and more.</p>
+            </div>
+          </div>
+          
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 flex items-center justify-center">
+              <img src="/clock.svg" alt="FPS Guaranteed" className="w-8 h-8" />
+            </div>
+            <div>
+              <h3 className="font-bold text-xl">FPS Guaranteed</h3>
+              <p className="text-gray-300">View popular games and their FPS performance alongside your build.</p>
+            </div>
+          </div>
+        </div>
+        
+        <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-all">
+          Customize a PC
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
+{/* steps */}
+<div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="text-center p-8">
+        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+          <span className="text-purple-900 text-2xl font-bold">1</span>
+        </div>
+        <h3 className="text-xl font-bold mb-4">Chipset & Budget</h3>
+        <p className="text-gray-300">Select your budget and your choice of AMD or Intel CPUs.</p>
+      </div>
+      
+      <div className="text-center p-8">
+        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+          <span className="text-purple-900 text-2xl font-bold">2</span>
+        </div>
+        <h3 className="text-xl font-bold mb-4">Pick Parts</h3>
+        <p className="text-gray-300">Pick your components and accessories based on your performance and aesthetic needs.</p>
+      </div>
+      
+      <div className="text-center p-8">
+        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+          <span className="text-purple-900 text-2xl font-bold">3</span>
+        </div>
+        <h3 className="text-xl font-bold mb-4">We Build & Ship</h3>
+        <p className="text-gray-300">Our experts build and ship your product directly to you with a two-day build time.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
+{/* pc types */}
+<div className="bg-gray-100 py-16">
+  <h2 className="text-center text-4xl font-bold mb-16">Build Your Dream PC</h2>
+  
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="bg-white rounded-lg p-8 text-center shadow-lg">
+        <div className="w-16 h-16 mx-auto mb-4">
+          <img src="/gaming-icon.svg" alt="Gaming" className="w-full h-full" />
+        </div>
+        <h3 className="text-2xl font-bold mb-4">Gaming</h3>
+        <p className="text-gray-600 mb-6">Whether you want to play popular games, get eye-catching visuals, or hit peak FPS, our Prebuilts got you covered from mid-range to top-of-the-line GPUs and CPUs.</p>
+        <button className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-all">
+          Shop Player: One
+        </button>
+      </div>
+      
+      <div className="bg-white rounded-lg p-8 text-center shadow-lg">
+        <div className="w-16 h-16 mx-auto mb-4">
+          <img src="/streaming-icon.svg" alt="Streaming" className="w-full h-full" />
+        </div>
+        <h3 className="text-2xl font-bold mb-4">Streaming</h3>
+        <p className="text-gray-600 mb-6">Ready to go live with your stream? We offer powerful CPUs, GPUs, and plenty capacity and performance so you can play and stream without taking a performance hit.</p>
+        <button className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-all">
+          Shop Player: Two
+        </button>
+      </div>
+      
+      <div className="bg-white rounded-lg p-8 text-center shadow-lg">
+        <div className="w-16 h-16 mx-auto mb-4">
+          <img src="/creating-icon.svg" alt="Creating" className="w-full h-full" />
+        </div>
+        <h3 className="text-2xl font-bold mb-4">Creating</h3>
+        <p className="text-gray-600 mb-6">Multitask like a pro with maxed out performance parts in our newest cases, allowing you to tackle more applications and increase your workflow. Our gaming PCs go beyond gaming.</p>
+        <button className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-all">
+          Shop Player: Three
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
   );
