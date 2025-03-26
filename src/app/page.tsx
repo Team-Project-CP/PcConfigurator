@@ -53,13 +53,13 @@ export default function Navbar() {
 
       {/* brands */}
       <div className="bg-gray-100 py-4 flex justify-center space-x-6 items-center">
-        <div className="bg-blue-600 text-white px-4 py-2 rounded flex items-center space-x-2">
+        <div className="bg-blue-600 text-white px-4 py-2 rounded flex items-center space-x-2 hover:scale-110 transition-transform duration-300 cursor-pointer">
           <span className="font-bold">Windows</span>
           <span className="text-sm">Get to know Windows 11</span>
         </div>
-        <span className="font-bold text-black">NVIDIA</span>
-        <span className="font-bold text-black">AMD</span>
-        <span className="font-bold text-black">intel</span>
+        <span className="font-bold text-black hover:text-[#76B900] transition-colors duration-300 cursor-pointer">NVIDIA</span>
+        <span className="font-bold text-black hover:text-[#ED1C24] transition-colors duration-300 cursor-pointer">AMD</span>
+        <span className="font-bold text-black hover:text-[#0071C5] transition-colors duration-300 cursor-pointer">Intel</span>
       </div>
 
 {/* main pc section */}
