@@ -3,6 +3,7 @@ import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/
 import { useState, useEffect } from "react";
 import Loader from "./loader";
 import { FaHammer, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
 
 export default function Navbar() {
 
@@ -296,7 +297,215 @@ export default function Navbar() {
     </div>
   </div>
 </div>
+<div className="w-full">
+      {/* Our Brand Partners Section - Updated with Single Image */}
+      <div className="bg-gray-100 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold text-gray-900 mb-4">Our Brand Partners</h2>
+          <p className="text-center text-gray-600 mb-8">
+            We partner closely with brands you love to get you access to high-quality parts and peripherals to complete your setup.
+          </p>
+          {/* Commented out the grid of multiple brand logos */}
+          {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=AMD" alt="AMD" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=Intel" alt="Intel" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=NVIDIA" alt="NVIDIA" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=ASUS" alt="ASUS" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=Samsung" alt="Samsung" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=ASRock" alt="ASRock" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=Gigabyte" alt="Gigabyte" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=PNY" alt="PNY" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=MSI" alt="MSI" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=Seagate" alt="Seagate" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=Western+Digital" alt="Western Digital" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=TeamGroup" alt="TeamGroup" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=Microsoft" alt="Microsoft" className="h-10" />
+            </div>
+            <div className="flex justify-center">
+              <img src="https://via.placeholder.com/100x40?text=Seasonic" alt="Seasonic" className="h-10" />
+            </div>
+          </div> */}
+          {/* Added a single image below the text */}
+          <div className="flex justify-center mt-6">
+            <img 
+              src="PartnerLogos.png"
+              className="w-full max-w-2xl h-auto"
+            />
+          </div>
+        </div>
+      </div>
 
+      {/* Boost Your Performance Section */}
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+          <div className="lg:w-1/2">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8">Boost Your Performance</h2>
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <svg className="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-gray-900">GPU</h3>
+                  <p className="text-gray-600">The Graphics Processing Unit offers pure power to push performance to new heights in the biggest games.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <svg className="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12l4-4m-4 4l4 4" />
+                  </svg>
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-gray-900">CPU</h3>
+                  <p className="text-gray-600">The Central Processing Unit multitasks well as increases performance in CPU-intensive games and helps avoid bottlenecks.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <svg className="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                  </svg>
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-gray-900">RAM</h3>
+                  <p className="text-gray-600">Random Access Memory enables you to run multiple programs at once—the more RAM you have, the better you can multi-task.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="lg:w-1/2 mt-8 lg:mt-0">
+            <img src="H7 Black PC.png"className="w-full h-auto" />
+          </div>
+        </div>
+      </div>
+
+      {/* Stay In Touch Section (Footer) */}
+      <div className="bg-black text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold mb-4">Stay In Touch</h2>
+          <p className="text-gray-400 mb-6">Keep up to date on the latest releases, offers, and news from NZXT</p>
+          <div className="flex flex-col sm:flex-row items-center mb-8">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full sm:w-96 px-4 py-2 rounded-l-md text-black focus:outline-none mb-4 sm:mb-0"
+            />
+            <button className="bg-gray-200 text-gray-900 px-6 py-2 rounded-r-md sm:rounded-l-none hover:bg-gray-300 transition-colors">
+              Notify Me
+            </button>
+          </div>
+          <div className="flex items-center mb-8">
+            <input type="checkbox" id="terms" className="mr-2" />
+            <label htmlFor="terms" className="text-gray-400 text-sm">
+              By signing up you agree to NZXT & CAM's{' '}
+              <a href="#" className="underline">Privacy Policy</a> and{' '}
+              <a href="#" className="underline">Terms & Conditions</a>
+            </label>
+          </div>
+          <div className="flex space-x-4 mb-8">
+            <a href="#" className="text-gray-400 hover:text-white"><FaFacebookF size={20} /></a>
+            <a href="#" className="text-gray-400 hover:text-white"><FaTwitter size={20} /></a>
+            <a href="#" className="text-gray-400 hover:text-white"><FaInstagram size={20} /></a>
+            <a href="#" className="text-gray-400 hover:text-white"><FaYoutube size={20} /></a>
+            <a href="#" className="text-gray-400 hover:text-white"><FaTwitch size={20} /></a>
+            <a href="#" className="text-gray-400 hover:text-white"><FaTiktok size={20} /></a>
+            <a href="#" className="text-gray-400 hover:text-white"><FaDiscord size={20} /></a>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Contact</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:underline">Customer Support</a></li>
+                <li><a href="#" className="hover:underline">Submit a Request</a></li>
+                <li><a href="#" className="hover:underline">Support Center</a></li>
+                <li><a href="#" className="hover:underline">Customer Reviews</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">About NZXT</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:underline">Company</a></li>
+                <li><a href="#" className="hover:underline">Founder Q & A</a></li>
+                <li><a href="#" className="hover:underline">Careers</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Community</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:underline">NZXT Club</a></li>
+                <li><a href="#" className="hover:underline">Podcast</a></li>
+                <li><a href="#" className="hover:underline">Newsroom & Blog</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Software</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:underline">CAM</a></li>
+                <li><a href="#" className="hover:underline">CAM Feedback</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Account</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:underline">Manage Your Account</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">NZXT Store</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:underline">NZXT Custom Gaming PC</a></li>
+                <li><a href="#" className="hover:underline">Certified Refurbished</a></li>
+                <li><a href="#" className="hover:underline">Gaming PCs</a></li>
+                <li><a href="#" className="hover:underline">PC Parts and Accessories</a></li>
+                <li><a href="#" className="hover:underline">NZXT for Business</a></li>
+                <li><a href="#" className="hover:underline">Find a Retailer</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex justify-between items-center mt-8">
+            <div className="flex space-x-4">
+              <select className="bg-gray-800 text-white px-4 py-2 rounded">
+                <option>English</option>
+              </select>
+              <select className="bg-gray-800 text-white px-4 py-2 rounded">
+                <option>United States</option>
+              </select>
+            </div>
+            <div>
+              <a href="#" className="text-gray-400 hover:underline">FAQ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
   );
 }
