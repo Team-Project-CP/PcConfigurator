@@ -1,8 +1,22 @@
 "use client";
 import { useState, useEffect } from "react";
+import React from 'react';
 import Loader from "../loader";
-import { FaWindows, FaApple, FaLinux, FaDownload, FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
+import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart, FaWindows, FaApple, FaLinux, FaDownload } from "react-icons/fa";
 import Link from 'next/link';
+import Image from 'next/image';
+
+interface SoftwareItem {
+  name: string;
+  price: string;
+  icon?: React.ReactElement;
+  image?: string;
+}
+
+interface SoftwareCategory {
+  title: string;
+  items: SoftwareItem[];
+}
 
 export default function SoftwarePage() {
   const [loading, setLoading] = useState(true);
@@ -17,7 +31,7 @@ export default function SoftwarePage() {
     return <Loader />;
   }
 
-  const softwareCategories = [
+  const softwareCategories: SoftwareCategory[] = [
     {
       title: "Operating Systems",
       items: [
@@ -30,17 +44,41 @@ export default function SoftwarePage() {
     {
       title: "Development Tools",
       items: [
-        { name: "Visual Studio 2022", icon: <FaWindows className="text-4xl text-purple-500" />, price: "$499.99" },
-        { name: "PyCharm Professional", icon: <FaWindows className="text-4xl text-green-500" />, price: "$199.99" },
-        { name: "WebStorm", icon: <FaWindows className="text-4xl text-yellow-500" />, price: "$149.99" },
+        { 
+          name: "Visual Studio 2022", 
+          image: "/Software/images/Visual Studio.png",
+          price: "$499.99" 
+        },
+        { 
+          name: "PyCharm Professional", 
+          image: "/Software/images/PyCharm.png",
+          price: "$199.99" 
+        },
+        { 
+          name: "WebStorm", 
+          image: "/Software/images/WebStorm.png",
+          price: "$149.99" 
+        },
       ]
     },
     {
       title: "Security Software",
       items: [
-        { name: "Norton 360", icon: <FaWindows className="text-4xl text-yellow-500" />, price: "$49.99/year" },
-        { name: "McAfee Total Protection", icon: <FaWindows className="text-4xl text-red-500" />, price: "$39.99/year" },
-        { name: "Bitdefender", icon: <FaWindows className="text-4xl text-blue-500" />, price: "$44.99/year" },
+        { 
+          name: "Norton 360", 
+          image: "/Software/images/Norton2.png",
+          price: "$49.99/year" 
+        },
+        { 
+          name: "McAfee Total Protection", 
+          image: "/Software/images/McAfee2.png",
+          price: "$39.99/year" 
+        },
+        { 
+          name: "Bitdefender", 
+          image: "/Software/images/Bitdefender3.png",
+          price: "$44.99/year" 
+        },
       ]
     }
   ];
@@ -105,7 +143,18 @@ export default function SoftwarePage() {
               {category.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-center justify-center mb-4">
-                    {item.icon}
+                    {item.image ? (
+                      <div className="w-24 h-24 relative">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          style={{ objectFit: 'contain' }}
+                        />
+                      </div>
+                    ) : (
+                      item.icon
+                    )}
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-center">{item.name}</h3>
                   <p className="text-gray-600 text-center mb-4">{item.price}</p>

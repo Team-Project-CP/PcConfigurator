@@ -135,9 +135,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$loader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/loader.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/fa/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -157,7 +159,7 @@ function SoftwarePage() {
     if (loading) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$loader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
             fileName: "[project]/src/app/Software/page.tsx",
-            lineNumber: 17,
+            lineNumber: 31,
             columnNumber: 12
         }, this);
     }
@@ -171,7 +173,7 @@ function SoftwarePage() {
                         className: "text-4xl text-blue-500"
                     }, void 0, false, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 24,
+                        lineNumber: 38,
                         columnNumber: 41
                     }, this),
                     price: "$199.99"
@@ -182,7 +184,7 @@ function SoftwarePage() {
                         className: "text-4xl text-blue-500"
                     }, void 0, false, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 25,
+                        lineNumber: 39,
                         columnNumber: 41
                     }, this),
                     price: "$149.99"
@@ -193,7 +195,7 @@ function SoftwarePage() {
                         className: "text-4xl text-gray-700"
                     }, void 0, false, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 26,
+                        lineNumber: 40,
                         columnNumber: 40
                     }, this),
                     price: "$29.99"
@@ -204,7 +206,7 @@ function SoftwarePage() {
                         className: "text-4xl text-orange-500"
                     }, void 0, false, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 27,
+                        lineNumber: 41,
                         columnNumber: 43
                     }, this),
                     price: "Free"
@@ -216,35 +218,17 @@ function SoftwarePage() {
             items: [
                 {
                     name: "Visual Studio 2022",
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaWindows"], {
-                        className: "text-4xl text-purple-500"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 33,
-                        columnNumber: 45
-                    }, this),
+                    image: "/Software/images/Visual Studio.png",
                     price: "$499.99"
                 },
                 {
                     name: "PyCharm Professional",
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaWindows"], {
-                        className: "text-4xl text-green-500"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 34,
-                        columnNumber: 47
-                    }, this),
+                    image: "/Software/images/PyCharm.png",
                     price: "$199.99"
                 },
                 {
                     name: "WebStorm",
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaWindows"], {
-                        className: "text-4xl text-yellow-500"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 35,
-                        columnNumber: 35
-                    }, this),
+                    image: "/Software/images/WebStorm.png",
                     price: "$149.99"
                 }
             ]
@@ -254,35 +238,17 @@ function SoftwarePage() {
             items: [
                 {
                     name: "Norton 360",
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaWindows"], {
-                        className: "text-4xl text-yellow-500"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 41,
-                        columnNumber: 37
-                    }, this),
+                    image: "/Software/images/Norton2.png",
                     price: "$49.99/year"
                 },
                 {
                     name: "McAfee Total Protection",
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaWindows"], {
-                        className: "text-4xl text-red-500"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 42,
-                        columnNumber: 50
-                    }, this),
+                    image: "/Software/images/McAfee2.png",
                     price: "$39.99/year"
                 },
                 {
                     name: "Bitdefender",
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaWindows"], {
-                        className: "text-4xl text-blue-500"
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 43,
-                        columnNumber: 38
-                    }, this),
+                    image: "/Software/images/Bitdefender3.png",
                     price: "$44.99/year"
                 }
             ]
@@ -301,13 +267,13 @@ function SoftwarePage() {
                         children: "Shop now >"
                     }, void 0, false, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 52,
+                        lineNumber: 90,
                         columnNumber: 43
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/Software/page.tsx",
-                lineNumber: 51,
+                lineNumber: 89,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -322,7 +288,7 @@ function SoftwarePage() {
                                 children: "Domino"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Software/page.tsx",
-                                lineNumber: 59,
+                                lineNumber: 97,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -334,7 +300,7 @@ function SoftwarePage() {
                                         children: "Deals"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Software/page.tsx",
-                                        lineNumber: 61,
+                                        lineNumber: 99,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -343,7 +309,7 @@ function SoftwarePage() {
                                         children: "Gaming PCs"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Software/page.tsx",
-                                        lineNumber: 62,
+                                        lineNumber: 100,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -352,7 +318,7 @@ function SoftwarePage() {
                                         children: "Components"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Software/page.tsx",
-                                        lineNumber: 63,
+                                        lineNumber: 101,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -361,7 +327,7 @@ function SoftwarePage() {
                                         children: "Gaming Gear"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Software/page.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 102,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -370,7 +336,7 @@ function SoftwarePage() {
                                         children: "Monitors"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Software/page.tsx",
-                                        lineNumber: 65,
+                                        lineNumber: 103,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -379,7 +345,7 @@ function SoftwarePage() {
                                         children: "Software"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Software/page.tsx",
-                                        lineNumber: 66,
+                                        lineNumber: 104,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -388,19 +354,19 @@ function SoftwarePage() {
                                         children: "Community"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Software/page.tsx",
-                                        lineNumber: 67,
+                                        lineNumber: 105,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/Software/page.tsx",
-                                lineNumber: 60,
+                                lineNumber: 98,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 58,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -410,40 +376,40 @@ function SoftwarePage() {
                                 className: "text-xl hover:text-gray-400 cursor-pointer"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Software/page.tsx",
-                                lineNumber: 73,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaQuestionCircle"], {
                                 className: "text-xl hover:text-gray-400 cursor-pointer"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Software/page.tsx",
-                                lineNumber: 74,
+                                lineNumber: 112,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaUser"], {
                                 className: "text-xl hover:text-gray-400 cursor-pointer"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Software/page.tsx",
-                                lineNumber: 75,
+                                lineNumber: 113,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaShoppingCart"], {
                                 className: "text-xl hover:text-gray-400 cursor-pointer"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Software/page.tsx",
-                                lineNumber: 76,
+                                lineNumber: 114,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 72,
+                        lineNumber: 110,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/Software/page.tsx",
-                lineNumber: 56,
+                lineNumber: 94,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -457,7 +423,7 @@ function SoftwarePage() {
                                 children: "Windows"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Software/page.tsx",
-                                lineNumber: 83,
+                                lineNumber: 121,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -465,13 +431,13 @@ function SoftwarePage() {
                                 children: "Get to know Windows 11"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Software/page.tsx",
-                                lineNumber: 84,
+                                lineNumber: 122,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 82,
+                        lineNumber: 120,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -479,7 +445,7 @@ function SoftwarePage() {
                         children: "NVIDIA"
                     }, void 0, false, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 86,
+                        lineNumber: 124,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -487,7 +453,7 @@ function SoftwarePage() {
                         children: "AMD"
                     }, void 0, false, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 87,
+                        lineNumber: 125,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -495,13 +461,13 @@ function SoftwarePage() {
                         children: "Intel"
                     }, void 0, false, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 88,
+                        lineNumber: 126,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/Software/page.tsx",
-                lineNumber: 81,
+                lineNumber: 119,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -514,7 +480,7 @@ function SoftwarePage() {
                             children: "Software Solutions"
                         }, void 0, false, {
                             fileName: "[project]/src/app/Software/page.tsx",
-                            lineNumber: 94,
+                            lineNumber: 132,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -522,18 +488,18 @@ function SoftwarePage() {
                             children: "Find the perfect software for your needs"
                         }, void 0, false, {
                             fileName: "[project]/src/app/Software/page.tsx",
-                            lineNumber: 95,
+                            lineNumber: 133,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/Software/page.tsx",
-                    lineNumber: 93,
+                    lineNumber: 131,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/Software/page.tsx",
-                lineNumber: 92,
+                lineNumber: 130,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -546,7 +512,7 @@ function SoftwarePage() {
                                 children: category.title
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Software/page.tsx",
-                                lineNumber: 103,
+                                lineNumber: 141,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -556,10 +522,28 @@ function SoftwarePage() {
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex items-center justify-center mb-4",
-                                                children: item.icon
+                                                children: item.image ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "w-24 h-24 relative",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                        src: item.image,
+                                                        alt: item.name,
+                                                        fill: true,
+                                                        style: {
+                                                            objectFit: 'contain'
+                                                        }
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Software/page.tsx",
+                                                        lineNumber: 148,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Software/page.tsx",
+                                                    lineNumber: 147,
+                                                    columnNumber: 23
+                                                }, this) : item.icon
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/Software/page.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 145,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -567,7 +551,7 @@ function SoftwarePage() {
                                                 children: item.name
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/Software/page.tsx",
-                                                lineNumber: 110,
+                                                lineNumber: 159,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -575,7 +559,7 @@ function SoftwarePage() {
                                                 children: item.price
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/Software/page.tsx",
-                                                lineNumber: 111,
+                                                lineNumber: 160,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -585,42 +569,42 @@ function SoftwarePage() {
                                                         className: "mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Software/page.tsx",
-                                                        lineNumber: 113,
+                                                        lineNumber: 162,
                                                         columnNumber: 21
                                                     }, this),
                                                     "Download"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/Software/page.tsx",
-                                                lineNumber: 112,
+                                                lineNumber: 161,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, itemIndex, true, {
                                         fileName: "[project]/src/app/Software/page.tsx",
-                                        lineNumber: 106,
+                                        lineNumber: 144,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Software/page.tsx",
-                                lineNumber: 104,
+                                lineNumber: 142,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, index, true, {
                         fileName: "[project]/src/app/Software/page.tsx",
-                        lineNumber: 102,
+                        lineNumber: 140,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/Software/page.tsx",
-                lineNumber: 100,
+                lineNumber: 138,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/Software/page.tsx",
-        lineNumber: 49,
+        lineNumber: 87,
         columnNumber: 5
     }, this);
 }
