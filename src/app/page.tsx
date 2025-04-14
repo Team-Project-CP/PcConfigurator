@@ -3,6 +3,7 @@ import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/
 import { useState, useEffect } from "react";
 import Loader from "./loader";
 import { FaHammer, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function Navbar() {
 
@@ -23,22 +24,22 @@ export default function Navbar() {
     <div>
       {/* top banner */}
       <div className="bg-purple-600 text-white text-center text-sm py-2">
-        Certified Refurbished Gaming PCs. <a href="#" className="underline">Shop now &gt;</a>
+        Certified Refurbished Gaming PCs. <Link href="#" className="underline">Shop now &gt;</Link>
       </div>
       
       {/* nav */}
       <nav className="text-white bg-black px-8 py-4 flex justify-center items-center">
         {/* logo and links */}
         <div className="flex items-center space-x-8">
-          <span className="text-2xl font-bold">Domino</span>
+          <Link href="/" className="text-2xl font-bold">Domino</Link>
           <div className="hidden md:flex space-x-6">
-            <a href="#" className="hover:text-gray-400">Deals</a>
-            <a href="#" className="hover:text-gray-400">Gaming PCs</a>
-            <a href="#" className="hover:text-gray-400">Components</a>
-            <a href="#" className="hover:text-gray-400">Gaming Gear</a>
-            <a href="#" className="hover:text-gray-400">Monitors</a>
-            <a href="#" className="hover:text-gray-400">Software</a>
-            <a href="#" className="hover:text-gray-400">Community</a>
+            <Link href="#" className="hover:text-gray-400">Deals</Link>
+            <Link href="#" className="hover:text-gray-400">Gaming PCs</Link>
+            <Link href="#" className="hover:text-gray-400">Components</Link>
+            <Link href="#" className="hover:text-gray-400">Gaming Gear</Link>
+            <Link href="#" className="hover:text-gray-400">Monitors</Link>
+            <Link href="/Software" className="hover:text-gray-400">Software</Link>
+            <Link href="#" className="hover:text-gray-400">Community</Link>
           </div>
         </div>
         
