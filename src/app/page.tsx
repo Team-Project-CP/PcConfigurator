@@ -40,7 +40,7 @@ export default function Navbar() {
             <a href="#" className="hover:text-gray-400">Components</a>
             <a href="#" className="hover:text-gray-400">Gaming Gear</a>
             <a href="#" className="hover:text-gray-400">Monitors</a>
-            <a href="#" className="hover:text-gray-400">Software</a>
+            <a href="/Software" className="hover:text-gray-400">Software</a>
             <a href="/Community" className="hover:text-gray-400">Community</a>
           </div>
         </div>
