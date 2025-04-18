@@ -1,8 +1,10 @@
 {
-  "/Community/page": "app/Community/page.js",
-  "/Gaming-Gear/page": "app/Gaming-Gear/page.js",
-  "/Monitors/page": "app/Monitors/page.js",
+  "/Components/[id]/page": "app/Components/[id]/page.js",
+  "/Components/page": "app/Components/page.js",
+  "/Software/page": "app/Software/page.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/api/components/[id]/recommendations/route": "app/api/components/[id]/recommendations/route.js",
+  "/api/components/[id]/route": "app/api/components/[id]/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }
