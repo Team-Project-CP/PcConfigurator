@@ -155,6 +155,7 @@
     --container-lg: 32rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
+    --container-4xl: 56rem;
     --container-7xl: 80rem;
     --text-sm: .875rem;
     --text-sm--line-height: calc(1.25 / .875);
@@ -889,6 +890,10 @@
     max-width: var(--container-2xl);
   }
 
+  .max-w-4xl {
+    max-width: var(--container-4xl);
+  }
+
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
@@ -1270,8 +1275,8 @@
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
 
-  .bg-\[url\(\'\/path-to-your-background-image\.jpg\'\)\] {
-    background-image: url("/path-to-your-background-image.jpg");
+  .bg-\[url\(\'\/Background\.png\'\)\] {
+    background-image: url("/Background.png");
   }
 
   .from-black {
