@@ -344,7 +344,11 @@ export default function Components() {
         {/* Components Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredComponents.map(component => (
-            <div key={component.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <Link
+              key={component.id}
+              href={`/Components/${component.id}`}
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
               <div className="relative">
                 <div className="aspect-square w-full overflow-hidden">
                   <img
@@ -356,62 +360,20 @@ export default function Components() {
                 <div className="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded">
                   {component.category}
                 </div>
-                <div className="absolute top-2 left-2 flex flex-col gap-2">
-                  <button
-                    onClick={() => toggleWishlist(component)}
-                    className={`p-2 rounded-full ${
-                      wishlist.find(item => item.id === component.id)
-                        ? "bg-red-500 text-white"
-                        : "bg-white text-gray-600"
-                    }`}
-                  >
-                    <FaHeart size={16} />
-                  </button>
-                  <button
-                    onClick={() => {
-                      setSelectedComponent(component);
-                      setShowQuickView(true);
-                    }}
-                    className="p-2 rounded-full bg-white text-gray-600 hover:text-purple-600"
-                  >
-                    <FaEye size={16} />
-                  </button>
-                  <button
-                    onClick={() => toggleCompare(component)}
-                    className={`p-2 rounded-full ${
-                      compareList.find(item => item.id === component.id)
-                        ? "bg-purple-600 text-white"
-                        : "bg-white text-gray-600"
-                    }`}
-                  >
-                    <FaBalanceScale size={16} />
-                  </button>
-                </div>
               </div>
               <div className="p-4">
-                <Link 
-                  href={`/Components/${component.id}`}
-                  className="text-xl font-semibold mb-2 hover:text-purple-600 transition-colors"
-                >
-                  {component.name}
-                </Link>
+                <h3 className="text-xl font-semibold mb-2">{component.name}</h3>
                 <p className="text-gray-600 mb-4">{component.description}</p>
-                <div className="mb-4">
-                  <h4 className="font-semibold mb-2">Key Specs:</h4>
-                  <ul className="list-disc list-inside text-sm text-gray-600">
-                    {component.specs.map((spec, index) => (
-                      <li key={index}>{spec}</li>
-                    ))}
-                  </ul>
-                </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-purple-600">${component.price}</span>
-                  <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-colors">
-                    Add to Cart
+                  <span className="text-2xl font-bold text-purple-600">
+                    ${component.price}
+                  </span>
+                  <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+                    View Details
                   </button>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { FaArrowLeft, FaShoppingCart, FaHeart, FaBalanceScale } from 'react-icons/fa';
+import { FaArrowLeft, FaShoppingCart, FaHeart, FaBalanceScale, FaQuestionCircle } from 'react-icons/fa';
+import { components } from '@/lib/data/components';
 
 // Component interface for type safety
 interface ComponentSpec {
@@ -19,6 +20,7 @@ interface ComponentSpec {
       value: string | number | boolean;
       score: number; // Higher score = better spec
       unit?: string;
+      description?: string;
     };
   };
   compatibility: {
@@ -40,10 +42,16 @@ export default function ComponentDetail() {
     const fetchData = async () => {
       try {
         // Replace with real API calls in production
-        const componentData = await fetch(`/api/components/${params.id}`).then(res => res.json());
-        setComponent(componentData);
+        const componentData = components.find(c => c.id === Number(params.id));
+        setComponent(componentData || null);
         
-        const recommendedData = await fetch(`/api/components/${params.id}/recommendations`).then(res => res.json());
+        // Mock recommendations based on compatibility
+        const recommendedData = components.filter(c => {
+          if (componentData?.category === 'CPU' && c.category === 'Motherboard') {
+            return c.compatibility.socket === componentData.compatibility.socket;
+          }
+          return false;
+        });
         setRecommendations(recommendedData);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -120,12 +128,41 @@ export default function ComponentDetail() {
                 <h2 className="text-xl font-semibold mb-4">Specifications</h2>
                 <div className="grid grid-cols-2 gap-4">
                   {Object.entries(component.detailedSpecs).map(([key, spec]) => (
-                    <div key={key} className="flex justify-between py-2 border-b">
-                      <span className="text-gray-600">{key}:</span>
-                      <span className="font-medium">
-                        {spec.value}
-                        {spec.unit}
-                      </span>
+                    <div key={key} className="flex items-center justify-between p-3 bg-gray-800 rounded-lg">
+                      <div className="flex items-center gap-2">
+                        <span className="text-gray-400">{key}</span>
+                        {spec.description && (
+                          <div className="group relative">
+                            <button className="text-gray-400 hover:text-gray-300">
+                              <FaQuestionCircle className="w-4 h-4" />
+                            </button>
+                            <div className="absolute left-0 bottom-full mb-2 hidden group-hover:block z-50">
+                              <div className="bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+                                <div className="text-sm">{spec.description}</div>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                        <span className="text-white">
+                          {typeof spec.value === 'boolean' 
+                            ? spec.value ? 'Yes' : 'No'
+                            : spec.value}{spec.unit ? ` ${spec.unit}` : ''}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-24 h-2 bg-gray-700 rounded-full">
+                          <div 
+                            className="h-full rounded-full"
+                            style={{ 
+                              width: `${spec.score}%`,
+                              backgroundColor: spec.score >= 90 ? '#10B981' : 
+                                            spec.score >= 80 ? '#3B82F6' : 
+                                            spec.score >= 70 ? '#F59E0B' : '#EF4444'
+                            }}
+                          />
+                        </div>
+                        <span className="text-sm text-gray-400">{spec.score}</span>
+                      </div>
                     </div>
                   ))}
                 </div>
