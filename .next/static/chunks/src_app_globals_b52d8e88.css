@@ -2007,12 +2007,6 @@
   }
 
   @media (hover: hover) {
-    .hover\:text-red-500:hover {
-      color: var(--color-red-500);
-    }
-  }
-
-  @media (hover: hover) {
     .hover\:text-white:hover {
       color: var(--color-white);
     }

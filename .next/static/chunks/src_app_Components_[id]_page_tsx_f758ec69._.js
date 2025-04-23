@@ -31,7 +31,7 @@ function ComponentDetail() {
             const fetchData = {
                 "ComponentDetail.useEffect.fetchData": async ()=>{
                     try {
-                        // These would be actual API calls in production
+                        // Replace with real API calls in production
                         const componentData = await fetch(`/api/components/${params.id}`).then({
                             "ComponentDetail.useEffect.fetchData": (res)=>res.json()
                         }["ComponentDetail.useEffect.fetchData"]);
@@ -59,12 +59,12 @@ function ComponentDetail() {
                 className: "animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-600"
             }, void 0, false, {
                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                lineNumber: 60,
+                lineNumber: 61,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/Components/[id]/page.tsx",
-            lineNumber: 59,
+            lineNumber: 60,
             columnNumber: 7
         }, this);
     }
@@ -79,19 +79,19 @@ function ComponentDetail() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaArrowLeft"], {}, void 0, false, {
                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                            lineNumber: 70,
+                            lineNumber: 71,
                             columnNumber: 11
                         }, this),
                         "Back to Components"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                    lineNumber: 69,
+                    lineNumber: 70,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                lineNumber: 68,
+                lineNumber: 69,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -109,12 +109,12 @@ function ComponentDetail() {
                                         className: "w-full rounded-lg"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                        lineNumber: 81,
+                                        lineNumber: 82,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                    lineNumber: 80,
+                                    lineNumber: 81,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -126,12 +126,12 @@ function ComponentDetail() {
                                                 children: component.category
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                lineNumber: 91,
+                                                lineNumber: 92,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                            lineNumber: 90,
+                                            lineNumber: 91,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -139,7 +139,7 @@ function ComponentDetail() {
                                             children: component.name
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                            lineNumber: 95,
+                                            lineNumber: 96,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -147,7 +147,7 @@ function ComponentDetail() {
                                             children: component.description
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                            lineNumber: 96,
+                                            lineNumber: 97,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -161,7 +161,7 @@ function ComponentDetail() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                    lineNumber: 100,
+                                                    lineNumber: 101,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -174,12 +174,12 @@ function ComponentDetail() {
                                                                 size: 20
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                                lineNumber: 105,
+                                                                lineNumber: 106,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                            lineNumber: 104,
+                                                            lineNumber: 105,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -189,12 +189,12 @@ function ComponentDetail() {
                                                                 size: 20
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                                lineNumber: 108,
+                                                                lineNumber: 109,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                            lineNumber: 107,
+                                                            lineNumber: 108,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -202,26 +202,26 @@ function ComponentDetail() {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaShoppingCart"], {}, void 0, false, {
                                                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                                    lineNumber: 111,
+                                                                    lineNumber: 112,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 "Add to Cart"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                            lineNumber: 110,
+                                                            lineNumber: 111,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                    lineNumber: 103,
+                                                    lineNumber: 104,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                            lineNumber: 99,
+                                            lineNumber: 100,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -232,7 +232,7 @@ function ComponentDetail() {
                                                     children: "Specifications"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                    lineNumber: 119,
+                                                    lineNumber: 120,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -248,7 +248,7 @@ function ComponentDetail() {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                                    lineNumber: 123,
+                                                                    lineNumber: 124,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -259,24 +259,24 @@ function ComponentDetail() {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                                    lineNumber: 124,
+                                                                    lineNumber: 125,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, key, true, {
                                                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                            lineNumber: 122,
+                                                            lineNumber: 123,
                                                             columnNumber: 21
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                    lineNumber: 120,
+                                                    lineNumber: 121,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                            lineNumber: 118,
+                                            lineNumber: 119,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -287,7 +287,7 @@ function ComponentDetail() {
                                                     children: "Compatibility"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                    lineNumber: 135,
+                                                    lineNumber: 136,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -303,7 +303,7 @@ function ComponentDetail() {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                                    lineNumber: 139,
+                                                                    lineNumber: 140,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -311,41 +311,41 @@ function ComponentDetail() {
                                                                     children: Array.isArray(value) ? value.join(', ') : value
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                                    lineNumber: 140,
+                                                                    lineNumber: 141,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, key, true, {
                                                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                            lineNumber: 138,
+                                                            lineNumber: 139,
                                                             columnNumber: 21
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                    lineNumber: 136,
+                                                    lineNumber: 137,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                            lineNumber: 134,
+                                            lineNumber: 135,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                    lineNumber: 89,
+                                    lineNumber: 90,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/Components/[id]/page.tsx",
-                            lineNumber: 78,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/Components/[id]/page.tsx",
-                        lineNumber: 77,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, this),
                     recommendations.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -356,7 +356,7 @@ function ComponentDetail() {
                                 children: "Recommended Compatible Components"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                lineNumber: 154,
+                                lineNumber: 155,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -374,7 +374,7 @@ function ComponentDetail() {
                                                         className: "w-full h-48 object-cover"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                        lineNumber: 163,
+                                                        lineNumber: 164,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -382,13 +382,13 @@ function ComponentDetail() {
                                                         children: rec.category
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                        lineNumber: 168,
+                                                        lineNumber: 169,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                lineNumber: 162,
+                                                lineNumber: 163,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -399,7 +399,7 @@ function ComponentDetail() {
                                                         children: rec.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                        lineNumber: 173,
+                                                        lineNumber: 174,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -407,7 +407,7 @@ function ComponentDetail() {
                                                         children: rec.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                        lineNumber: 174,
+                                                        lineNumber: 175,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -421,7 +421,7 @@ function ComponentDetail() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                                lineNumber: 176,
+                                                                lineNumber: 177,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -429,48 +429,48 @@ function ComponentDetail() {
                                                                 children: "Compatible"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                                lineNumber: 179,
+                                                                lineNumber: 180,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                        lineNumber: 175,
+                                                        lineNumber: 176,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                                lineNumber: 172,
+                                                lineNumber: 173,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, rec.id, true, {
                                         fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                        lineNumber: 157,
+                                        lineNumber: 158,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                                lineNumber: 155,
+                                lineNumber: 156,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/Components/[id]/page.tsx",
-                        lineNumber: 153,
+                        lineNumber: 154,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/Components/[id]/page.tsx",
-                lineNumber: 76,
+                lineNumber: 77,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/Components/[id]/page.tsx",
-        lineNumber: 66,
+        lineNumber: 67,
         columnNumber: 5
     }, this);
 }

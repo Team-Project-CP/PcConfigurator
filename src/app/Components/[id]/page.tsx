@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { FaArrowLeft, FaShoppingCart, FaHeart, FaBalanceScale } from 'react-icons/fa';
 
+// Component interface for type safety
 interface ComponentSpec {
   id: number;
   category: string;
@@ -15,8 +16,8 @@ interface ComponentSpec {
   specs: string[];
   detailedSpecs: {
     [key: string]: {
-      value: string | number;
-      score: number;
+      value: string | number | boolean;
+      score: number; // Higher score = better spec
       unit?: string;
     };
   };
@@ -38,7 +39,7 @@ export default function ComponentDetail() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // These would be actual API calls in production
+        // Replace with real API calls in production
         const componentData = await fetch(`/api/components/${params.id}`).then(res => res.json());
         setComponent(componentData);
         
@@ -77,11 +78,11 @@ export default function ComponentDetail() {
         <div className="bg-white rounded-lg shadow-lg p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Left Column - Image */}
-            <div>
+            <div className="aspect-square w-full overflow-hidden">
               <img
                 src={component.image}
                 alt={component.name}
-                className="w-full rounded-lg"
+                className="w-full h-full object-contain p-4"
               />
             </div>
 
@@ -160,11 +161,13 @@ export default function ComponentDetail() {
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="relative">
-                    <img
-                      src={rec.image}
-                      alt={rec.name}
-                      className="w-full h-48 object-cover"
-                    />
+                    <div className="aspect-square w-full overflow-hidden">
+                      <img
+                        src={rec.image}
+                        alt={rec.name}
+                        className="w-full h-full object-contain p-4"
+                      />
+                    </div>
                     <div className="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded">
                       {rec.category}
                     </div>

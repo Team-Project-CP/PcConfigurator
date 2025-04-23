@@ -28,7 +28,7 @@ export const components: ComponentSpec[] = [
     category: "CPU",
     name: "AMD Ryzen 9 7950X",
     price: 699.99,
-    image: "/cpu-ryzen.png",
+    image: "/images/components/cpu-ryzen.png",
     description: "16-core processor for ultimate gaming and content creation",
     specs: ["16 Cores", "32 Threads", "Up to 5.7GHz", "AM5 Socket"],
     detailedSpecs: {
@@ -48,7 +48,7 @@ export const components: ComponentSpec[] = [
     category: "GPU",
     name: "NVIDIA RTX 4090",
     price: 1599.99,
-    image: "/gpu-rtx.png",
+    image: "/images/components/gpu-rtx.png",
     description: "Ultimate graphics card for 4K gaming and AI workloads",
     specs: ["24GB GDDR6X", "DLSS 3", "Ray Tracing", "4K Gaming"],
     detailedSpecs: {
@@ -66,7 +66,7 @@ export const components: ComponentSpec[] = [
     category: "RAM",
     name: "Corsair Dominator Platinum RGB",
     price: 199.99,
-    image: "/ram-dominator.png",
+    image: "/images/components/ram-dominator.png",
     description: "High-performance DDR5 memory with dynamic RGB lighting",
     specs: ["32GB (2x16GB)", "DDR5-6000", "CL30", "RGB Lighting"],
     detailedSpecs: {
@@ -84,7 +84,7 @@ export const components: ComponentSpec[] = [
     category: "Storage",
     name: "Samsung 990 PRO",
     price: 169.99,
-    image: "/ssd-samsung.png",
+    image: "/images/components/ssd-samsung.png",
     description: "Ultra-fast PCIe 4.0 NVMe SSD for professional use",
     specs: ["2TB Capacity", "7,450 MB/s Read", "6,900 MB/s Write", "PCIe 4.0"],
     detailedSpecs: {
@@ -102,7 +102,7 @@ export const components: ComponentSpec[] = [
     category: "Motherboard",
     name: "ASUS ROG Maximus Z790 Hero",
     price: 629.99,
-    image: "/mb-asus.png",
+    image: "/images/components/mb-asus.png",
     description: "Premium Intel Z790 motherboard with extensive features",
     specs: ["Intel Z790", "DDR5 Support", "PCIe 5.0", "WiFi 6E"],
     detailedSpecs: {
@@ -123,7 +123,7 @@ export const components: ComponentSpec[] = [
     category: "PSU",
     name: "Corsair HX1200i",
     price: 299.99,
-    image: "/psu-corsair.png",
+    image: "/images/components/psu-corsair.png",
     description: "Platinum-certified modular power supply with digital interface",
     specs: ["1200W Output", "80+ Platinum", "Fully Modular", "iCUE Compatible"],
     detailedSpecs: {
@@ -141,7 +141,7 @@ export const components: ComponentSpec[] = [
     category: "Cooling",
     name: "NZXT Kraken Z73",
     price: 279.99,
-    image: "/cooling-kraken.png",
+    image: "/images/components/cooling-kraken.png",
     description: "360mm AIO liquid cooler with LCD display",
     specs: ["360mm Radiator", "LCD Display", "RGB Lighting", "CAM Software"],
     detailedSpecs: {
@@ -159,7 +159,7 @@ export const components: ComponentSpec[] = [
     category: "CPU",
     name: "Intel Core i9-13900K",
     price: 589.99,
-    image: "/cpu-intel.png",
+    image: "/images/components/cpu-intel.png",
     description: "High-performance Intel processor for gaming and productivity",
     specs: ["24 Cores", "32 Threads", "Up to 5.8GHz", "LGA 1700"],
     detailedSpecs: {
@@ -179,7 +179,7 @@ export const components: ComponentSpec[] = [
     category: "GPU",
     name: "AMD Radeon RX 7900 XTX",
     price: 999.99,
-    image: "/gpu-amd.png",
+    image: "/images/components/gpu-amd.png",
     description: "High-end AMD graphics card for 4K gaming",
     specs: ["24GB GDDR6", "2.5GHz Game Clock", "Ray Tracing", "FSR 3.0"],
     detailedSpecs: {
@@ -197,7 +197,7 @@ export const components: ComponentSpec[] = [
     category: "Storage",
     name: "WD Black SN850X",
     price: 149.99,
-    image: "/ssd-wd.png",
+    image: "/images/components/ssd-wd.png",
     description: "High-performance PCIe 4.0 gaming SSD",
     specs: ["1TB Capacity", "7,300 MB/s Read", "6,300 MB/s Write", "Gaming Mode"],
     detailedSpecs: {
