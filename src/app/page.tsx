@@ -10,6 +10,7 @@ export default function Navbar() {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoginForm, setIsLoginForm] = useState(true); // State to toggle between login and registration
 
   useEffect(() => {
     // Simulate loading
@@ -21,6 +22,11 @@ export default function Navbar() {
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+    setIsLoginForm(true); // Reset to login form when closing modal
+  };
+
+  const toggleForm = () => {
+    setIsLoginForm(!isLoginForm);
   };
 
   if (loading) {
@@ -29,9 +35,9 @@ export default function Navbar() {
 
   return (
     <div>
-      {/* Login  Modal */}
+      {/* Login/Registration Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-md flex items-center justify-center z-50">
+        <div className="fixed inset-0 backdrop-blur flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-6 w-full max-w-sm relative">
             {/* Close Button */}
             <button
@@ -51,37 +57,94 @@ export default function Navbar() {
                 Sign in with Google
               </button>
               <p className="text-gray-500 text-sm mb-4">Or continue with</p>
-              <form className="w-full space-y-4">
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                  />
-                </div>
-                <div className="flex justify-between items-center text-sm">
-                  <label className="flex items-center">
-                    <input type="checkbox" className="mr-2" />
-                    Remember me
-                  </label>
-                  <a href="#" className="text-blue-600 hover:underline">Forgot password?</a>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all"
-                >
-                  Sign In
-                </button>
-              </form>
+
+              {isLoginForm ? (
+                // Login Form
+                <form className="w-full space-y-4">
+                  <div>
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    />
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <label className="flex items-center">
+                      <input type="checkbox" className="mr-2" />
+                      Remember me
+                    </label>
+                    <a href="#" className="text-blue-600 hover:underline">Forgot password?</a>
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all"
+                  >
+                    Sign In
+                  </button>
+                </form>
+              ) : (
+                // Registration Form
+                <form className="w-full space-y-4">
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Full Name"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="password"
+                      placeholder="Confirm Password"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all"
+                  >
+                    Register
+                  </button>
+                </form>
+              )}
+
               <p className="text-sm text-gray-600 mt-4">
-                Not a member? <a href="#" className="text-blue-600 hover:underline">Create account</a>
+                {isLoginForm ? (
+                  <>
+                    Not a member?{' '}
+                    <a href="#" onClick={toggleForm} className="text-blue-600 hover:underline">
+                      Create account
+                    </a>
+                  </>
+                ) : (
+                  <>
+                    Already have an account?{' '}
+                    <a href="#" onClick={toggleForm} className="text-blue-600 hover:underline">
+                      Sign in
+                    </a>
+                  </>
+                )}
               </p>
             </div>
           </div>
