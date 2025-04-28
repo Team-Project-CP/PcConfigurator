@@ -14,8 +14,8 @@ export default function DominoClub() {
             <a href="#" className="hover:text-gray-400">Deals</a>
             <a href="#" className="hover:text-gray-400">Gaming PCs</a>
             <a href="#" className="hover:text-gray-400">Components</a>
-            <a href="#" className="hover:text-gray-400">Gaming Gear</a>
-            <a href="#" className="hover:text-gray-400">Monitors</a>
+            <a href="/Gaming-Gear" className="hover:text-gray-400">Gaming Gear</a>
+            <a href="/Monitors" className="hover:text-gray-400">Monitors</a>
             <a href="/Software" className="hover:text-gray-400">Software</a>
             <a href="#" className="hover:text-gray-400">Community</a>
           </div>
@@ -28,27 +28,19 @@ export default function DominoClub() {
         </div>
       </nav>
 
-      {/* Welcome Section */}
-      <section className="relative bg-gradient-to-r from-purple-200 to-blue-200 py-16 text-center">
-        {/* Placeholder background (replace with your image) */}
-        <div className="absolute inset-0 bg-[url('/path-to-your-background-image.jpg')] bg-cover bg-center opacity-50"></div>
-        <div className="relative z-10">
-          <div className="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold mb-4">
-            NZXT
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Welcome to the Domino Club</h1>
-          <p className="text-lg text-gray-700 mb-6">Join the ultimate gaming community and gain access to perks from NZXT</p>
-          <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all">
-            Join the Club
-          </button>
-        </div>
-        {/* Placeholder for characters (replace with your image) */}
-        <div className="mt-8">
-          <div className="w-full h-64 bg-gray-300 flex items-center justify-center">
-            [Placeholder for Characters Image]
-          </div>
-        </div>
-      </section>
+     {/* Welcome Section */}
+<section className="relative bg-[url('/Background.png')] bg-cover bg-center py-16 text-center min-h-screen">
+  <div className="relative z-10 max-w-4xl mx-auto text-center items-center">
+    <div className="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold mb-4">
+      DOMINO
+    </div>
+    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Welcome to the Domino Club</h1>
+    <p className="text-lg text-gray-700 mb-6">Join the ultimate gaming community and gain access to perks from NZXT</p>
+    <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all">
+      Join the Club
+    </button>
+  </div>
+</section>
 
       {/* How It Works Section */}
       <section className="py-16 bg-white">

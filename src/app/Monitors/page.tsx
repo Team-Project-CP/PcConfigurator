@@ -59,8 +59,8 @@ export default function MonitorsPage() {
             <Link href="#" className="hover:text-gray-400">Deals</Link>
             <Link href="#" className="hover:text-gray-400">Gaming PCs</Link>
             <Link href="#" className="hover:text-gray-400">Components</Link>
-            <Link href="#" className="hover:text-gray-400">Gaming Gear</Link>
-            <Link href="#" className="hover:text-gray-400">Monitors</Link>
+            <Link href="/Gaming-Gear" className="hover:text-gray-400">Gaming Gear</Link>
+            <Link href="/Monitors" className="hover:text-gray-400">Monitors</Link>
             <Link href="/Software" className="hover:text-gray-400">Software</Link>
             <Link href="/Community" className="hover:text-gray-400">Community</Link>
           </div>
