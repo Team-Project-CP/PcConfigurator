@@ -25,10 +25,10 @@ export default function GamingGearPage() {
           <span className="text-2xl font-bold">Domino</span>
           <div className="hidden md:flex space-x-6">
             <a href="#" className="hover:text-gray-400">Deals</a>
-            <a href="#" className="hover:text-gray-400">Gaming PCs</a>
+            <a href="/Gaming-PCs" className="hover:text-gray-400">Gaming PCs</a>
             <a href="#" className="hover:text-gray-400">Components</a>
             <a href="/Gaming-Gear" className="hover:text-gray-400">Gaming Gear</a>
-            <a href="#" className="hover:text-gray-400">Monitors</a>
+            <a href="/Monitors" className="hover:text-gray-400">Monitors</a>
             <a href="/Software" className="hover:text-gray-400">Software</a>
             <a href="/Community" className="hover:text-gray-400">Community</a>
           </div>

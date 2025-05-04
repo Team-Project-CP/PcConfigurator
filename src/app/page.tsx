@@ -153,7 +153,7 @@ export default function Navbar() {
 
       {/* Top Banner */}
       <div className={`bg-purple-600 text-white text-center text-sm py-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-        Certified Refurbished Gaming PCs. <a href="#" className="underline">Shop now</a>
+        Certified Refurbished Gaming PCs. <a href="/page.tsx" className="underline">Shop now</a>
       </div>
 
       {/* Navigation */}
@@ -163,7 +163,7 @@ export default function Navbar() {
           <span className="text-2xl font-bold">Domino</span>
           <div className="hidden md:flex space-x-6">
             <a href="#" className="hover:text-gray-400">Deals</a>
-            <a href="#" className="hover:text-gray-400">Gaming PCs</a>
+            <a href="/Gaming-PCs" className="hover:text-gray-400">Gaming PCs</a>
             <a href="#" className="hover:text-gray-400">Components</a>
             <a href="/Gaming-Gear" className="hover:text-gray-400">Gaming Gear</a>
             <a href="/Monitors" className="hover:text-gray-400">Monitors</a>
