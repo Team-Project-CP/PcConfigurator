@@ -106,6 +106,39 @@ export default function GamingGearPage() {
   </div>
 </section>
 
+{/* COLOBORATES */}
+<section className="py-16 px-6 md:px-16 text-white">
+  <h2 className="text-2xl md:text-3xl font-bold mb-8">Our Special Offers</h2>
+  <div className="space-y-8">
+    {[1, 2, 3].map((i) => (
+      <div key={i} className="flex flex-col md:flex-row items-center md:items-start bg-black p-6 border rounded-lg shadow-lg">
+        {/* Left side: Image */}
+        <div className="flex-1 mb-4 md:mb-0 md:w-1/2">
+          <Image 
+            src={`/Gaming-PCs/images/colaborate-${i}.png`} 
+            alt={`Coloborate ${i}`} 
+            width={300} 
+            height={200} 
+            className="mx-auto"
+          />
+        </div>
+        
+        {/* Right side: Text */}
+        <div className="flex-1 ml-0 md:ml-8 text-center md:text-left">
+          <h3 className="text-xl font-semibold mb-2">THE LEGEND IS UNBEATABLE #{i}</h3>
+          
+          <p className="mb-4">
+            AMD Ryzen™ 9000 Series processors
+          </p>
+          <button className="mt-4 w-auto bg-black hover:bg-gray-800 px-10 py-2 rounded border-2 border-white">
+            Shop AMD PCs
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
       {/* Footer */}
       {/* Stay In Touch Section (Footer) */}
       <div className={`bg-gray-900 text-white py-12 transition-all duration-1000 delay-2600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
@@ -219,7 +252,7 @@ export default function GamingGearPage() {
                   <a href="#" className="text-gray-400 hover:underline">FAQ</a>
                 </div>
               </div>
-            </div>
+      </div>
     </main>
   );
 }

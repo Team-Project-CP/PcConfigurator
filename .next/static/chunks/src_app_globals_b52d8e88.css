@@ -574,6 +574,10 @@
     margin-bottom: 3%;
   }
 
+  .ml-0 {
+    margin-left: calc(var(--spacing) * 0);
+  }
+
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
   }
@@ -796,6 +800,10 @@
 
   .w-\[100\%\] {
     width: 100%;
+  }
+
+  .w-auto {
+    width: auto;
   }
 
   .w-full {
@@ -1957,6 +1965,12 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-gray-800:hover {
+      background-color: var(--color-gray-800);
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:bg-purple-700:hover {
       background-color: var(--color-purple-700);
     }
@@ -2101,8 +2115,32 @@
   }
 
   @media (width >= 48rem) {
+    .md\:mb-0 {
+      margin-bottom: calc(var(--spacing) * 0);
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:ml-8 {
+      margin-left: calc(var(--spacing) * 8);
+    }
+  }
+
+  @media (width >= 48rem) {
     .md\:flex {
       display: flex;
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:w-1\/2 {
+      width: 50%;
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:w-auto {
+      width: auto;
     }
   }
 
@@ -2137,6 +2175,12 @@
   }
 
   @media (width >= 48rem) {
+    .md\:items-start {
+      align-items: flex-start;
+    }
+  }
+
+  @media (width >= 48rem) {
     .md\:px-16 {
       padding-inline: calc(var(--spacing) * 16);
     }
@@ -2151,6 +2195,12 @@
   @media (width >= 48rem) {
     .md\:py-24 {
       padding-block: calc(var(--spacing) * 24);
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:text-left {
+      text-align: left;
     }
   }
 

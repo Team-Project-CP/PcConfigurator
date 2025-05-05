@@ -452,6 +452,97 @@ function GamingGearPage() {
                 lineNumber: 95,
                 columnNumber: 1
             }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                className: "py-16 px-6 md:px-16 text-white",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                        className: "text-2xl md:text-3xl font-bold mb-8",
+                        children: "Our Special Offers"
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                        lineNumber: 111,
+                        columnNumber: 3
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "space-y-8",
+                        children: [
+                            1,
+                            2,
+                            3
+                        ].map((i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex flex-col md:flex-row items-center md:items-start bg-black p-6 border rounded-lg shadow-lg",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex-1 mb-4 md:mb-0 md:w-1/2",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                            src: `/Gaming-PCs/images/colaborate-${i}.png`,
+                                            alt: `Coloborate ${i}`,
+                                            width: 300,
+                                            height: 200,
+                                            className: "mx-auto"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                            lineNumber: 117,
+                                            columnNumber: 11
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                        lineNumber: 116,
+                                        columnNumber: 9
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex-1 ml-0 md:ml-8 text-center md:text-left",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                className: "text-xl font-semibold mb-2",
+                                                children: [
+                                                    "THE LEGEND IS UNBEATABLE #",
+                                                    i
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                lineNumber: 128,
+                                                columnNumber: 11
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "mb-4",
+                                                children: "AMD Ryzen™ 9000 Series processors"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                lineNumber: 130,
+                                                columnNumber: 11
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                className: "mt-4 w-auto bg-black hover:bg-gray-800 px-10 py-2 rounded border-2 border-white",
+                                                children: "Shop AMD PCs"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                lineNumber: 133,
+                                                columnNumber: 11
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                        lineNumber: 127,
+                                        columnNumber: 9
+                                    }, this)
+                                ]
+                            }, i, true, {
+                                fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                lineNumber: 114,
+                                columnNumber: 7
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                        lineNumber: 112,
+                        columnNumber: 3
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                lineNumber: 110,
+                columnNumber: 1
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: `bg-gray-900 text-white py-12 transition-all duration-1000 delay-2600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -468,7 +559,7 @@ function GamingGearPage() {
                                             children: "Stay In Touch"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 116,
+                                            lineNumber: 149,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -476,13 +567,13 @@ function GamingGearPage() {
                                             children: "Keep up to date on the latest releases, offers, and news from DOMINO"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 117,
+                                            lineNumber: 150,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 115,
+                                    lineNumber: 148,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -498,20 +589,20 @@ function GamingGearPage() {
                                                             children: "Language"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                            lineNumber: 122,
+                                                            lineNumber: 155,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             children: "English"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                            lineNumber: 123,
+                                                            lineNumber: 156,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 121,
+                                                    lineNumber: 154,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -521,26 +612,26 @@ function GamingGearPage() {
                                                             children: "Country"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                            lineNumber: 126,
+                                                            lineNumber: 159,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                             children: "United States"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                            lineNumber: 127,
+                                                            lineNumber: 160,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 125,
+                                                    lineNumber: 158,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 120,
+                                            lineNumber: 153,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -552,7 +643,7 @@ function GamingGearPage() {
                                                     className: "w-full sm:w-96 px-4 py-2 rounded-l-md text-black focus:outline-none mb-4 sm:mb-0"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 131,
+                                                    lineNumber: 164,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -560,25 +651,25 @@ function GamingGearPage() {
                                                     children: "Notify Me"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 136,
+                                                    lineNumber: 169,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 130,
+                                            lineNumber: 163,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 119,
+                                    lineNumber: 152,
                                     columnNumber: 19
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                            lineNumber: 114,
+                            lineNumber: 147,
                             columnNumber: 17
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -590,7 +681,7 @@ function GamingGearPage() {
                                     className: "mr-2"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 178,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -605,7 +696,7 @@ function GamingGearPage() {
                                             children: "Privacy Policy"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 148,
+                                            lineNumber: 181,
                                             columnNumber: 21
                                         }, this),
                                         " and",
@@ -616,19 +707,19 @@ function GamingGearPage() {
                                             children: "Terms & Conditions"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 149,
+                                            lineNumber: 182,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 179,
                                     columnNumber: 19
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                            lineNumber: 144,
+                            lineNumber: 177,
                             columnNumber: 17
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -641,12 +732,12 @@ function GamingGearPage() {
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                        lineNumber: 155,
+                                        lineNumber: 188,
                                         columnNumber: 74
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 155,
+                                    lineNumber: 188,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -656,12 +747,12 @@ function GamingGearPage() {
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                        lineNumber: 156,
+                                        lineNumber: 189,
                                         columnNumber: 74
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 156,
+                                    lineNumber: 189,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -671,12 +762,12 @@ function GamingGearPage() {
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                        lineNumber: 157,
+                                        lineNumber: 190,
                                         columnNumber: 74
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 157,
+                                    lineNumber: 190,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -686,12 +777,12 @@ function GamingGearPage() {
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                        lineNumber: 158,
+                                        lineNumber: 191,
                                         columnNumber: 74
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 158,
+                                    lineNumber: 191,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -701,12 +792,12 @@ function GamingGearPage() {
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                        lineNumber: 159,
+                                        lineNumber: 192,
                                         columnNumber: 74
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 192,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -716,12 +807,12 @@ function GamingGearPage() {
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                        lineNumber: 160,
+                                        lineNumber: 193,
                                         columnNumber: 74
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 160,
+                                    lineNumber: 193,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -731,18 +822,18 @@ function GamingGearPage() {
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                        lineNumber: 161,
+                                        lineNumber: 194,
                                         columnNumber: 74
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 161,
+                                    lineNumber: 194,
                                     columnNumber: 19
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                            lineNumber: 154,
+                            lineNumber: 187,
                             columnNumber: 17
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -755,7 +846,7 @@ function GamingGearPage() {
                                             children: "Contact"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 167,
+                                            lineNumber: 200,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -768,12 +859,12 @@ function GamingGearPage() {
                                                         children: "Customer Support"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 169,
+                                                        lineNumber: 202,
                                                         columnNumber: 27
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 169,
+                                                    lineNumber: 202,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -783,12 +874,12 @@ function GamingGearPage() {
                                                         children: "Submit a Request"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 170,
+                                                        lineNumber: 203,
                                                         columnNumber: 27
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 170,
+                                                    lineNumber: 203,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -798,12 +889,12 @@ function GamingGearPage() {
                                                         children: "Support Center"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 171,
+                                                        lineNumber: 204,
                                                         columnNumber: 27
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 171,
+                                                    lineNumber: 204,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -813,24 +904,24 @@ function GamingGearPage() {
                                                         children: "Customer Reviews"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 172,
+                                                        lineNumber: 205,
                                                         columnNumber: 27
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 172,
+                                                    lineNumber: 205,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 168,
+                                            lineNumber: 201,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 199,
                                     columnNumber: 19
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -840,7 +931,7 @@ function GamingGearPage() {
                                             children: "About DOMINO"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 176,
+                                            lineNumber: 209,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -851,299 +942,6 @@ function GamingGearPage() {
                                                         href: "#",
                                                         className: "hover:underline",
                                                         children: "Company"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 178,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 178,
-                                                    columnNumber: 23
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "Founder Q & A"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 179,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 179,
-                                                    columnNumber: 23
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "Careers"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 180,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 180,
-                                                    columnNumber: 23
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 177,
-                                            columnNumber: 21
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 175,
-                                    columnNumber: 19
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-lg font-semibold mb-4",
-                                            children: "Community"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 184,
-                                            columnNumber: 21
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                            className: "space-y-2 text-gray-400",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "DOMINO Club"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 186,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 186,
-                                                    columnNumber: 23
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "Podcast"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 187,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 187,
-                                                    columnNumber: 23
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "Newsroom & Blog"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 188,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 188,
-                                                    columnNumber: 23
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 185,
-                                            columnNumber: 21
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 183,
-                                    columnNumber: 19
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-lg font-semibold mb-4",
-                                            children: "Software"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 192,
-                                            columnNumber: 21
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                            className: "space-y-2 text-gray-400",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "CAM"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 194,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 194,
-                                                    columnNumber: 23
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "CAM Feedback"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 195,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 195,
-                                                    columnNumber: 23
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 193,
-                                            columnNumber: 21
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 191,
-                                    columnNumber: 19
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-lg font-semibold mb-4",
-                                            children: "Account"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 199,
-                                            columnNumber: 21
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                            className: "space-y-2 text-gray-400",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                    href: "#",
-                                                    className: "hover:underline",
-                                                    children: "Manage Your Account"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 201,
-                                                    columnNumber: 27
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                lineNumber: 201,
-                                                columnNumber: 23
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 200,
-                                            columnNumber: 21
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 198,
-                                    columnNumber: 19
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-lg font-semibold mb-4",
-                                            children: "DOMINO Store"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 205,
-                                            columnNumber: 21
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                            className: "space-y-2 text-gray-400",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "DOMINO Custom Gaming PC"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 207,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 207,
-                                                    columnNumber: 23
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "Certified Refurbished"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 208,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 208,
-                                                    columnNumber: 23
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "Gaming PCs"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 209,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 209,
-                                                    columnNumber: 23
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "PC Parts and Accessories"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                        lineNumber: 210,
-                                                        columnNumber: 27
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                                    lineNumber: 210,
-                                                    columnNumber: 23
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        href: "#",
-                                                        className: "hover:underline",
-                                                        children: "DOMINO for Business"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
                                                         lineNumber: 211,
@@ -1158,7 +956,7 @@ function GamingGearPage() {
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                         href: "#",
                                                         className: "hover:underline",
-                                                        children: "Find a Retailer"
+                                                        children: "Founder Q & A"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/Gaming-PCs/page.tsx",
                                                         lineNumber: 212,
@@ -1168,23 +966,316 @@ function GamingGearPage() {
                                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
                                                     lineNumber: 212,
                                                     columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "Careers"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 213,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 213,
+                                                    columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                            lineNumber: 206,
+                                            lineNumber: 210,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                    lineNumber: 204,
+                                    lineNumber: 208,
+                                    columnNumber: 19
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                            className: "text-lg font-semibold mb-4",
+                                            children: "Community"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                            lineNumber: 217,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                            className: "space-y-2 text-gray-400",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "DOMINO Club"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 219,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 219,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "Podcast"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 220,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 220,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "Newsroom & Blog"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 221,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 221,
+                                                    columnNumber: 23
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                            lineNumber: 218,
+                                            columnNumber: 21
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                    lineNumber: 216,
+                                    columnNumber: 19
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                            className: "text-lg font-semibold mb-4",
+                                            children: "Software"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                            lineNumber: 225,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                            className: "space-y-2 text-gray-400",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "CAM"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 227,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 227,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "CAM Feedback"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 228,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 228,
+                                                    columnNumber: 23
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                            lineNumber: 226,
+                                            columnNumber: 21
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                    lineNumber: 224,
+                                    columnNumber: 19
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                            className: "text-lg font-semibold mb-4",
+                                            children: "Account"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                            lineNumber: 232,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                            className: "space-y-2 text-gray-400",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: "#",
+                                                    className: "hover:underline",
+                                                    children: "Manage Your Account"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 234,
+                                                    columnNumber: 27
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                lineNumber: 234,
+                                                columnNumber: 23
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                            lineNumber: 233,
+                                            columnNumber: 21
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                    lineNumber: 231,
+                                    columnNumber: 19
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                            className: "text-lg font-semibold mb-4",
+                                            children: "DOMINO Store"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                            lineNumber: 238,
+                                            columnNumber: 21
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                            className: "space-y-2 text-gray-400",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "DOMINO Custom Gaming PC"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 240,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 240,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "Certified Refurbished"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 241,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 241,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "Gaming PCs"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 242,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 242,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "PC Parts and Accessories"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 243,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 243,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "DOMINO for Business"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 244,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 244,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "#",
+                                                        className: "hover:underline",
+                                                        children: "Find a Retailer"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                        lineNumber: 245,
+                                                        columnNumber: 27
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                                    lineNumber: 245,
+                                                    columnNumber: 23
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                            lineNumber: 239,
+                                            columnNumber: 21
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/Gaming-PCs/page.tsx",
+                                    lineNumber: 237,
                                     columnNumber: 19
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                            lineNumber: 165,
+                            lineNumber: 198,
                             columnNumber: 17
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1195,23 +1286,23 @@ function GamingGearPage() {
                                 children: "FAQ"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                                lineNumber: 219,
+                                lineNumber: 252,
                                 columnNumber: 19
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                            lineNumber: 218,
+                            lineNumber: 251,
                             columnNumber: 17
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                    lineNumber: 112,
+                    lineNumber: 145,
                     columnNumber: 15
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/Gaming-PCs/page.tsx",
-                lineNumber: 111,
+                lineNumber: 144,
                 columnNumber: 7
             }, this)
         ]
