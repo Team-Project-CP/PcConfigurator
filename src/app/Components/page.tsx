@@ -74,6 +74,26 @@ export default function Components() {
   const [showCompare, setShowCompare] = useState(false);
   const [wishlist, setWishlist] = useState<ComponentSpec[]>([]);
   const [recommendations, setRecommendations] = useState<ComponentSpec[]>([]);
+  const [detailedFilters, setDetailedFilters] = useState<{
+    [key: string]: {
+      min?: number;
+      max?: number;
+      value?: string | boolean;
+    };
+  }>({});
+  const [selectedManufacturer, setSelectedManufacturer] = useState<string>("");
+  const [showManufacturerFilter, setShowManufacturerFilter] = useState(false);
+
+  // Define manufacturers for each category
+  const manufacturers = {
+    CPU: ["Intel", "AMD"],
+    GPU: ["NVIDIA", "AMD", "Intel"],
+    RAM: ["Corsair", "G.Skill", "Crucial", "Kingston", "Team Group"],
+    Storage: ["Samsung", "Western Digital", "Crucial", "Seagate", "Kingston"],
+    Motherboard: ["ASUS", "MSI", "Gigabyte", "ASRock", "EVGA"],
+    PSU: ["Corsair", "EVGA", "Seasonic", "be quiet!", "Thermaltake"],
+    Cooling: ["NZXT", "Corsair", "be quiet!", "Noctua", "Arctic"]
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -106,13 +126,69 @@ export default function Components() {
     }
   };
 
+  // Get available detailed specs for the selected category
+  const getAvailableDetailedSpecs = () => {
+    if (selectedCategory === "all") return [];
+    const categoryComponents = components.filter(c => c.category === selectedCategory);
+    if (categoryComponents.length === 0) return [];
+
+    const specs = new Set<string>();
+    categoryComponents.forEach(component => {
+      Object.keys(component.detailedSpecs).forEach(spec => {
+        specs.add(spec);
+      });
+    });
+    return Array.from(specs);
+  };
+
+  // Update detailed filters
+  const updateDetailedFilter = (spec: string, value: any, type: 'min' | 'max' | 'value') => {
+    setDetailedFilters(prev => ({
+      ...prev,
+      [spec]: {
+        ...prev[spec],
+        [type]: value
+      }
+    }));
+  };
+
+  // Filter components based on detailed specifications
+  const filterByDetailedSpecs = (component: ComponentSpec) => {
+    if (Object.keys(detailedFilters).length === 0) return true;
+
+    return Object.entries(detailedFilters).every(([spec, filter]) => {
+      const componentSpec = component.detailedSpecs[spec];
+      if (!componentSpec) return false;
+
+      if (typeof componentSpec.value === 'number') {
+        if (filter.min !== undefined && componentSpec.value < filter.min) return false;
+        if (filter.max !== undefined && componentSpec.value > filter.max) return false;
+      } else if (typeof componentSpec.value === 'boolean') {
+        if (filter.value !== undefined && componentSpec.value !== filter.value) return false;
+      } else if (typeof componentSpec.value === 'string') {
+        if (filter.value && typeof filter.value === 'string' && 
+            !componentSpec.value.toLowerCase().includes(filter.value.toLowerCase())) return false;
+      }
+      return true;
+    });
+  };
+
+  // Filter components by manufacturer
+  const filterByManufacturer = (component: ComponentSpec) => {
+    if (!selectedManufacturer) return true;
+    return component.name.toLowerCase().includes(selectedManufacturer.toLowerCase());
+  };
+
+  // Update filtered components to include manufacturer filter
   const filteredComponents = handleSort(
     components.filter(component => {
       const matchesCategory = selectedCategory === "all" || component.category === selectedCategory;
       const matchesPrice = component.price >= priceRange[0] && component.price <= priceRange[1];
       const matchesSearch = component.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            component.description.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesPrice && matchesSearch;
+      const matchesDetailedSpecs = filterByDetailedSpecs(component);
+      const matchesManufacturer = filterByManufacturer(component);
+      return matchesCategory && matchesPrice && matchesSearch && matchesDetailedSpecs && matchesManufacturer;
     })
   );
 
@@ -226,7 +302,10 @@ export default function Components() {
             <select
               className="px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-purple-500"
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={(e) => {
+                setSelectedCategory(e.target.value);
+                setDetailedFilters({}); // Reset detailed filters when category changes
+              }}
             >
               {categories.map(category => (
                 <option key={category} value={category}>
@@ -247,6 +326,176 @@ export default function Components() {
             </select>
           </div>
         </div>
+
+        {/* Detailed Filters */}
+        {selectedCategory !== "all" && (
+          <div className="mb-8 p-4 bg-gray-50 rounded-lg">
+            <h3 className="text-lg font-semibold mb-4">Detailed Filters</h3>
+            
+            {/* Manufacturer Filter */}
+            <div className="mb-6">
+              <button
+                onClick={() => setShowManufacturerFilter(!showManufacturerFilter)}
+                className="flex items-center justify-between w-full p-3 bg-white rounded-lg shadow-sm hover:bg-gray-50 transition-all duration-300"
+              >
+                <span className="font-medium">Manufacturer</span>
+                <svg
+                  className={`w-5 h-5 transform transition-transform duration-300 ${
+                    showManufacturerFilter ? 'rotate-180' : ''
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              <div
+                className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-2 overflow-hidden transition-all duration-300 ${
+                  showManufacturerFilter ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                {manufacturers[selectedCategory as keyof typeof manufacturers]?.map((manufacturer) => (
+                  <button
+                    key={manufacturer}
+                    onClick={() => setSelectedManufacturer(selectedManufacturer === manufacturer ? "" : manufacturer)}
+                    className={`p-2 rounded-lg text-sm transition-all duration-300 transform hover:scale-105 ${
+                      selectedManufacturer === manufacturer
+                        ? 'bg-purple-600 text-white'
+                        : 'bg-white text-gray-700 hover:bg-purple-50'
+                    }`}
+                  >
+                    {manufacturer}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Existing Detailed Specs Filters */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {getAvailableDetailedSpecs().map(spec => {
+                const categoryComponents = components.filter(c => c.category === selectedCategory);
+                const specValues = categoryComponents.map(c => c.detailedSpecs[spec]?.value);
+                const isNumeric = specValues.every(v => typeof v === 'number');
+                const isBoolean = specValues.every(v => typeof v === 'boolean');
+                const isString = specValues.every(v => typeof v === 'string');
+
+                if (isNumeric) {
+                  const min = Math.min(...specValues as number[]);
+                  const max = Math.max(...specValues as number[]);
+                  const description = categoryComponents[0]?.detailedSpecs[spec]?.description;
+                  return (
+                    <div key={spec} className="space-y-2 transform transition-all duration-300 hover:scale-105 group relative">
+                      <div className="flex items-center gap-2">
+                        <label className="block text-sm font-medium text-gray-700">{spec}</label>
+                        {description && (
+                          <div className="relative">
+                            <FaQuestionCircle className="text-gray-400 hover:text-purple-500 cursor-help transition-colors duration-300" />
+                            <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-64 p-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+                              {description}
+                              <div className="absolute left-1/2 -translate-x-1/2 top-full w-2 h-2 bg-gray-900 transform rotate-45"></div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      <div className="flex gap-2">
+                        <input
+                          type="number"
+                          placeholder="Min"
+                          className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                          value={detailedFilters[spec]?.min || ''}
+                          onChange={(e) => updateDetailedFilter(spec, parseFloat(e.target.value), 'min')}
+                        />
+                        <input
+                          type="number"
+                          placeholder="Max"
+                          className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                          value={detailedFilters[spec]?.max || ''}
+                          onChange={(e) => updateDetailedFilter(spec, parseFloat(e.target.value), 'max')}
+                        />
+                      </div>
+                    </div>
+                  );
+                } else if (isBoolean) {
+                  const description = categoryComponents[0]?.detailedSpecs[spec]?.description;
+                  return (
+                    <div key={spec} className="space-y-2 transform transition-all duration-300 hover:scale-105 group relative">
+                      <div className="flex items-center gap-2">
+                        <label className="block text-sm font-medium text-gray-700">{spec}</label>
+                        {description && (
+                          <div className="relative">
+                            <FaQuestionCircle className="text-gray-400 hover:text-purple-500 cursor-help transition-colors duration-300" />
+                            <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-64 p-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+                              {description}
+                              <div className="absolute left-1/2 -translate-x-1/2 top-full w-2 h-2 bg-gray-900 transform rotate-45"></div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      <select
+                        className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                        value={typeof detailedFilters[spec]?.value === 'boolean' 
+                          ? detailedFilters[spec]?.value.toString() 
+                          : ''}
+                        onChange={(e) => {
+                          const value = e.target.value;
+                          if (value === '') {
+                            updateDetailedFilter(spec, undefined, 'value');
+                          } else {
+                            updateDetailedFilter(spec, value === 'true', 'value');
+                          }
+                        }}
+                      >
+                        <option value="">Any</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                      </select>
+                    </div>
+                  );
+                } else if (isString) {
+                  const description = categoryComponents[0]?.detailedSpecs[spec]?.description;
+                  // Get unique values for this spec
+                  const uniqueValues = Array.from(new Set(
+                    categoryComponents
+                      .map(c => c.detailedSpecs[spec]?.value)
+                      .filter((value): value is string => typeof value === 'string')
+                  )).sort();
+
+                  return (
+                    <div key={spec} className="space-y-2 transform transition-all duration-300 hover:scale-105 group relative">
+                      <div className="flex items-center gap-2">
+                        <label className="block text-sm font-medium text-gray-700">{spec}</label>
+                        {description && (
+                          <div className="relative">
+                            <FaQuestionCircle className="text-gray-400 hover:text-purple-500 cursor-help transition-colors duration-300" />
+                            <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-64 p-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+                              {description}
+                              <div className="absolute left-1/2 -translate-x-1/2 top-full w-2 h-2 bg-gray-900 transform rotate-45"></div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      <select
+                        className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                        value={typeof detailedFilters[spec]?.value === 'string' ? detailedFilters[spec]?.value : ''}
+                        onChange={(e) => updateDetailedFilter(spec, e.target.value || undefined, 'value')}
+                      >
+                        <option value="">Any</option>
+                        {uniqueValues.map((value) => (
+                          <option key={value} value={value}>
+                            {value}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  );
+                }
+                return null;
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Price Range Section */}
         <div className="mb-8">
