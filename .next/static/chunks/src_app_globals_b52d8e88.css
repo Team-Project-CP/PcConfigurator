@@ -2139,12 +2139,6 @@
   }
 
   @media (width >= 48rem) {
-    .md\:w-auto {
-      width: auto;
-    }
-  }
-
-  @media (width >= 48rem) {
     .md\:max-w-lg {
       max-width: var(--container-lg);
     }
