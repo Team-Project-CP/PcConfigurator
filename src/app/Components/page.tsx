@@ -256,7 +256,7 @@ export default function Components() {
       {/* Navigation */}
       <nav className={`text-white bg-black px-8 py-4 flex justify-center items-center transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
         <div className="flex items-center space-x-8">
-          <Link href="/" className="text-2xl font-bold hover:text-purple-600 transition-colors">Domino</Link>
+          <span className="text-2xl font-bold">Domino</span>
           <div className="hidden md:flex space-x-6">
             <a href="#" className="hover:text-gray-400">Deals</a>
             <a href="#" className="hover:text-gray-400">Gaming PCs</a>
@@ -593,78 +593,36 @@ export default function Components() {
         {/* Components Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredComponents.map(component => (
-            <div
+            <Link
               key={component.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+              href={`/Components/${component.id}`}
+              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              <Link href={`/Components/${component.id}`} className="block">
-                <div className="relative">
-                  <div className="aspect-square w-full overflow-hidden">
-                    <img
-                      src={component.image}
-                      alt={component.name}
-                      className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded transition-all duration-300 group-hover:bg-purple-700">
-                    {component.category}
-                  </div>
+              <div className="relative">
+                <div className="aspect-square w-full overflow-hidden">
+                  <img
+                    src={component.image}
+                    alt={component.name}
+                    className="w-full h-full object-contain p-4"
+                  />
                 </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-semibold mb-2 transition-colors duration-300 group-hover:text-purple-600">{component.name}</h3>
-                  <p className="text-gray-600 mb-4 transition-colors duration-300 group-hover:text-gray-800">{component.description}</p>
-                </div>
-              </Link>
-              <div className="px-4 pb-4">
-                <div className="flex flex-col gap-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-purple-600 transition-all duration-300 group-hover:scale-105">
-                      ${component.price}
-                    </span>
-                    <div className="flex gap-2">
-                      <button 
-                        onClick={() => toggleWishlist(component)}
-                        className={`p-2 rounded-full transition-all duration-300 transform hover:scale-110 ${
-                          wishlist.find(item => item.id === component.id)
-                            ? "bg-red-500 text-white"
-                            : "bg-gray-200 text-gray-600 hover:bg-gray-300"
-                        }`}
-                      >
-                        <FaHeart size={20} />
-                      </button>
-                      <button 
-                        onClick={() => toggleCompare(component)}
-                        className={`p-2 rounded-full transition-all duration-300 transform hover:scale-110 ${
-                          compareList.find(item => item.id === component.id)
-                            ? "bg-purple-600 text-white"
-                            : "bg-gray-200 text-gray-600 hover:bg-gray-300"
-                        }`}
-                      >
-                        <FaBalanceScale size={20} />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <button 
-                      onClick={() => {
-                        // Add to cart functionality here
-                      }}
-                      className="flex-1 bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                    >
-                      <FaShoppingCart size={16} />
-                      Add to Cart
-                    </button>
-                    <Link
-                      href={`/Components/${component.id}`}
-                      className="flex-1 bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                    >
-                      <FaEye size={16} />
-                      View Details
-                    </Link>
-                  </div>
+                <div className="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded">
+                  {component.category}
                 </div>
               </div>
-            </div>
+              <div className="p-4">
+                <h3 className="text-xl font-semibold mb-2">{component.name}</h3>
+                <p className="text-gray-600 mb-4">{component.description}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold text-purple-600">
+                    ${component.price}
+                  </span>
+                  <button className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -1,16 +1,14 @@
 "use client";
-import Link from "next/link";
+import Link from "next/link"
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
-import { FaHammer, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
 import { useState, useEffect } from "react";
 import Loader from "./loader";
+import { FaHammer, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
 
 export default function Navbar() {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoginForm, setIsLoginForm] = useState(true); // State to toggle between login and registration
 
   useEffect(() => {
     // Simulate loading
@@ -20,140 +18,15 @@ export default function Navbar() {
     }, 6000);
   }, []);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-    setIsLoginForm(true); // Reset to login form when closing modal
-  };
-
-  const toggleForm = () => {
-    setIsLoginForm(!isLoginForm);
-  };
-
   if (loading) {
     return <Loader />;
   }
 
   return (
     <div>
-      {/* Login/Registration Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 backdrop-blur flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-full max-w-sm relative">
-            {/* Close Button */}
-            <button
-              onClick={toggleModal}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            {/* Modal Content */}
-            <div className="flex flex-col items-center">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">DOMINO</h2>
-              <button className="w-full border border-gray-300 text-gray-700 py-2 rounded-lg mb-4 hover:bg-gray-100 transition-all flex items-center justify-center">
-                <img src="/google.png" alt="Google Icon" className="w-5 h-5 mr-2" /> {/* Replace with actual Google icon path */}
-                Sign in with Google
-              </button>
-              <p className="text-gray-500 text-sm mb-4">Or continue with</p>
-
-              {isLoginForm ? (
-                // Login Form
-                <form className="w-full space-y-4">
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="password"
-                      placeholder="Password"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <div className="flex justify-between items-center text-sm">
-                    <label className="flex items-center">
-                      <input type="checkbox" className="mr-2" />
-                      Remember me
-                    </label>
-                    <a href="#" className="text-blue-600 hover:underline">Forgot password?</a>
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all"
-                  >
-                    Sign In
-                  </button>
-                </form>
-              ) : (
-                // Registration Form
-                <form className="w-full space-y-4">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Full Name"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="password"
-                      placeholder="Password"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="password"
-                      placeholder="Confirm Password"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all"
-                  >
-                    Register
-                  </button>
-                </form>
-              )}
-
-              <p className="text-sm text-gray-600 mt-4">
-                {isLoginForm ? (
-                  <>
-                    Not a member?{' '}
-                    <a href="#" onClick={toggleForm} className="text-blue-600 hover:underline">
-                      Create account
-                    </a>
-                  </>
-                ) : (
-                  <>
-                    Already have an account?{' '}
-                    <a href="#" onClick={toggleForm} className="text-blue-600 hover:underline">
-                      Sign in
-                    </a>
-                  </>
-                )}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Top Banner */}
       <div className={`bg-purple-600 text-white text-center text-sm py-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-        Certified Refurbished Gaming PCs. <a href="#" className="underline">Shop now</a>
+        Certified Refurbished Gaming PCs. <a href="#" className="underline">Shop now &gt;</a>
       </div>
 
       {/* Navigation */}
@@ -176,7 +49,7 @@ export default function Navbar() {
         <div className="flex space-x-6 ml-auto">
           <FaSearch className="text-xl hover:text-gray-400 cursor-pointer" />
           <FaQuestionCircle className="text-xl hover:text-gray-400 cursor-pointer" />
-          <FaUser className="text-xl hover:text-gray-400 cursor-pointer" onClick={toggleModal} />
+          <FaUser className="text-xl hover:text-gray-400 cursor-pointer" />
           <FaShoppingCart className="text-xl hover:text-gray-400 cursor-pointer" />
         </div>
       </nav>
@@ -397,8 +270,10 @@ export default function Navbar() {
             <div className="relative group">
               <img
                 src="PartnerLogos.png"
-                className="w-full max-w-2xl h-auto transition-transform duration-500"
+                className="w-full max-w-2xl h-auto  transition-transform duration-500 "
+               
               />
+            
             </div>
           </div>
         </div>
