@@ -1574,7 +1574,13 @@ function DominoClub() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "w-32 h-32 mx-auto mb-4 bg-gray-300 flex items-center justify-center",
-                                            children: "[Placeholder for Quest Image]"
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                src: "/club1.png"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/Community/page.tsx",
+                                                lineNumber: 39,
+                                                columnNumber: 20
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Community/page.tsx",
                                             lineNumber: 38,
@@ -1585,7 +1591,7 @@ function DominoClub() {
                                             children: "Complete Quests"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Community/page.tsx",
-                                            lineNumber: 41,
+                                            lineNumber: 43,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1593,7 +1599,7 @@ function DominoClub() {
                                             children: "Take fun tasks on your favorite platforms. The more quests you complete, the more progress in the NZXT Club"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Community/page.tsx",
-                                            lineNumber: 42,
+                                            lineNumber: 44,
                                             columnNumber: 15
                                         }, this)
                                     ]
@@ -1607,10 +1613,16 @@ function DominoClub() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "w-32 h-32 mx-auto mb-4 bg-gray-300 flex items-center justify-center",
-                                            children: "[Placeholder for Points Image]"
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                src: "/club2.png"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/Community/page.tsx",
+                                                lineNumber: 49,
+                                                columnNumber: 22
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Community/page.tsx",
-                                            lineNumber: 46,
+                                            lineNumber: 48,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1618,7 +1630,7 @@ function DominoClub() {
                                             children: "Earn Pucci Points"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Community/page.tsx",
-                                            lineNumber: 49,
+                                            lineNumber: 53,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1626,13 +1638,13 @@ function DominoClub() {
                                             children: "Earn Pucci Points by completing quests and checking back daily for new opportunities. Each quest gets you closer to exclusive experiences"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Community/page.tsx",
-                                            lineNumber: 50,
+                                            lineNumber: 54,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Community/page.tsx",
-                                    lineNumber: 45,
+                                    lineNumber: 47,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1640,10 +1652,16 @@ function DominoClub() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "w-32 h-32 mx-auto mb-4 bg-gray-300 flex items-center justify-center",
-                                            children: "[Placeholder for Rewards Image]"
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                src: "/club3.png"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/Community/page.tsx",
+                                                lineNumber: 59,
+                                                columnNumber: 21
+                                            }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Community/page.tsx",
-                                            lineNumber: 54,
+                                            lineNumber: 58,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1651,7 +1669,7 @@ function DominoClub() {
                                             children: "Unlock Rewards"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Community/page.tsx",
-                                            lineNumber: 57,
+                                            lineNumber: 63,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1659,13 +1677,13 @@ function DominoClub() {
                                             children: "Unlock rewards and exclusive experiences and perks that you won’t find anywhere else. The more you engage, the more you unlock!"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Community/page.tsx",
-                                            lineNumber: 58,
+                                            lineNumber: 64,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Community/page.tsx",
-                                    lineNumber: 53,
+                                    lineNumber: 57,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -1700,7 +1718,7 @@ function DominoClub() {
                                         children: "Invite Your Friends"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Community/page.tsx",
-                                        lineNumber: 70,
+                                        lineNumber: 76,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1708,21 +1726,27 @@ function DominoClub() {
                                         children: "Spread the word! Invite your friends to join the NZXT Club and earn Pucci Points when they sign up. The more friends you invite, the more rewards you’ll unlock!"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Community/page.tsx",
-                                        lineNumber: 71,
+                                        lineNumber: 77,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-full h-48 bg-gray-300 flex items-center justify-center",
-                                        children: "[Placeholder for Friends Image]"
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                            src: "/club4.png"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Community/page.tsx",
+                                            lineNumber: 79,
+                                            columnNumber: 25
+                                        }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Community/page.tsx",
-                                        lineNumber: 72,
+                                        lineNumber: 78,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/Community/page.tsx",
-                                lineNumber: 69,
+                                lineNumber: 75,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1733,7 +1757,7 @@ function DominoClub() {
                                         children: "See How You Stack Up"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Community/page.tsx",
-                                        lineNumber: 78,
+                                        lineNumber: 86,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1741,37 +1765,43 @@ function DominoClub() {
                                         children: "Climb the leaderboard by completing quests and earning Pucci Points. Compete with NZXT fans and showcase your status. The higher the rank, the better!"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Community/page.tsx",
-                                        lineNumber: 79,
+                                        lineNumber: 87,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "w-full h-48 bg-gray-300 flex items-center justify-center",
-                                        children: "[Placeholder for Leaderboard Image]"
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                            src: "/club5.png"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/Community/page.tsx",
+                                            lineNumber: 89,
+                                            columnNumber: 23
+                                        }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/Community/page.tsx",
-                                        lineNumber: 80,
+                                        lineNumber: 88,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/Community/page.tsx",
-                                lineNumber: 77,
+                                lineNumber: 85,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/Community/page.tsx",
-                        lineNumber: 67,
+                        lineNumber: 73,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/Community/page.tsx",
-                    lineNumber: 66,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/Community/page.tsx",
-                lineNumber: 65,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1784,7 +1814,7 @@ function DominoClub() {
                             children: "Your Rewards Await"
                         }, void 0, false, {
                             fileName: "[project]/src/app/Community/page.tsx",
-                            lineNumber: 91,
+                            lineNumber: 101,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1792,7 +1822,7 @@ function DominoClub() {
                             children: "Join the NZXT Club today to unlock exclusive rewards and be part of one of our most exciting experiences as we continue to build a community. The more you contribute, the more you’ll grow together!"
                         }, void 0, false, {
                             fileName: "[project]/src/app/Community/page.tsx",
-                            lineNumber: 92,
+                            lineNumber: 102,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1800,7 +1830,7 @@ function DominoClub() {
                             children: "Join the Club"
                         }, void 0, false, {
                             fileName: "[project]/src/app/Community/page.tsx",
-                            lineNumber: 93,
+                            lineNumber: 103,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1810,30 +1840,30 @@ function DominoClub() {
                                 children: "[Placeholder for Rewards Image]"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/Community/page.tsx",
-                                lineNumber: 97,
+                                lineNumber: 107,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/Community/page.tsx",
-                            lineNumber: 96,
+                            lineNumber: 106,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/Community/page.tsx",
-                    lineNumber: 90,
+                    lineNumber: 100,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/Community/page.tsx",
-                lineNumber: 89,
+                lineNumber: 99,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$Footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 isVisible: isVisible
             }, void 0, false, {
                 fileName: "[project]/src/app/Community/page.tsx",
-                lineNumber: 105,
+                lineNumber: 115,
                 columnNumber: 8
             }, this)
         ]

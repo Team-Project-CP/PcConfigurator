@@ -36,7 +36,9 @@ export default function DominoClub() {
             {/* Complete Quests */}
             <div className="bg-purple-50 p-6 rounded-lg text-center">
               <div className="w-32 h-32 mx-auto mb-4 bg-gray-300 flex items-center justify-center">
-                [Placeholder for Quest Image]
+                   <img
+        src="/club1.png"
+      />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Complete Quests</h3>
               <p className="text-gray-600">Take fun tasks on your favorite platforms. The more quests you complete, the more progress in the NZXT Club</p>
@@ -44,7 +46,9 @@ export default function DominoClub() {
             {/* Earn Pucci Points */}
             <div className="bg-purple-50 p-6 rounded-lg text-center">
               <div className="w-32 h-32 mx-auto mb-4 bg-gray-300 flex items-center justify-center">
-                [Placeholder for Points Image]
+                     <img
+        src="/club2.png"
+      />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Earn Pucci Points</h3>
               <p className="text-gray-600">Earn Pucci Points by completing quests and checking back daily for new opportunities. Each quest gets you closer to exclusive experiences</p>
@@ -52,7 +56,9 @@ export default function DominoClub() {
             {/* Unlock Rewards */}
             <div className="bg-purple-50 p-6 rounded-lg text-center">
               <div className="w-32 h-32 mx-auto mb-4 bg-gray-300 flex items-center justify-center">
-                [Placeholder for Rewards Image]
+                    <img
+        src="/club3.png"
+      />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Unlock Rewards</h3>
               <p className="text-gray-600">Unlock rewards and exclusive experiences and perks that you won’t find anywhere else. The more you engage, the more you unlock!</p>
@@ -70,7 +76,9 @@ export default function DominoClub() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Invite Your Friends</h3>
               <p className="text-gray-600 mb-4">Spread the word! Invite your friends to join the NZXT Club and earn Pucci Points when they sign up. The more friends you invite, the more rewards you’ll unlock!</p>
               <div className="w-full h-48 bg-gray-300 flex items-center justify-center">
-                [Placeholder for Friends Image]
+                        <img
+        src="/club4.png"
+      />
               </div>
             </div>
             {/* See How You Stack Up */}
@@ -78,7 +86,9 @@ export default function DominoClub() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">See How You Stack Up</h3>
               <p className="text-gray-600 mb-4">Climb the leaderboard by completing quests and earning Pucci Points. Compete with NZXT fans and showcase your status. The higher the rank, the better!</p>
               <div className="w-full h-48 bg-gray-300 flex items-center justify-center">
-                [Placeholder for Leaderboard Image]
+                      <img
+        src="/club5.png"
+      />
               </div>
             </div>
           </div>
