@@ -1010,6 +1010,21 @@
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 
+  .translate-y-8 {
+    --tw-translate-y: calc(var(--spacing) * 8);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  .translate-y-10 {
+    --tw-translate-y: calc(var(--spacing) * 10);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  .translate-y-20 {
+    --tw-translate-y: calc(var(--spacing) * 20);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
@@ -1918,6 +1933,10 @@
     transition-delay: .2s;
   }
 
+  .delay-300 {
+    transition-delay: .3s;
+  }
+
   .delay-400 {
     transition-delay: .4s;
   }
@@ -1926,44 +1945,248 @@
     transition-delay: .6s;
   }
 
+  .delay-700 {
+    transition-delay: .7s;
+  }
+
   .delay-800 {
     transition-delay: .8s;
+  }
+
+  .delay-900 {
+    transition-delay: .9s;
   }
 
   .delay-1000 {
     transition-delay: 1s;
   }
 
+  .delay-1100 {
+    transition-delay: 1.1s;
+  }
+
   .delay-1200 {
     transition-delay: 1.2s;
+  }
+
+  .delay-1300 {
+    transition-delay: 1.3s;
   }
 
   .delay-1400 {
     transition-delay: 1.4s;
   }
 
+  .delay-1500 {
+    transition-delay: 1.5s;
+  }
+
   .delay-1600 {
     transition-delay: 1.6s;
+  }
+
+  .delay-1700 {
+    transition-delay: 1.7s;
   }
 
   .delay-1800 {
     transition-delay: 1.8s;
   }
 
+  .delay-1900 {
+    transition-delay: 1.9s;
+  }
+
   .delay-2000 {
     transition-delay: 2s;
+  }
+
+  .delay-2100 {
+    transition-delay: 2.1s;
   }
 
   .delay-2200 {
     transition-delay: 2.2s;
   }
 
+  .delay-2300 {
+    transition-delay: 2.3s;
+  }
+
   .delay-2400 {
     transition-delay: 2.4s;
   }
 
+  .delay-2500 {
+    transition-delay: 2.5s;
+  }
+
   .delay-2600 {
     transition-delay: 2.6s;
+  }
+
+  .delay-2700 {
+    transition-delay: 2.7s;
+  }
+
+  .delay-2800 {
+    transition-delay: 2.8s;
+  }
+
+  .delay-2900 {
+    transition-delay: 2.9s;
+  }
+
+  .delay-3000 {
+    transition-delay: 3s;
+  }
+
+  .delay-3100 {
+    transition-delay: 3.1s;
+  }
+
+  .delay-3200 {
+    transition-delay: 3.2s;
+  }
+
+  .delay-3300 {
+    transition-delay: 3.3s;
+  }
+
+  .delay-3400 {
+    transition-delay: 3.4s;
+  }
+
+  .delay-3500 {
+    transition-delay: 3.5s;
+  }
+
+  .delay-3600 {
+    transition-delay: 3.6s;
+  }
+
+  .delay-3700 {
+    transition-delay: 3.7s;
+  }
+
+  .delay-3800 {
+    transition-delay: 3.8s;
+  }
+
+  .delay-3900 {
+    transition-delay: 3.9s;
+  }
+
+  .delay-4000 {
+    transition-delay: 4s;
+  }
+
+  .delay-4100 {
+    transition-delay: 4.1s;
+  }
+
+  .delay-4200 {
+    transition-delay: 4.2s;
+  }
+
+  .delay-4300 {
+    transition-delay: 4.3s;
+  }
+
+  .delay-4400 {
+    transition-delay: 4.4s;
+  }
+
+  .delay-4500 {
+    transition-delay: 4.5s;
+  }
+
+  .delay-4600 {
+    transition-delay: 4.6s;
+  }
+
+  .delay-4700 {
+    transition-delay: 4.7s;
+  }
+
+  .delay-4800 {
+    transition-delay: 4.8s;
+  }
+
+  .delay-4900 {
+    transition-delay: 4.9s;
+  }
+
+  .delay-5000 {
+    transition-delay: 5s;
+  }
+
+  .delay-5100 {
+    transition-delay: 5.1s;
+  }
+
+  .delay-5200 {
+    transition-delay: 5.2s;
+  }
+
+  .delay-5300 {
+    transition-delay: 5.3s;
+  }
+
+  .delay-5400 {
+    transition-delay: 5.4s;
+  }
+
+  .delay-5500 {
+    transition-delay: 5.5s;
+  }
+
+  .delay-5600 {
+    transition-delay: 5.6s;
+  }
+
+  .delay-5700 {
+    transition-delay: 5.7s;
+  }
+
+  .delay-5800 {
+    transition-delay: 5.8s;
+  }
+
+  .delay-5900 {
+    transition-delay: 5.9s;
+  }
+
+  .delay-6000 {
+    transition-delay: 6s;
+  }
+
+  .delay-6100 {
+    transition-delay: 6.1s;
+  }
+
+  .delay-6200 {
+    transition-delay: 6.2s;
+  }
+
+  .delay-6300 {
+    transition-delay: 6.3s;
+  }
+
+  .delay-6400 {
+    transition-delay: 6.4s;
+  }
+
+  .delay-6500 {
+    transition-delay: 6.5s;
+  }
+
+  .delay-6600 {
+    transition-delay: 6.6s;
+  }
+
+  .delay-6700 {
+    transition-delay: 6.7s;
   }
 
   .duration-300 {
@@ -1979,6 +2202,11 @@
   .duration-1000 {
     --tw-duration: 1s;
     transition-duration: 1s;
+  }
+
+  .duration-1500 {
+    --tw-duration: 1.5s;
+    transition-duration: 1.5s;
   }
 
   .ease-in-out {
