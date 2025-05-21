@@ -37,6 +37,9 @@ export default function ComponentDetail() {
   const [component, setComponent] = useState<ComponentSpec | null>(null);
   const [recommendations, setRecommendations] = useState<ComponentSpec[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [isComparing, setIsComparing] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -62,6 +65,18 @@ export default function ComponentDetail() {
 
     fetchData();
   }, [params.id]);
+
+  const toggleFavorite = () => {
+    setIsFavorite(!isFavorite);
+  };
+
+  const toggleCompare = () => {
+    setIsComparing(!isComparing);
+  };
+
+  const toggleTooltip = (key: string) => {
+    setActiveTooltip(activeTooltip === key ? null : key);
+  };
 
   if (loading || !component) {
     return (
@@ -105,20 +120,32 @@ export default function ComponentDetail() {
               <p className="text-gray-600 mb-6">{component.description}</p>
 
               {/* Price and Actions */}
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
                 <span className="text-4xl font-bold text-purple-600">
                   ${component.price}
                 </span>
-                <div className="flex gap-4">
-                  <button className="p-2 rounded bg-gray-200 hover:bg-gray-300">
-                    <FaHeart className="text-gray-600" size={20} />
+                <div className="flex gap-4 w-full sm:w-auto">
+                  <button 
+                    onClick={toggleFavorite}
+                    className={`p-2 rounded flex-1 sm:flex-none ${isFavorite ? 'bg-red-500 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
+                    aria-label={isFavorite ? "Удалить из избранного" : "Добавить в избранное"}
+                  >
+                    <FaHeart className={`${isFavorite ? 'text-white' : 'text-gray-600'}`} size={20} />
                   </button>
-                  <button className="p-2 rounded bg-gray-200 hover:bg-gray-300">
-                    <FaBalanceScale className="text-gray-600" size={20} />
+                  <button 
+                    onClick={toggleCompare}
+                    className={`p-2 rounded flex-1 sm:flex-none ${isComparing ? 'bg-blue-500 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
+                    aria-label={isComparing ? "Удалить из сравнения" : "Добавить к сравнению"}
+                  >
+                    <FaBalanceScale className={`${isComparing ? 'text-white' : 'text-gray-600'}`} size={20} />
                   </button>
-                  <button className="flex items-center gap-2 bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700">
+                  <button 
+                    className="flex items-center justify-center gap-2 bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700 flex-1 sm:flex-none"
+                    aria-label="Добавить в корзину"
+                  >
                     <FaShoppingCart />
-                    Add to Cart
+                    <span className="hidden sm:inline">Add to Cart</span>
+                    <span className="sm:hidden">Купить</span>
                   </button>
                 </div>
               </div>
@@ -126,31 +153,37 @@ export default function ComponentDetail() {
               {/* Detailed Specifications */}
               <div className="border-t pt-6">
                 <h2 className="text-xl font-semibold mb-4">Specifications</h2>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {Object.entries(component.detailedSpecs).map(([key, spec]) => (
-                    <div key={key} className="flex items-center justify-between p-3 bg-gray-800 rounded-lg">
-                      <div className="flex items-center gap-2">
-                        <span className="text-gray-400">{key}</span>
+                    <div key={key} className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-gray-800 rounded-lg gap-2">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-gray-400 min-w-[120px]">{key}</span>
                         {spec.description && (
-                          <div className="group relative">
-                            <button className="text-gray-400 hover:text-gray-300">
+                          <div className="relative">
+                            <button 
+                              onClick={() => toggleTooltip(key)}
+                              className="text-gray-400 hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-full p-1"
+                              aria-label="Показать описание"
+                            >
                               <FaQuestionCircle className="w-4 h-4" />
                             </button>
-                            <div className="absolute left-0 bottom-full mb-2 hidden group-hover:block z-50">
-                              <div className="bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
-                                <div className="text-sm">{spec.description}</div>
+                            {(activeTooltip === key || window.matchMedia('(hover: hover)').matches) && (
+                              <div className={`absolute left-0 ${window.matchMedia('(hover: hover)').matches ? 'bottom-full mb-2 hidden group-hover:block' : 'top-full mt-2'} z-50`}>
+                                <div className="bg-white text-gray-900 p-4 rounded-lg shadow-lg max-w-xs">
+                                  <div className="text-sm">{spec.description}</div>
+                                </div>
                               </div>
-                            </div>
+                            )}
                           </div>
                         )}
-                        <span className="text-white">
+                        <span className="text-white break-words">
                           {typeof spec.value === 'boolean' 
                             ? spec.value ? 'Yes' : 'No'
                             : spec.value}{spec.unit ? ` ${spec.unit}` : ''}
                         </span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-24 h-2 bg-gray-700 rounded-full">
+                      <div className="flex items-center gap-2 min-w-[140px]">
+                        <div className="w-20 sm:w-24 h-2 bg-gray-700 rounded-full flex-shrink-0">
                           <div 
                             className="h-full rounded-full"
                             style={{ 
@@ -161,7 +194,7 @@ export default function ComponentDetail() {
                             }}
                           />
                         </div>
-                        <span className="text-sm text-gray-400">{spec.score}</span>
+                        <span className="text-sm text-gray-400 whitespace-nowrap">{spec.score}</span>
                       </div>
                     </div>
                   ))}
