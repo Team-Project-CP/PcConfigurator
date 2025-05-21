@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { FaArrowLeft, FaShoppingCart, FaHeart, FaBalanceScale, FaQuestionCircle } from 'react-icons/fa';
 import { components } from '@/lib/data/components';
+import PaymentModal from '@/app/Components/PaymentModal';
 
 // Component interface for type safety
 interface ComponentSpec {
@@ -40,6 +41,7 @@ export default function ComponentDetail() {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
   const [isFavorite, setIsFavorite] = useState(false);
   const [isComparing, setIsComparing] = useState(false);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -140,12 +142,13 @@ export default function ComponentDetail() {
                     <FaBalanceScale className={`${isComparing ? 'text-white' : 'text-gray-600'}`} size={20} />
                   </button>
                   <button 
+                    onClick={() => setIsPaymentModalOpen(true)}
                     className="flex items-center justify-center gap-2 bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700 flex-1 sm:flex-none"
-                    aria-label="Добавить в корзину"
+                    aria-label="Add to cart"
                   >
                     <FaShoppingCart />
                     <span className="hidden sm:inline">Add to Cart</span>
-                    <span className="sm:hidden">Купить</span>
+                    <span className="sm:hidden">Buy Now</span>
                   </button>
                 </div>
               </div>
@@ -163,7 +166,7 @@ export default function ComponentDetail() {
                             <button 
                               onClick={() => toggleTooltip(key)}
                               className="text-gray-400 hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-full p-1"
-                              aria-label="Показать описание"
+                              aria-label="Show description"
                             >
                               <FaQuestionCircle className="w-4 h-4" />
                             </button>
@@ -256,6 +259,16 @@ export default function ComponentDetail() {
               ))}
             </div>
           </div>
+        )}
+
+        {/* Payment Modal */}
+        {component && (
+          <PaymentModal
+            isOpen={isPaymentModalOpen}
+            onClose={() => setIsPaymentModalOpen(false)}
+            amount={component.price}
+            componentName={component.name}
+          />
         )}
       </div>
     </div>
