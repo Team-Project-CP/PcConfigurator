@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
+import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart, FaBars } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import Loader from "./loader";
 
@@ -9,6 +9,7 @@ export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoginForm, setIsLoginForm] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -26,14 +27,19 @@ export default function Header() {
     setIsLoginForm(!isLoginForm);
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   if (loading) {
     return <Loader />;
   }
 
   return (
     <>
+      {/* Login/Register Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 backdrop-blur flex items-center justify-center z-50">
+        <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-6 w-full max-w-sm relative">
             <button
               onClick={toggleModal}
@@ -137,37 +143,64 @@ export default function Header() {
           </div>
         </div>
       )}
+
+      {/* Top Banner */}
       <div className={`bg-purple-600 text-white text-center text-sm py-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
         Certified Refurbished Gaming PCs. <a href="#" className="underline">Shop now</a>
       </div>
-      <nav className={`text-white bg-black px-8 py-4 flex justify-center items-center transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-        <div className="flex items-center space-x-8">
+
+      {/* Main Navigation */}
+      <nav className={`text-white bg-black px-4 sm:px-8 py-4 flex justify-between items-center transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+        <div className="flex items-center space-x-4">
           <a href="/" className="text-2xl font-bold">Domino</a>
-          <div className="hidden md:flex space-x-6">
-            <a href="#" className="hover:text-gray-400">Deals</a>
-            <a href="/Gaming-PCs" className="hover:text-gray-400">Gaming PCs</a>
-            <a href="#" className="hover:text-gray-400">Components</a>
-            <a href="/Gaming-Gear" className="hover:text-gray-400">Gaming Gear</a>
-            <a href="/Monitors" className="hover:text-gray-400">Monitors</a>
-            <a href="/Software" className="hover:text-gray-400">Software</a>
-            <a href="/Community" className="hover:text-gray-400">Community</a>
-          </div>
+          {/* Hamburger Menu for Mobile */}
+          <button className="md:hidden text-2xl" onClick={toggleMobileMenu}>
+            <FaBars />
+          </button>
         </div>
-        <div className="flex space-x-6 ml-auto">
+
+        {/* Desktop Navigation Links */}
+        <div className="hidden md:flex space-x-6">
+          <a href="#" className="hover:text-gray-400">Deals</a>
+          <a href="/Gaming-PCs" className="hover:text-gray-400">Gaming PCs</a>
+          <a href="#" className="hover:text-gray-400">Components</a>
+          <a href="/Gaming-Gear" className="hover:text-gray-400">Gaming Gear</a>
+          <a href="/Monitors" className="hover:text-gray-400">Monitors</a>
+          <a href="/Software" className="hover:text-gray-400">Software</a>
+          <a href="/Community" className="hover:text-gray-400">Community</a>
+        </div>
+
+        {/* Icons */}
+        <div className="flex space-x-4">
           <FaSearch className="text-xl hover:text-gray-400 cursor-pointer" />
           <FaQuestionCircle className="text-xl hover:text-gray-400 cursor-pointer" />
           <FaUser className="text-xl hover:text-gray-400 cursor-pointer" onClick={toggleModal} />
           <FaShoppingCart className="text-xl hover:text-gray-400 cursor-pointer" />
         </div>
       </nav>
-      <div className={`bg-gray-100 py-4 flex justify-center space-x-6 items-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-        <div className="bg-blue-600 text-white px-4 py-2 rounded flex items-center space-x-2 hover:scale-110 transition-transform duration-300 cursor-pointer">
-          <span className="font-bold">Windows</span>
-          <span className="text-sm">Get to know Windows 11</span>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-black text-white flex flex-col items-center space-y-4 py-4">
+          <a href="#" className="hover:text-gray-400" onClick={toggleMobileMenu}>Deals</a>
+          <a href="/Gaming-PCs" className="hover:text-gray-400" onClick={toggleMobileMenu}>Gaming PCs</a>
+          <a href="#" className="hover:text-gray-400" onClick={toggleMobileMenu}>Components</a>
+          <a href="/Gaming-Gear" className="hover:text-gray-400" onClick={toggleMobileMenu}>Gaming Gear</a>
+          <a href="/Monitors" className="hover:text-gray-400" onClick={toggleMobileMenu}>Monitors</a>
+          <a href="/Software" className="hover:text-gray-400" onClick={toggleMobileMenu}>Software</a>
+          <a href="/Community" className="hover:text-gray-400" onClick={toggleMobileMenu}>Community</a>
         </div>
-        <span className="font-bold text-black hover:text-[#76B900] transition-colors duration-300 cursor-pointer">NVIDIA</span>
-        <span className="font-bold text-black hover:text-[#ED1C24] transition-colors duration-300 cursor-pointer">AMD</span>
-        <span className="font-bold text-black hover:text-[#0071C5] transition-colors duration-300 cursor-pointer">Intel</span>
+      )}
+
+      {/* Bottom Bar */}
+      <div className={`bg-gray-100 py-4 flex flex-wrap justify-center gap-2 items-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+        <div className="bg-blue-600 text-white px-2 py-1 sm:px-4 sm:py-2 rounded flex items-center space-x-1 sm:space-x-2 hover:scale-110 transition-transform duration-300 cursor-pointer">
+          <span className="font-bold text-xs sm:text-base">Windows</span>
+          <span className="text-xs sm:text-sm">Get to know Windows 11</span>
+        </div>
+        <span className="font-bold text-black text-xs sm:text-base hover:text-[#76B900] transition-colors duration-300 cursor-pointer">NVIDIA</span>
+        <span className="font-bold text-black text-xs sm:text-base hover:text-[#ED1C24] transition-colors duration-300 cursor-pointer">AMD</span>
+        <span className="font-bold text-black text-xs sm:text-base hover:text-[#0071C5] transition-colors duration-300 cursor-pointer">Intel</span>
       </div>
     </>
   );
