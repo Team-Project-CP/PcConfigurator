@@ -1,5 +1,12 @@
-node_modules/
 node_modules
-.next
-.env
+target
+dist
+logs
+.cache
+.vscode
 .DS_Store
+.idea
+.next
+yarn-error.log
+npm-debug.log
+.env
