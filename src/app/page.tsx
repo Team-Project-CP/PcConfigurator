@@ -3,13 +3,8 @@ import Link from "next/link"
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import Loader from "./loader";
-<<<<<<< HEAD
 import { FaHammer, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
-=======
-import Header from "./Header";
-import Footer from "./Footer";
->>>>>>> origin/Develop
 
 export default function Navbar() {
   const [loading, setLoading] = useState(true);
@@ -29,7 +24,6 @@ export default function Navbar() {
 
   return (
     <div>
-<<<<<<< HEAD
       {/* Top Banner */}
       <div className={`bg-purple-600 text-white text-center text-sm py-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
         Certified Refurbished Gaming PCs. <a href="#" className="underline">Shop now &gt;</a>
@@ -70,9 +64,6 @@ export default function Navbar() {
         <span className="font-bold text-black hover:text-[#ED1C24] transition-colors duration-300 cursor-pointer">AMD</span>
         <span className="font-bold text-black hover:text-[#0071C5] transition-colors duration-300 cursor-pointer">Intel</span>
       </div>
-=======
-    <Header />
->>>>>>> origin/Develop
 
       {/* Main PC Section */}
       <div className="bg-white px-[5%] py-[5%] flex flex-col lg:flex-row items-center justify-between w-full">
@@ -336,7 +327,7 @@ export default function Navbar() {
       </div>
 
       {/* Stay In Touch Section (Footer) */}
-      <Footer isVisible={isVisible} />
+      {/* <Footer isVisible={isVisible} /> */}
     </div>
   );
 }
