@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node_modules
 target
 dist
@@ -10,3 +11,7 @@ logs
 yarn-error.log
 npm-debug.log
 .env
+=======
+node_modules/
+.next/
+>>>>>>> origin/Develop
