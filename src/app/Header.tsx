@@ -144,9 +144,9 @@ export default function Header() {
         <div className="flex items-center space-x-8">
           <a href="/" className="text-2xl font-bold">Domino</a>
           <div className="hidden md:flex space-x-6">
-            <a href="#" className="hover:text-gray-400">Deals</a>
+            <a href="/Deals" className="hover:text-gray-400">Deals</a>
             <a href="/Gaming-PCs" className="hover:text-gray-400">Gaming PCs</a>
-            <a href="#" className="hover:text-gray-400">Components</a>
+            <a href="/Components" className="hover:text-gray-400">Components</a>
             <a href="/Gaming-Gear" className="hover:text-gray-400">Gaming Gear</a>
             <a href="/Monitors" className="hover:text-gray-400">Monitors</a>
             <a href="/Software" className="hover:text-gray-400">Software</a>
