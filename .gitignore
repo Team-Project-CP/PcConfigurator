@@ -1,12 +1,2 @@
-node_modules
-target
-dist
-logs
-.cache
-.vscode
-.DS_Store
-.idea
-.next
-yarn-error.log
-npm-debug.log
-.env
+node_modules/
+.next/
