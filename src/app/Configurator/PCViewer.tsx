@@ -12,6 +12,8 @@ interface PCViewerProps {
     storage: any;
     motherboard: any;
     case: any;
+    cooling: any;
+    psu: any;
   };
 }
 
@@ -66,6 +68,24 @@ export default function PCViewer({ selectedComponents }: PCViewerProps) {
           </mesh>
         </Float>
 
+        {/* Материнская плата */}
+        {selectedComponents.motherboard && (
+          <Float
+            speed={1.6}
+            rotationIntensity={0.15}
+            floatIntensity={0.15}
+          >
+            <mesh position={[0, 0, 0.1]} castShadow>
+              <boxGeometry args={[1.8, 3.5, 0.05]} />
+              <meshStandardMaterial 
+                color="#1a1a1a"
+                metalness={0.9}
+                roughness={0.1}
+              />
+            </mesh>
+          </Float>
+        )}
+
         {/* CPU */}
         {selectedComponents.cpu && (
           <Float
@@ -113,6 +133,60 @@ export default function PCViewer({ selectedComponents }: PCViewerProps) {
               <boxGeometry args={[0.1, 0.8, 0.2]} />
               <meshStandardMaterial 
                 color="#555555"
+                metalness={0.9}
+                roughness={0.1}
+              />
+            </mesh>
+          </Float>
+        )}
+
+        {/* Хранилище */}
+        {selectedComponents.storage && (
+          <Float
+            speed={1.7}
+            rotationIntensity={0.2}
+            floatIntensity={0.2}
+          >
+            <mesh position={[-0.8, -1, 0.6]} castShadow>
+              <boxGeometry args={[0.8, 0.1, 0.2]} />
+              <meshStandardMaterial 
+                color="#777777"
+                metalness={0.9}
+                roughness={0.1}
+              />
+            </mesh>
+          </Float>
+        )}
+
+        {/* Система охлаждения */}
+        {selectedComponents.cooling && (
+          <Float
+            speed={1.9}
+            rotationIntensity={0.3}
+            floatIntensity={0.3}
+          >
+            <mesh position={[0, 1.2, 0.8]} castShadow>
+              <cylinderGeometry args={[0.4, 0.4, 0.1, 32]} />
+              <meshStandardMaterial 
+                color="#888888"
+                metalness={0.9}
+                roughness={0.1}
+              />
+            </mesh>
+          </Float>
+        )}
+
+        {/* Блок питания */}
+        {selectedComponents.psu && (
+          <Float
+            speed={1.6}
+            rotationIntensity={0.2}
+            floatIntensity={0.2}
+          >
+            <mesh position={[0, -1.5, 0.6]} castShadow>
+              <boxGeometry args={[1.2, 0.8, 0.2]} />
+              <meshStandardMaterial 
+                color="#666666"
                 metalness={0.9}
                 roughness={0.1}
               />
