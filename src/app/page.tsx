@@ -1,18 +1,14 @@
 "use client";
-import Link from "next/link";
+import Link from "next/link"
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
-import { FaHammer, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
 import { useState, useEffect } from "react";
 import Loader from "./loader";
-import Header from "./Header";
-import Footer from "./Footer";
+import { FaHammer, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
 
 export default function Navbar() {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoginForm, setIsLoginForm] = useState(true); // State to toggle between login and registration
 
   useEffect(() => {
     // Simulate loading
@@ -22,22 +18,52 @@ export default function Navbar() {
     }, 6000);
   }, []);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-    setIsLoginForm(true); // Reset to login form when closing modal
-  };
-
-  const toggleForm = () => {
-    setIsLoginForm(!isLoginForm);
-  };
-
   if (loading) {
     return <Loader />;
   }
 
   return (
     <div>
-    <Header />
+      {/* Top Banner */}
+      <div className={`bg-purple-600 text-white text-center text-sm py-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+        Certified Refurbished Gaming PCs. <a href="#" className="underline">Shop now &gt;</a>
+      </div>
+
+      {/* Navigation */}
+      <nav className={`text-white bg-black px-8 py-4 flex justify-center items-center transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+        {/* Logo and Links */}
+        <div className="flex items-center space-x-8">
+          <span className="text-2xl font-bold">Domino</span>
+          <div className="hidden md:flex space-x-6">
+            <a href="#" className="hover:text-gray-400">Deals</a>
+            <a href="#" className="hover:text-gray-400">Gaming PCs</a>
+            <a href="/Components" className="hover:text-gray-400">Components</a>
+            <a href="/Gaming-Gear" className="hover:text-gray-400">Gaming Gear</a>
+            <a href="/Monitors" className="hover:text-gray-400">Monitors</a>
+            <a href="/Software" className="hover:text-gray-400">Software</a>
+            <a href="/Community" className="hover:text-gray-400">Community</a>
+          </div>
+        </div>
+
+        {/* Icons */}
+        <div className="flex space-x-6 ml-auto">
+          <FaSearch className="text-xl hover:text-gray-400 cursor-pointer" />
+          <FaQuestionCircle className="text-xl hover:text-gray-400 cursor-pointer" />
+          <FaUser className="text-xl hover:text-gray-400 cursor-pointer" />
+          <FaShoppingCart className="text-xl hover:text-gray-400 cursor-pointer" />
+        </div>
+      </nav>
+
+      {/* Brands */}
+      <div className={`bg-gray-100 py-4 flex justify-center space-x-6 items-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+        <div className="bg-blue-600 text-white px-4 py-2 rounded flex items-center space-x-2 hover:scale-110 transition-transform duration-300 cursor-pointer">
+          <span className="font-bold">Windows</span>
+          <span className="text-sm">Get to know Windows 11</span>
+        </div>
+        <span className="font-bold text-black hover:text-[#76B900] transition-colors duration-300 cursor-pointer">NVIDIA</span>
+        <span className="font-bold text-black hover:text-[#ED1C24] transition-colors duration-300 cursor-pointer">AMD</span>
+        <span className="font-bold text-black hover:text-[#0071C5] transition-colors duration-300 cursor-pointer">Intel</span>
+      </div>
 
       {/* Main PC Section */}
       <div className="bg-white px-[5%] py-[5%] flex flex-col lg:flex-row items-center justify-between w-full">
@@ -244,8 +270,10 @@ export default function Navbar() {
             <div className="relative group">
               <img
                 src="PartnerLogos.png"
-                className="w-full max-w-2xl h-auto transition-transform duration-500"
+                className="w-full max-w-2xl h-auto  transition-transform duration-500 "
+               
               />
+            
             </div>
           </div>
         </div>
@@ -299,7 +327,7 @@ export default function Navbar() {
       </div>
 
       {/* Stay In Touch Section (Footer) */}
-      <Footer isVisible={isVisible} />
+      {/* <Footer isVisible={isVisible} /> */}
     </div>
   );
 }
