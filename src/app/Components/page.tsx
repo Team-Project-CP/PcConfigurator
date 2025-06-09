@@ -251,11 +251,7 @@ export default function Components() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Top Banner */}
-      <div className={`bg-purple-600 text-white text-center text-sm py-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-        Certified Refurbished Gaming PCs. <a href="#" className="underline">Shop now &gt;</a>
-      </div>
-
+      
       <Header />
 
       {/* Main Content */}
