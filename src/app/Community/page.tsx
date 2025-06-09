@@ -1,7 +1,6 @@
 "use client";
-import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
+
 import Header from "../Header";
 import Footer from "../Footer";
 

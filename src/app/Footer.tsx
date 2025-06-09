@@ -42,7 +42,7 @@ export default function Footer({ isVisible }: FooterProps) {
           <input type="checkbox" id="terms" className="mr-2" />
           <label htmlFor="terms" className="text-gray-400 text-sm">
             By signing up you agree to DOMINO{' '}
-            <a href="#" className="underline">Privacy Policy</a> and{' '}
+            <a href="/Privacy-Policy" className="underline">Privacy Policy</a> and{' '}
             <a href="#" className="underline">Terms & Conditions</a>
           </label>
         </div>
