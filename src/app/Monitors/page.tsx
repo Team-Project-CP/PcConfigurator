@@ -1,21 +1,12 @@
 "use client";
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import Loader from "../loader";
-import Link from 'next/link';
-import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart, FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
-import Header from "../Header";
-import Footer from "../Footer";
-=======
 import { useState } from "react";
 import type { Monitor } from "@/lib/data/monitors";
 import { monitors } from "@/lib/data/monitors";
 import { FaHeart, FaBalanceScale, FaShoppingCart } from "react-icons/fa";
 import Link from "next/link";
-// import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
+import Header from "../Header";
+import Footer from "../Footer";
 
->>>>>>> UI/Monitors_Page
 export default function MonitorsPage() {
   const [wishlist, setWishlist] = useState<number[]>([]);
   const [compareList, setCompareList] = useState<number[]>([]);
@@ -48,13 +39,8 @@ export default function MonitorsPage() {
   const compared = monitors.filter(m => compareList.includes(m.id));
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-100 flex flex-col">
-      {/* Top Banner */}
-      <Header />
-=======
     <main className="bg-white text-black">
-      {/* <Header /> */}
+      <Header /> 
 
       <section className="py-16 px-6 lg:px-20">
         <h1 className="text-3xl font-bold mb-6 text-center">Monitors</h1>
@@ -117,7 +103,6 @@ export default function MonitorsPage() {
             </div>
           </section>
         )}
->>>>>>> UI/Monitors_Page
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {sorted.map((monitor) => (
@@ -125,220 +110,6 @@ export default function MonitorsPage() {
               key={monitor.id}
               className="border rounded-2xl p-6 shadow-lg flex flex-col justify-between h-full bg-white transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-<<<<<<< HEAD
-              Browse Gaming Monitors
-            </button>
-          </div>
-
-          {/* Right Image */}
-          <div className={`lg:w-1/2 flex justify-center relative mt-[3%] lg:mt-0 before:absolute before:content-[''] before:w-[400px] before:h-[400px] before:bg-blue-600 before:blur-[100px] before:opacity-90 before:rounded-full before:top-[60%] before:translate-y-[-70%] transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-            <img src="/images/gaming-pc.png" className="w-[100%] relative" alt="Monitors" />
-          </div>
-        </div>
-
-        {/* Gaming Monitors Section */}
-        <div id="gaming-monitors" className="bg-gray-100 px-[5%] py-[5%]">
-          <h2 className="text-3xl font-bold text-center mb-8">Gaming Monitors</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Gaming Monitor 1]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Gaming Monitor 1
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Gaming Monitor 2]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Gaming Monitor 2
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Gaming Monitor 3]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Gaming Monitor 3
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Office Monitors Section */}
-        <div className="bg-gray-100 px-[5%] py-[5%] mt-8">
-          <h2 className="text-3xl font-bold text-center mb-8">Office Monitors</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Office Monitor 1]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Office Monitor 1
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Office Monitor 2]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Office Monitor 2
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Office Monitor 3]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Office Monitor 3
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Home Monitors Section */}
-        <div id="home-monitors" className="bg-gray-100 px-[5%] py-[5%] mt-8">
-          <h2 className="text-3xl font-bold text-center mb-8">Home Monitors</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Home Monitor 1]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Home Monitor 1
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Home Monitor 2]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Home Monitor 2
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Home Monitor 3]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Home Monitor 3
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Graphical Monitors Section */}
-        <div id="graphical-monitors" className="bg-gray-100 px-[5%] py-[5%] mt-8">
-          <h2 className="text-3xl font-bold text-center mb-8">Graphical Monitors</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Graphical Monitor 1]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Graphical Monitor 1
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Graphical Monitor 2]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Graphical Monitor 2
-                  </div>
-                </button>
-              </div>
-            </div>
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
-              <div className="w-full aspect-square bg-gray-300 flex items-center justify-center mx-auto rounded-lg mb-4">
-                <div className="w-3/4 h-3/4 bg-gray-100 flex items-center justify-center rounded-lg">
-                  [Placeholder for Graphical Monitor 3]
-                </div>
-              </div>
-              <div className="w-3/4 mx-auto">
-                <button className="mt-4 bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">
-                  <div className="w-full h-full bg-blue-500 rounded flex items-center justify-center">
-                    Find Graphical Monitor 3
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <Footer isVisible={isVisible} />
-    </div>
-  );
-}
-=======
               <Link href={`/Monitors/${monitor.id}`} className="block">
                 <img
                   src={monitor.image}
@@ -367,7 +138,8 @@ export default function MonitorsPage() {
         </div>
       </section>
 
-      {/* <Footer /> */}
+      <Footer isVisible={true} />
     </main>
+    
   );}
->>>>>>> UI/Monitors_Page
+
