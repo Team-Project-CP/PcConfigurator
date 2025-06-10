@@ -106,9 +106,16 @@ export default function MonitorsPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {sorted.map((monitor) => (
-            <div key={monitor.id} className="border rounded-2xl p-6 shadow-lg flex flex-col justify-between h-full bg-white">
+            <div
+              key={monitor.id}
+              className="border rounded-2xl p-6 shadow-lg flex flex-col justify-between h-full bg-white transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
               <Link href={`/Monitors/${monitor.id}`} className="block">
-                <img src={monitor.image} alt={monitor.name} className="w-full h-48 object-contain mb-4" />
+                <img
+                  src={monitor.image}
+                  alt={monitor.name}
+                  className="w-full h-48 object-contain mb-4 transition-transform duration-300 hover:scale-105"
+                />
                 <h3 className="text-xl font-semibold mb-2 text-black">{monitor.name}</h3>
                 <p className="text-sm text-gray-500">{monitor.description}</p>
               </Link>
@@ -121,7 +128,7 @@ export default function MonitorsPage() {
                   <button onClick={() => toggleCompare(monitor.id)}>
                     <FaBalanceScale className={compareList.includes(monitor.id) ? "text-blue-500" : "text-gray-400"} />
                   </button>
-                  <button className="bg-[#6C38CC] text-white px-3 py-1 rounded hover:bg-purple-700">
+                  <button className="bg-[#6C38CC] text-white px-3 py-1 rounded hover:bg-purple-700 transition-transform hover:scale-105">
                     <FaShoppingCart className="inline-block mr-1" /> Buy
                   </button>
                 </div>
@@ -133,5 +140,4 @@ export default function MonitorsPage() {
 
       {/* <Footer /> */}
     </main>
-  );
-}
+  );}
