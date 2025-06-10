@@ -131,6 +131,7 @@ export default function Header() {
           <div className="flex flex-col space-y-4 pt-4 pb-2 bg-black text-white px-6">
             <Link href="/Deals" className="hover:text-gray-400">Deals</Link>
             <Link href="/Gaming-PCs" className="hover:text-gray-400">Gaming PCs</Link>
+            <a href="/Configurator" className="hover:text-gray-400">Configurator</a>
             <Link href="/Components" className="hover:text-gray-400">Components</Link>
             <Link href="/Gaming-Gear" className="hover:text-gray-400">Gaming Gear</Link>
             <Link href="/Monitors" className="hover:text-gray-400">Monitors</Link>
