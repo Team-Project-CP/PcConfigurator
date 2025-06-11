@@ -2,45 +2,38 @@
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
+import Header from "../Header";
+import Footer from "../Footer";
 
 export default function DominoClub() {
+  const [isVisible, setIsVisible] = useState(true);
+
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Navigation */}
-      <nav className="bg-black text-white px-8 py-4 flex justify-center items-center">
-        <div className="flex items-center space-x-8">
-          <span className="text-2xl font-bold">Domino</span>
-          <div className="hidden md:flex space-x-6">
-            <a href="#" className="hover:text-gray-400">Deals</a>
-            <a href="#" className="hover:text-gray-400">Gaming PCs</a>
-            <a href="#" className="hover:text-gray-400">Components</a>
-            <a href="/Gaming-Gear" className="hover:text-gray-400">Gaming Gear</a>
-            <a href="/Monitors" className="hover:text-gray-400">Monitors</a>
-            <a href="/Software" className="hover:text-gray-400">Software</a>
-            <a href="#" className="hover:text-gray-400">Community</a>
+     <Header />
+
+      {/* Welcome Section */}
+      <section className="relative bg-gradient-to-r from-purple-200 to-blue-200 py-16 text-center">
+        {/* Placeholder background (replace with your image) */}
+        <div className="absolute inset-0 bg-[url('/path-to-your-background-image.jpg')] bg-cover bg-center opacity-50"></div>
+        <div className="relative z-10">
+          <div className="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold mb-4">
+            NZXT
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Welcome to the Domino Club</h1>
+          <p className="text-lg text-gray-700 mb-6">Join the ultimate gaming community and gain access to perks from NZXT</p>
+          <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all">
+            Join the Club
+          </button>
+        </div>
+        {/* Placeholder for characters (replace with your image) */}
+        <div className="mt-8">
+          <div className="w-full h-64 bg-gray-300 flex items-center justify-center">
+            [Placeholder for Characters Image]
           </div>
         </div>
-        <div className="flex space-x-6 ml-auto">
-          <FaSearch className="text-xl hover:text-gray-400 cursor-pointer" />
-          <FaQuestionCircle className="text-xl hover:text-gray-400 cursor-pointer" />
-          <FaUser className="text-xl hover:text-gray-400 cursor-pointer" />
-          <FaShoppingCart className="text-xl hover:text-gray-400 cursor-pointer" />
-        </div>
-      </nav>
-
-     {/* Welcome Section */}
-<section className="relative bg-[url('/Background.png')] bg-cover bg-center py-16 text-center min-h-screen">
-  <div className="relative z-10 max-w-4xl mx-auto text-center items-center">
-    <div className="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold mb-4">
-      DOMINO
-    </div>
-    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Welcome to the Domino Club</h1>
-    <p className="text-lg text-gray-700 mb-6">Join the ultimate gaming community and gain access to perks from NZXT</p>
-    <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all">
-      Join the Club
-    </button>
-  </div>
-</section>
+      </section>
 
       {/* How It Works Section */}
       <section className="py-16 bg-white">
@@ -117,113 +110,7 @@ export default function DominoClub() {
       </section>
 
       {/* Footer*/}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row justify-between mb-8">
-            <div className="lg:w-1/2">
-              <h2 className="text-3xl font-bold mb-4">Stay In Touch</h2>
-              <p className="text-gray-400 mb-6">Keep up to date on the latest releases, offers, and news from DOMINO</p>
-            </div>
-            <div className="lg:w-1/2 flex flex-col items-start lg:items-end">
-              <div className="flex space-x-4 mb-4">
-                <select className="bg-gray-800 text-white px-4 py-2 rounded">
-                  <option>Language</option>
-                  <option>English</option>
-                </select>
-                <select className="bg-gray-800 text-white px-4 py-2 rounded">
-                  <option>Country</option>
-                  <option>United States</option>
-                </select>
-              </div>
-              <div className="flex flex-col sm:flex-row items-center w-full lg:w-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full sm:w-96 px-4 py-2 rounded-l-md text-black focus:outline-none mb-4 sm:mb-0"
-                />
-                <button className="bg-gray-200 text-gray-900 px-6 py-2 rounded-r-md sm:rounded-l-none hover:bg-gray-300 transition-colors">
-                  Notify Me
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center mb-8">
-            <input type="checkbox" id="terms" className="mr-2" />
-            <label htmlFor="terms" className="text-gray-400 text-sm">
-              By signing up you agree to DOMINO{' '}
-              <a href="#" className="underline">Privacy Policy</a> and{' '}
-              <a href="#" className="underline">Terms & Conditions</a>
-            </label>
-          </div>
-
-          <div className="flex space-x-4 mb-8">
-            <a href="#" className="text-gray-400 hover:text-white"><FaFacebookF size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaTwitter size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaInstagram size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaYoutube size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaTwitch size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaTiktok size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaDiscord size={20} /></a>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">Customer Support</a></li>
-                <li><a href="#" className="hover:underline">Submit a Request</a></li>
-                <li><a href="#" className="hover:underline">Support Center</a></li>
-                <li><a href="#" className="hover:underline">Customer Reviews</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">About DOMINO</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">Company</a></li>
-                <li><a href="#" className="hover:underline">Founder Q & A</a></li>
-                <li><a href="#" className="hover:underline">Careers</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Community</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">DOMINO Club</a></li>
-                <li><a href="#" className="hover:underline">Podcast</a></li>
-                <li><a href="#" className="hover:underline">Newsroom & Blog</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Software</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">CAM</a></li>
-                <li><a href="#" className="hover:underline">CAM Feedback</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Account</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">Manage Your Account</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">DOMINO Store</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">DOMINO Custom Gaming PC</a></li>
-                <li><a href="#" className="hover:underline">Certified Refurbished</a></li>
-                <li><a href="#" className="hover:underline">Gaming PCs</a></li>
-                <li><a href="#" className="hover:underline">PC Parts and Accessories</a></li>
-                <li><a href="#" className="hover:underline">DOMINO for Business</a></li>
-                <li><a href="#" className="hover:underline">Find a Retailer</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex justify-end">
-            <a href="#" className="text-gray-400 hover:underline">FAQ</a>
-          </div>
-        </div>
-      </footer>
+       <Footer isVisible={isVisible} />
     </div>
   );
 }

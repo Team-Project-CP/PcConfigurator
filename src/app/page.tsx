@@ -1,16 +1,14 @@
 "use client";
-import Link from "next/link";
+import Link from "next/link"
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
-import { FaHammer, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
 import { useState, useEffect } from "react";
 import Loader from "./loader";
+import { FaHammer, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
 
 export default function Navbar() {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoginForm, setIsLoginForm] = useState(true); // State to toggle between login and registration
 
   useEffect(() => {
     // Simulate loading
@@ -20,140 +18,15 @@ export default function Navbar() {
     }, 6000);
   }, []);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-    setIsLoginForm(true); // Reset to login form when closing modal
-  };
-
-  const toggleForm = () => {
-    setIsLoginForm(!isLoginForm);
-  };
-
   if (loading) {
     return <Loader />;
   }
 
   return (
     <div>
-      {/* Login/Registration Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 backdrop-blur flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-full max-w-sm relative">
-            {/* Close Button */}
-            <button
-              onClick={toggleModal}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            {/* Modal Content */}
-            <div className="flex flex-col items-center">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">DOMINO</h2>
-              <button className="w-full border border-gray-300 text-gray-700 py-2 rounded-lg mb-4 hover:bg-gray-100 transition-all flex items-center justify-center">
-                <img src="/google.png" alt="Google Icon" className="w-5 h-5 mr-2" /> {/* Replace with actual Google icon path */}
-                Sign in with Google
-              </button>
-              <p className="text-gray-500 text-sm mb-4">Or continue with</p>
-
-              {isLoginForm ? (
-                // Login Form
-                <form className="w-full space-y-4">
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="password"
-                      placeholder="Password"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <div className="flex justify-between items-center text-sm">
-                    <label className="flex items-center">
-                      <input type="checkbox" className="mr-2" />
-                      Remember me
-                    </label>
-                    <a href="#" className="text-blue-600 hover:underline">Forgot password?</a>
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all"
-                  >
-                    Sign In
-                  </button>
-                </form>
-              ) : (
-                // Registration Form
-                <form className="w-full space-y-4">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Full Name"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="password"
-                      placeholder="Password"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="password"
-                      placeholder="Confirm Password"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-none focus:outline-none focus:ring-2 focus:ring-purple-600"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all"
-                  >
-                    Register
-                  </button>
-                </form>
-              )}
-
-              <p className="text-sm text-gray-600 mt-4">
-                {isLoginForm ? (
-                  <>
-                    Not a member?{' '}
-                    <a href="#" onClick={toggleForm} className="text-blue-600 hover:underline">
-                      Create account
-                    </a>
-                  </>
-                ) : (
-                  <>
-                    Already have an account?{' '}
-                    <a href="#" onClick={toggleForm} className="text-blue-600 hover:underline">
-                      Sign in
-                    </a>
-                  </>
-                )}
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Top Banner */}
       <div className={`bg-purple-600 text-white text-center text-sm py-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-        Certified Refurbished Gaming PCs. <a href="#" className="underline">Shop now</a>
+        Certified Refurbished Gaming PCs. <a href="#" className="underline">Shop now &gt;</a>
       </div>
 
       {/* Navigation */}
@@ -163,8 +36,9 @@ export default function Navbar() {
           <span className="text-2xl font-bold">Domino</span>
           <div className="hidden md:flex space-x-6">
             <a href="#" className="hover:text-gray-400">Deals</a>
-            <a href="/Gaming-PCs" className="hover:text-gray-400">Gaming PCs</a>
-            <a href="#" className="hover:text-gray-400">Components</a>
+            <a href="#" className="hover:text-gray-400">Gaming PCs</a>
+            <a href="/Configurator" className="hover:text-gray-400">Configurator</a>
+            <a href="/Components" className="hover:text-gray-400">Components</a>
             <a href="/Gaming-Gear" className="hover:text-gray-400">Gaming Gear</a>
             <a href="/Monitors" className="hover:text-gray-400">Monitors</a>
             <a href="/Software" className="hover:text-gray-400">Software</a>
@@ -176,7 +50,7 @@ export default function Navbar() {
         <div className="flex space-x-6 ml-auto">
           <FaSearch className="text-xl hover:text-gray-400 cursor-pointer" />
           <FaQuestionCircle className="text-xl hover:text-gray-400 cursor-pointer" />
-          <FaUser className="text-xl hover:text-gray-400 cursor-pointer" onClick={toggleModal} />
+          <FaUser className="text-xl hover:text-gray-400 cursor-pointer" />
           <FaShoppingCart className="text-xl hover:text-gray-400 cursor-pointer" />
         </div>
       </nav>
@@ -397,8 +271,10 @@ export default function Navbar() {
             <div className="relative group">
               <img
                 src="PartnerLogos.png"
-                className="w-full max-w-2xl h-auto transition-transform duration-500"
+                className="w-full max-w-2xl h-auto  transition-transform duration-500 "
+               
               />
+            
             </div>
           </div>
         </div>
@@ -452,118 +328,7 @@ export default function Navbar() {
       </div>
 
       {/* Stay In Touch Section (Footer) */}
-      <div className={`bg-gray-900 text-white py-12 transition-all duration-1000 delay-2600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Top Section: Heading, Description, Email Input, and Dropdowns */}
-          <div className="flex flex-col lg:flex-row justify-between mb-8">
-            <div className="lg:w-1/2">
-              <h2 className="text-3xl font-bold mb-4">Stay In Touch</h2>
-              <p className="text-gray-400 mb-6">Keep up to date on the latest releases, offers, and news from DOMINO</p>
-            </div>
-            <div className="lg:w-1/2 flex flex-col items-start lg:items-end">
-              <div className="flex space-x-4 mb-4">
-                <select className="bg-gray-800 text-white px-4 py-2 rounded">
-                  <option>Language</option>
-                  <option>English</option>
-                </select>
-                <select className="bg-gray-800 text-white px-4 py-2 rounded">
-                  <option>Country</option>
-                  <option>United States</option>
-                </select>
-              </div>
-              <div className="flex flex-col sm:flex-row items-center w-full lg:w-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full sm:w-96 px-4 py-2 rounded-l-md text-black focus:outline-none mb-4 sm:mb-0"
-                />
-                <button className="bg-gray-200 text-gray-900 px-6 py-2 rounded-r-md sm:rounded-l-none hover:bg-gray-300 transition-colors">
-                  Notify Me
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Checkbox Section */}
-          <div className="flex items-center mb-8">
-            <input type="checkbox" id="terms" className="mr-2" />
-            <label htmlFor="terms" className="text-gray-400 text-sm">
-              By signing up you agree to DOMINO{' '}
-              <a href="#" className="underline">Privacy Policy</a> and{' '}
-              <a href="#" className="underline">Terms & Conditions</a>
-            </label>
-          </div>
-
-          {/* Social Media Icons */}
-          <div className="flex space-x-4 mb-8">
-            <a href="#" className="text-gray-400 hover:text-white"><FaFacebookF size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaTwitter size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaInstagram size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaYoutube size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaTwitch size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaTiktok size={20} /></a>
-            <a href="#" className="text-gray-400 hover:text-white"><FaDiscord size={20} /></a>
-          </div>
-
-          {/* Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">Customer Support</a></li>
-                <li><a href="#" className="hover:underline">Submit a Request</a></li>
-                <li><a href="#" className="hover:underline">Support Center</a></li>
-                <li><a href="#" className="hover:underline">Customer Reviews</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">About DOMINO</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">Company</a></li>
-                <li><a href="#" className="hover:underline">Founder Q & A</a></li>
-                <li><a href="#" className="hover:underline">Careers</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Community</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">DOMINO Club</a></li>
-                <li><a href="#" className="hover:underline">Podcast</a></li>
-                <li><a href="#" className="hover:underline">Newsroom & Blog</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Software</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">CAM</a></li>
-                <li><a href="#" className="hover:underline">CAM Feedback</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Account</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">Manage Your Account</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">DOMINO Store</h3>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:underline">DOMINO Custom Gaming PC</a></li>
-                <li><a href="#" className="hover:underline">Certified Refurbished</a></li>
-                <li><a href="#" className="hover:underline">Gaming PCs</a></li>
-                <li><a href="#" className="hover:underline">PC Parts and Accessories</a></li>
-                <li><a href="#" className="hover:underline">DOMINO for Business</a></li>
-                <li><a href="#" className="hover:underline">Find a Retailer</a></li>
-              </ul>
-            </div>
-          </div>
-
-          {/* FAQ Link */}
-          <div className="flex justify-end">
-            <a href="#" className="text-gray-400 hover:underline">FAQ</a>
-          </div>
-        </div>
-      </div>
+      {/* <Footer isVisible={isVisible} /> */}
     </div>
   );
 }
