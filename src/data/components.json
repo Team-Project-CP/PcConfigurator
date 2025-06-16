@@ -1,0 +1,77 @@
+{
+  "components": {
+    "cpu": {
+      "cpu_1": {
+        "id": "cpu_1",
+        "type": "cpu",
+        "brand": "Intel",
+        "name": "Core i9-13900K",
+        "price": 550,
+        "stock": 50,
+        "specs": {
+          "cores": 24,
+          "threads": 32,
+          "baseClock": "3.0 GHz",
+          "boostClock": "5.8 GHz",
+          "socket": "LGA 1700",
+          "tdp": "125W"
+        },
+        "images": [
+          "https://example.com/cpu1.jpg",
+          "https://example.com/cpu1_2.jpg"
+        ],
+        "compatibility": {
+          "requirements": {
+            "socket": "LGA 1700",
+            "minPower": "125W"
+          },
+          "restrictions": [
+            "Requires Z690/Z790 motherboard",
+            "Requires adequate cooling"
+          ]
+        },
+        "ratings": {
+          "average": 4.8,
+          "count": 150
+        },
+        "reviews": ["review_1", "review_2"]
+      }
+    },
+    "motherboard": {
+      "mb_1": {
+        "id": "mb_1",
+        "type": "motherboard",
+        "brand": "ASUS",
+        "name": "ROG Maximus Z790",
+        "price": 450,
+        "stock": 30,
+        "specs": {
+          "chipset": "Z790",
+          "socket": "LGA 1700",
+          "memorySlots": 4,
+          "maxMemory": "128GB",
+          "memoryType": "DDR5"
+        },
+        "images": [
+          "https://example.com/mb1.jpg",
+          "https://example.com/mb1_2.jpg"
+        ],
+        "compatibility": {
+          "requirements": {
+            "cpuSocket": "LGA 1700",
+            "memoryType": "DDR5"
+          },
+          "restrictions": [
+            "Supports only 12th/13th gen Intel CPUs",
+            "Requires ATX case"
+          ]
+        },
+        "ratings": {
+          "average": 4.7,
+          "count": 120
+        },
+        "reviews": ["review_3", "review_4"]
+      }
+    }
+  }
+} 
