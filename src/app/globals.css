@@ -1,10 +1,23 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-end-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -12,7 +25,6 @@
     --foreground: #ededed;
   }
 }
-
 
 @keyframes black-hole {
   0% { transform: scale(1) translate3d(75px, 0, 0) }
@@ -89,11 +101,9 @@
 .bubble:nth-child(5):before { animation: black-hole 3s ease 2.5s infinite; }
 .bubble:nth-child(6):before { animation: black-hole 3.5s ease 3s infinite; }
 
-
-
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   .chrome-image {
-    transform: scale(1.4); /* Make image 20% bigger */
+    transform: scale(1.4);
   }
 }
 
