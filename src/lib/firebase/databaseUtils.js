@@ -12,6 +12,8 @@ import {
   onValue,
   off
 } from 'firebase/database';
+import { firestore } from './init';
+import { collection, addDoc, getDocs } from 'firebase/firestore';
 
 // Работа с пользователями
 export const createUser = async (userId, userData) => {
@@ -110,6 +112,49 @@ export const addComponent = async (componentData) => {
   }
 };
 
+// Добавить тестовый компонент в коллекцию Components (Firestore)
+export const addTestComponentFirestore = async () => {
+  const testComponent = {
+    category: "CPU",
+    name: "Intel Core i9-13900K",
+    price: 550,
+    image: "https://example.com/cpu.jpg",
+    description: "High-end Intel CPU",
+    specs: ["24 cores", "32 threads", "3.0 GHz base", "5.8 GHz boost"],
+    detailedSpecs: {
+      cores: { value: 24, score: 10 },
+      threads: { value: 32, score: 10 },
+      baseClock: { value: "3.0 GHz", score: 8 },
+      boostClock: { value: "5.8 GHz", score: 10 }
+    },
+    compatibility: {
+      socket: "LGA 1700"
+    }
+  };
+  try {
+    const docRef = await addDoc(collection(firestore, "Components"), testComponent);
+    return docRef.id;
+  } catch (error) {
+    console.error("Error adding test component to Firestore:", error);
+    return null;
+  }
+};
+
+// Получить все элементы из коллекции (Firestore)
+export const getCollectionFirestore = async (collectionName) => {
+  try {
+    const querySnapshot = await getDocs(collection(firestore, collectionName));
+    const data = [];
+    querySnapshot.forEach((doc) => {
+      data.push({ id: doc.id, ...doc.data() });
+    });
+    return data;
+  } catch (error) {
+    console.error(`Error getting collection ${collectionName} from Firestore:`, error);
+    return [];
+  }
+};
+
 // Получение данных
 export const getUserConfigs = async (userId) => {
   try {
@@ -151,4 +196,15 @@ export const subscribeToUserConfigs = (userId, callback) => {
     callback(snapshot.val());
   });
   return () => off(configsQuery);
+};
+
+// Получить все элементы из коллекции
+export const getCollection = async (collectionName) => {
+  try {
+    const snapshot = await get(ref(database, collectionName));
+    return snapshot.val();
+  } catch (error) {
+    console.error(`Error getting collection ${collectionName}:`, error);
+    return null;
+  }
 }; 

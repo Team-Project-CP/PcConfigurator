@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Monitor } from "@/lib/data/monitors";
-import { monitors } from "@/lib/data/monitors";
+import { getCollection } from '@/lib/firebase/databaseUtils';
 import { FaHeart, FaBalanceScale, FaShoppingCart } from "react-icons/fa";
 import Link from "next/link";
 import Header from "../Header";
@@ -15,6 +15,7 @@ export default function MonitorsPage() {
   const [categoryFilter, setCategoryFilter] = useState<string>("all");
   const [minPrice, setMinPrice] = useState<number>(0);
   const [maxPrice, setMaxPrice] = useState<number>(1000);
+  const [firebaseMonitors, setFirebaseMonitors] = useState<Monitor[]>([]);
 
   const toggleWishlist = (id: number) => {
     setWishlist(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
@@ -23,7 +24,15 @@ export default function MonitorsPage() {
     setCompareList(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
   };
 
-  const filtered: Monitor[] = monitors
+  useEffect(() => {
+    getCollection('Monitors').then(data => {
+      if (data) {
+        setFirebaseMonitors(Object.values(data));
+      }
+    });
+  }, []);
+
+  const filtered: Monitor[] = firebaseMonitors
     .filter(m => categoryFilter === "all" || m.category === categoryFilter)
     .filter(m => m.name.toLowerCase().includes(search.toLowerCase()))
     .filter(m => m.price >= minPrice && m.price <= maxPrice);
@@ -35,8 +44,8 @@ export default function MonitorsPage() {
     return 0;
   });
 
-  const categories = Array.from(new Set(monitors.map(m => m.category)));
-  const compared = monitors.filter(m => compareList.includes(m.id));
+  const categories = Array.from(new Set(firebaseMonitors.map(m => m.category)));
+  const compared = firebaseMonitors.filter(m => compareList.includes(m.id));
 
   return (
     <main className="bg-white text-black">
