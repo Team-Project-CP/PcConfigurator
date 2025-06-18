@@ -9,6 +9,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import { useStore } from '../context/StoreContext';
 import { products } from '../data';
+import PaymentButton from '@/components/PaymentButton';
 
 // Product data types
 interface Product {
@@ -214,6 +215,16 @@ export default function GamingGearPage() {
             </button>
           </div>
         </div>
+        <PaymentButton
+          items={[{
+            name: product.name,
+            description: product.description,
+            price: product.price,
+            quantity: 1,
+            image: product.image
+          }]}
+          className="mt-3 w-full"
+        />
         <Link 
           href={`/Gaming-PCs/${product.id}`}
           className="block w-full text-center bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg transition-all duration-300 hover:scale-105 animate-fade-in"

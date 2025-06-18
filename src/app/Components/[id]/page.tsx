@@ -10,6 +10,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { firestore } from "@/lib/firebase/init";
 import Header from "../../Header";
 import Footer from "../../Footer";
+import PaymentButton from '@/components/PaymentButton';
 
 // Component interface for type safety
 interface ComponentSpec {
@@ -113,7 +114,7 @@ export default function ComponentDetails() {
             <div className="mb-6">
               <h2 className="text-lg font-semibold mb-2">Specifications</h2>
               <ul className="list-disc list-inside space-y-1 text-gray-700">
-                {component.specs?.map((spec, idx) => (
+                {component.specs?.map((spec: string, idx: number) => (
                   <li key={idx}>{spec}</li>
                 ))}
               </ul>
@@ -123,7 +124,7 @@ export default function ComponentDetails() {
               <table className="w-full text-sm border rounded-lg overflow-hidden">
                 <tbody>
                   {component.detailedSpecs &&
-                    Object.entries(component.detailedSpecs).map(([key, value]) => (
+                    Object.entries(component.detailedSpecs).map(([key, value]: [string, any]) => (
                       <tr key={key} className="border-b last:border-b-0">
                         <td className="py-2 px-3 font-medium text-gray-600">{key}</td>
                         <td className="py-2 px-3 text-right">{value.value} {value.unit || ""}</td>
@@ -136,7 +137,7 @@ export default function ComponentDetails() {
               <h2 className="text-lg font-semibold mb-2">Compatibility</h2>
               <ul className="text-gray-700">
                 {component.compatibility &&
-                  Object.entries(component.compatibility).map(([key, value]) => (
+                  Object.entries(component.compatibility).map(([key, value]: [string, any]) => (
                     <li key={key}>
                       <span className="font-medium">{key}:</span> {Array.isArray(value) ? value.join(", ") : value}
                     </li>
@@ -146,6 +147,16 @@ export default function ComponentDetails() {
             <button className="mt-8 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg shadow transition">
               Add to Cart
             </button>
+            <PaymentButton
+              items={[{
+                name: component.name,
+                description: component.description,
+                price: component.price,
+                quantity: 1,
+                image: component.image
+              }]}
+              className="mt-4 w-full"
+            />
           </div>
         </div>
       </div>

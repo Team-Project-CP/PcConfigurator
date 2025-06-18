@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import {
   Elements,
@@ -96,6 +96,12 @@ export default function PaymentModal({ isOpen, onClose, amount, componentName }:
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  useEffect(() => {
+    if (isOpen && !clientSecret) {
+      initializePayment();
+    }
+  }, [isOpen]);
+
   const initializePayment = async () => {
     try {
       setError(null);
@@ -155,12 +161,8 @@ export default function PaymentModal({ isOpen, onClose, amount, componentName }:
             </Elements>
           ) : (
             <div className="text-center py-8">
-              <button
-                onClick={initializePayment}
-                className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
-              >
-                Proceed to Payment
-              </button>
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-600 mx-auto"></div>
+              <p className="mt-4 text-gray-600">Initializing payment...</p>
             </div>
           )}
         </div>

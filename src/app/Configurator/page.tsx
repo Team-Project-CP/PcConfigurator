@@ -4,6 +4,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import { FaDesktop, FaMemory, FaHdd, FaMicrochip, FaServer, FaFan, FaPowerOff } from "react-icons/fa";
 import PCViewer from "./PCViewer";
+import PaymentButton from "@/components/PaymentButton";
 
 interface Component {
   id: number;
@@ -195,6 +196,26 @@ export default function Configurator() {
         description: "1000W, 80+ Titanium"
       }
     ] as Component[]
+  };
+
+  const calculateTotalPrice = () => {
+    return Object.values(selectedComponents).reduce((total, component) => {
+      return total + (component?.price || 0);
+    }, 0);
+  };
+
+  const handlePayment = () => {
+    const items = Object.values(selectedComponents)
+      .filter(component => component !== null)
+      .map(component => ({
+        name: component.name,
+        description: component.description || '',
+        price: component.price,
+        quantity: 1,
+        image: component.image
+      }));
+
+    return items;
   };
 
   return (
@@ -483,14 +504,12 @@ export default function Configurator() {
             <div className="flex flex-col items-end justify-center">
               <p className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">
                 Total: $
-                {Object.values(selectedComponents)
-                  .filter((component): component is Component => component !== null)
-                  .reduce((sum, component) => sum + component.price, 0)
-                  .toFixed(2)}
+                {calculateTotalPrice().toFixed(2)}
               </p>
-              <button className="mt-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Save Configuration
-              </button>
+              <PaymentButton 
+                items={handlePayment()} 
+                className="mt-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              />
             </div>
           </div>
         </div>
