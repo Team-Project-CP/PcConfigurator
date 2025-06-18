@@ -1,12 +1,14 @@
-'use client';
+"use client";
 
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import Header from "../../Header";
 import Footer from "../../Footer";
 import { useEffect, useState } from 'react';
-import { useStore } from '../../context/StoreContext';
+import { doc, getDoc } from 'firebase/firestore';
+import { firestore } from '@/lib/firebase/init';
 import { FaHeart, FaRegHeart, FaBalanceScale, FaShoppingCart } from 'react-icons/fa';
+import { useStore } from '../../context/StoreContext';
 
 // Product data types
 interface Product {
@@ -14,14 +16,12 @@ interface Product {
   name: string;
   price: number;
   description: string;
-  specs: {
-    cpu: string;
-    gpu: string;
-    ram: string;
-    storage: string;
-    cooling: string;
-  };
-  images: string[];
+  images?: string[];
+  image?: string;
+  features?: string[];
+  specs?: Record<string, string>;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 export default function ProductPage() {
@@ -39,37 +39,29 @@ export default function ProductPage() {
   } = useStore();
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsVisible(true);
-    }, 100);
+    const timeout = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timeout);
   }, []);
 
-  // Here will be product data loading
   useEffect(() => {
-    // In a real application, this would be an API request
-    setProduct({
-      id: params.id as string,
-      name: "Gaming PC Pro",
-      price: 3499.99,
-      description: "Powerful gaming computer for the most demanding games and tasks. Equipped with the latest components and advanced cooling system.",
-      specs: {
-        cpu: "Intel Core i9-13900K",
-        gpu: "NVIDIA GeForce RTX 4090",
-        ram: "32GB DDR5",
-        storage: "2TB NVMe SSD",
-        cooling: "Liquid Cooling System"
-      },
-      images: [
-        "/Gaming-PCs/images/product-1.png",
-        "/Gaming-PCs/images/product-2.png",
-        "/Gaming-PCs/images/product-3.png"
-      ]
-    });
+    const fetchProduct = async () => {
+      try {
+        const docRef = doc(firestore, 'GamingPCs', params.id as string);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setProduct({ id: docSnap.id, ...docSnap.data() } as Product);
+        } else {
+          setProduct(null);
+        }
+      } catch (error) {
+        setProduct(null);
+      }
+    };
+    fetchProduct();
   }, [params.id]);
 
   if (!product) {
-    return <div>Loading...</div>;
+    return <div className="p-8 text-center">Loading or not found...</div>;
   }
 
   const handleAddToCart = () => {
@@ -78,8 +70,14 @@ export default function ProductPage() {
       name: product.name,
       price: product.price,
       description: product.description,
-      image: product.images[0],
-      specs: product.specs
+      image: product.images && product.images.length > 0 ? product.images[0] : '/images/gaming-pc.png',
+      specs: {
+        cpu: product.specs?.cpu || '',
+        gpu: product.specs?.gpu || '',
+        ram: product.specs?.ram || '',
+        storage: product.specs?.storage || '',
+        cooling: product.specs?.cooling || ''
+      }
     });
   };
 
@@ -92,8 +90,14 @@ export default function ProductPage() {
         name: product.name,
         price: product.price,
         description: product.description,
-        image: product.images[0],
-        specs: product.specs
+        image: product.images && product.images.length > 0 ? product.images[0] : '/images/gaming-pc.png',
+        specs: {
+          cpu: product.specs?.cpu || '',
+          gpu: product.specs?.gpu || '',
+          ram: product.specs?.ram || '',
+          storage: product.specs?.storage || '',
+          cooling: product.specs?.cooling || ''
+        }
       });
     }
   };
@@ -107,8 +111,14 @@ export default function ProductPage() {
         name: product.name,
         price: product.price,
         description: product.description,
-        image: product.images[0],
-        specs: product.specs
+        image: product.images && product.images.length > 0 ? product.images[0] : '/images/gaming-pc.png',
+        specs: {
+          cpu: product.specs?.cpu || '',
+          gpu: product.specs?.gpu || '',
+          ram: product.specs?.ram || '',
+          storage: product.specs?.storage || '',
+          cooling: product.specs?.cooling || ''
+        }
       });
     }
   };
@@ -121,7 +131,12 @@ export default function ProductPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Image Gallery */}
           <div className="space-y-4">
-            {product.images.map((image, index) => (
+            {(product.images && product.images.length > 0
+              ? product.images
+              : product.image
+                ? [product.image]
+                : ['/images/gaming-pc.png']
+            ).map((image, index) => (
               <div key={index} className="relative aspect-square">
                 <Image
                   src={image}
@@ -134,71 +149,37 @@ export default function ProductPage() {
           </div>
 
           {/* Product Information */}
-          <div className="space-y-6">
-            <div className="flex justify-between items-start">
-              <h1 className="text-4xl font-bold">{product.name}</h1>
-              <div className="flex gap-2">
-                <button
-                  onClick={handleFavorite}
-                  className="p-2 rounded-full hover:bg-gray-100 transition"
-                  title={isInFavorites(product.id) ? "Remove from favorites" : "Add to favorites"}
-                >
-                  {isInFavorites(product.id) ? (
-                    <FaHeart className="text-red-500 text-xl" />
-                  ) : (
-                    <FaRegHeart className="text-gray-500 text-xl" />
-                  )}
-                </button>
-                <button
-                  onClick={handleCompare}
-                  className="p-2 rounded-full hover:bg-gray-100 transition"
-                  title={isInCompare(product.id) ? "Remove from compare" : "Add to compare"}
-                >
-                  <FaBalanceScale className={`text-xl ${isInCompare(product.id) ? 'text-purple-600' : 'text-gray-500'}`} />
-                </button>
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
+            <p className="text-gray-600 text-lg mb-4">{product.description}</p>
+            <p className="text-[#6C38CC] font-bold text-2xl mb-6">${product.price}</p>
+            {/* Features */}
+            {product.features && product.features.length > 0 && (
+              <div>
+                <h2 className="text-xl font-semibold mb-2">Features</h2>
+                <ul className="list-disc list-inside space-y-1">
+                  {product.features.map((feature, idx) => (
+                    <li key={idx}>{feature}</li>
+                  ))}
+                </ul>
               </div>
-            </div>
-            
-            <p className="text-3xl font-bold text-purple-600">${product.price}</p>
-            
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">Description</h2>
-              <p className="text-gray-600">{product.description}</p>
-            </div>
-
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">Specifications</h2>
-              <ul className="space-y-2">
-                <li className="flex justify-between">
-                  <span className="text-gray-600">CPU:</span>
-                  <span className="font-medium">{product.specs.cpu}</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-600">GPU:</span>
-                  <span className="font-medium">{product.specs.gpu}</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-600">RAM:</span>
-                  <span className="font-medium">{product.specs.ram}</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-600">Storage:</span>
-                  <span className="font-medium">{product.specs.storage}</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="text-gray-600">Cooling:</span>
-                  <span className="font-medium">{product.specs.cooling}</span>
-                </li>
-              </ul>
-            </div>
-
-            <button 
-              onClick={handleAddToCart}
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition flex items-center justify-center gap-2"
-            >
-              <FaShoppingCart />
-              Add to Cart
-            </button>
+            )}
+            {/* Specs */}
+            {product.specs && Object.keys(product.specs).length > 0 && (
+              <div>
+                <h2 className="text-2xl font-semibold mb-2">Specifications</h2>
+                <table className="w-full text-sm border rounded-lg overflow-hidden">
+                  <tbody>
+                    {Object.entries(product.specs).map(([key, value]) => (
+                      <tr key={key} className="border-b last:border-b-0">
+                        <td className="py-2 px-3 font-medium text-gray-600">{key.toUpperCase()}</td>
+                        <td className="py-2 px-3 text-right">{value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
         </div>
       </div>

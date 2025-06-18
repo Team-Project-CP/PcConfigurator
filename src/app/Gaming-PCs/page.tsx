@@ -8,7 +8,8 @@ import { useEffect, useState } from 'react';
 import Header from "../Header";
 import Footer from "../Footer";
 import { useStore } from '../context/StoreContext';
-import { products } from '../data';
+import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import { firestore } from '@/lib/firebase/init';
 
 // Product data types
 interface Product {
@@ -17,7 +18,8 @@ interface Product {
   price: number;
   description: string;
   image: string;
-  category: string;
+  cpu: string;
+  gpu: string;
 }
 
 interface NewsPoster {
@@ -42,6 +44,11 @@ export default function GamingGearPage() {
   const [isVisible, setIsVisible] = useState(false);
   const [products, setProducts] = useState<Product[]>([]);
   const [newsPosters, setNewsPosters] = useState<NewsPoster[]>([]);
+  const [search, setSearch] = useState('');
+  const [selectedGPU, setSelectedGPU] = useState('all');
+  const [selectedCPU, setSelectedCPU] = useState('all');
+  const [sortBy, setSortBy] = useState('default');
+  const [loading, setLoading] = useState(true);
   const { 
     addToCart, 
     addToFavorites, 
@@ -59,60 +66,56 @@ export default function GamingGearPage() {
     return () => clearTimeout(timeout);
   }, []);
 
-  // Load product data
+  // Load product data from Firestore
   useEffect(() => {
-    // In a real application, this would be an API request
-    setProducts([
-      {
-        id: "limited-1",
-        name: "LIMITED PC #1",
-        price: 3499.99,
-        description: "RTX 4090, Intel i9, 32GB RAM",
-        image: "/Gaming-PCs/images/product-1.png",
-        category: "limited"
-      },
-      {
-        id: "limited-2",
-        name: "LIMITED PC #2",
-        price: 3299.99,
-        description: "RTX 4080, Intel i7, 32GB RAM",
-        image: "/Gaming-PCs/images/product-2.png",
-        category: "limited"
-      },
-      {
-        id: "limited-3",
-        name: "LIMITED PC #3",
-        price: 2999.99,
-        description: "RTX 4070, Intel i7, 16GB RAM",
-        image: "/Gaming-PCs/images/product-3.png",
-        category: "limited"
-      },
-      {
-        id: "nzxt-1",
-        name: "NZXT PC #1",
-        price: 2299.99,
-        description: "RTX 4070, Ryzen 7, 16GB RAM",
-        image: "/Gaming-PCs/images/product-4.png",
-        category: "nzxt"
-      },
-      {
-        id: "nzxt-2",
-        name: "NZXT PC #2",
-        price: 2499.99,
-        description: "RTX 4080, Ryzen 9, 32GB RAM",
-        image: "/Gaming-PCs/images/product-5.png",
-        category: "nzxt"
-      },
-      {
-        id: "nzxt-3",
-        name: "NZXT PC #3",
-        price: 2699.99,
-        description: "RTX 4090, Ryzen 9, 32GB RAM",
-        image: "/Gaming-PCs/images/product-6.png",
-        category: "nzxt"
+    const fetchProducts = async () => {
+      try {
+        let q;
+        if (sortBy === 'price-asc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('price', 'asc'));
+        } else if (sortBy === 'price-desc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('price', 'desc'));
+        } else if (sortBy === 'name-asc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('name', 'asc'));
+        } else if (sortBy === 'name-desc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('name', 'desc'));
+        } else if (sortBy === 'cpu-asc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('cpu', 'asc'));
+        } else if (sortBy === 'cpu-desc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('cpu', 'desc'));
+        } else if (sortBy === 'gpu-asc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('gpu', 'asc'));
+        } else if (sortBy === 'gpu-desc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('gpu', 'desc'));
+        } else if (sortBy === 'ram-asc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('ram', 'asc'));
+        } else if (sortBy === 'ram-desc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('ram', 'desc'));
+        } else if (sortBy === 'storage-asc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('storage', 'asc'));
+        } else if (sortBy === 'storage-desc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('storage', 'desc'));
+        } else if (sortBy === 'cooling-asc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('cooling', 'asc'));
+        } else if (sortBy === 'cooling-desc') {
+          q = query(collection(firestore, 'GamingPCs'), orderBy('cooling', 'desc'));
+        } else {
+          q = collection(firestore, 'GamingPCs');
+        }
+        const querySnapshot = await getDocs(q);
+        const productsData = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        })) as Product[];
+        setProducts(productsData);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+        setLoading(false);
       }
-    ]);
-  }, []);
+    };
+    fetchProducts();
+  }, [sortBy]);
 
   // Load news posters data
   useEffect(() => {
@@ -140,6 +143,17 @@ export default function GamingGearPage() {
       }
     ]);
   }, []);
+
+  // Получение уникальных GPU и CPU для фильтров
+  const gpuOptions = ['all', ...Array.from(new Set(products.map(p => p.gpu)).values()).filter(Boolean)];
+  const cpuOptions = ['all', ...Array.from(new Set(products.map(p => p.cpu)).values()).filter(Boolean)];
+
+  // Фильтрация, поиск (без сортировки на клиенте)
+  let filteredProducts = products.filter(product =>
+    (selectedGPU === 'all' || product.gpu === selectedGPU) &&
+    (selectedCPU === 'all' || product.cpu === selectedCPU) &&
+    (product.name || '').toLowerCase().includes(search.toLowerCase())
+  );
 
   const handleAddToCart = (product: Product) => {
     addToCart(product);
@@ -274,8 +288,43 @@ export default function GamingGearPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-4xl font-bold mb-8 text-center animate-fade-in">Gaming PCs</h1>
         
+        {/* Фильтры, поиск и сортировка */}
+        <div className="flex flex-col md:flex-row gap-4 mb-8 justify-center items-center">
+          <input
+            type="text"
+            placeholder="Search by name..."
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          />
+          <select value={selectedGPU} onChange={e => setSelectedGPU(e.target.value)} className="px-4 py-2 border rounded-lg">
+            {gpuOptions.map(gpu => <option key={gpu} value={gpu}>{gpu === 'all' ? 'All GPUs' : gpu}</option>)}
+          </select>
+          <select value={selectedCPU} onChange={e => setSelectedCPU(e.target.value)} className="px-4 py-2 border rounded-lg">
+            {cpuOptions.map(cpu => <option key={cpu} value={cpu}>{cpu === 'all' ? 'All CPUs' : cpu}</option>)}
+          </select>
+          <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="px-4 py-2 border rounded-lg">
+            <option value="default">Sort by</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A-Z</option>
+            <option value="name-desc">Name: Z-A</option>
+            <option value="cpu-asc">CPU: A-Z</option>
+            <option value="cpu-desc">CPU: Z-A</option>
+            <option value="gpu-asc">GPU: A-Z</option>
+            <option value="gpu-desc">GPU: Z-A</option>
+            <option value="ram-asc">RAM: A-Z</option>
+            <option value="ram-desc">RAM: Z-A</option>
+            <option value="storage-asc">Storage: A-Z</option>
+            <option value="storage-desc">Storage: Z-A</option>
+            <option value="cooling-asc">Cooling: A-Z</option>
+            <option value="cooling-desc">Cooling: Z-A</option>
+          </select>
+        </div>
+
+        {/* Список ПК */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <ProductCard key={product.id} product={product} index={index} />
           ))}
         </div>
