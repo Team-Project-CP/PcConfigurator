@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart, FaFilter, FaSort, FaEye, FaBalanceScale, FaHeart, FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import Link from 'next/link';
-import { components } from '@/lib/data/components';
+import { getCollectionFirestore, addTestComponentFirestore } from '@/lib/firebase/databaseUtils';
 import Header from "../Header";
 import Footer from "../Footer";
 
@@ -86,6 +86,7 @@ export default function Components() {
   }>({});
   const [selectedManufacturer, setSelectedManufacturer] = useState<string>("");
   const [showManufacturerFilter, setShowManufacturerFilter] = useState(false);
+  const [firebaseComponents, setFirebaseComponents] = useState<ComponentSpec[]>([]);
 
   // Define manufacturers for each category
   const manufacturers = {
@@ -99,10 +100,11 @@ export default function Components() {
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    getCollectionFirestore('Components').then(data => {
+      setFirebaseComponents(data);
       setLoading(false);
       setIsVisible(true);
-    }, 1000);
+    });
   }, []);
 
   const categories = ["all", "CPU", "GPU", "RAM", "Storage", "Motherboard", "PSU", "Cooling"];
@@ -132,7 +134,7 @@ export default function Components() {
   // Get available detailed specs for the selected category
   const getAvailableDetailedSpecs = () => {
     if (selectedCategory === "all") return [];
-    const categoryComponents = components.filter(c => c.category === selectedCategory);
+    const categoryComponents = firebaseComponents.filter(c => c.category === selectedCategory);
     if (categoryComponents.length === 0) return [];
 
     const specs = new Set<string>();
@@ -184,11 +186,12 @@ export default function Components() {
 
   // Update filtered components to include manufacturer filter
   const filteredComponents = handleSort(
-    components.filter(component => {
+    firebaseComponents.filter(component => {
       const matchesCategory = selectedCategory === "all" || component.category === selectedCategory;
       const matchesPrice = component.price >= priceRange[0] && component.price <= priceRange[1];
-      const matchesSearch = component.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           component.description.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesSearch =
+        (component.name?.toLowerCase().includes(searchQuery.toLowerCase()) || false) ||
+        (component.description?.toLowerCase().includes(searchQuery.toLowerCase()) || false);
       const matchesDetailedSpecs = filterByDetailedSpecs(component);
       const matchesManufacturer = filterByManufacturer(component);
       return matchesCategory && matchesPrice && matchesSearch && matchesDetailedSpecs && matchesManufacturer;
@@ -423,7 +426,7 @@ export default function Components() {
               {/* Existing Detailed Specs Filters */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {getAvailableDetailedSpecs().map(spec => {
-                  const categoryComponents = components.filter(c => c.category === selectedCategory);
+                  const categoryComponents = firebaseComponents.filter(c => c.category === selectedCategory);
                   const specValues = categoryComponents.map(c => c.detailedSpecs[spec]?.value);
                   const isNumeric = specValues.every(v => typeof v === 'number');
                   const isBoolean = specValues.every(v => typeof v === 'boolean');
@@ -794,6 +797,14 @@ export default function Components() {
 
       {/* Stay In Touch Section (Footer) */}
       <Footer isVisible={isVisible} />
+      
+      {/* ВРЕМЕННАЯ КНОПКА ДЛЯ ДОБАВЛЕНИЯ ТЕСТОВОГО КОМПОНЕНТА */}
+      <button
+        onClick={() => addTestComponentFirestore().then(id => alert('Добавлен компонент с id: ' + id))}
+        style={{ margin: '16px', padding: '8px 16px', background: '#6C38CC', color: 'white', borderRadius: '8px' }}
+      >
+        Добавить тестовый компонент в Firestore
+      </button>
       
     </div>
   );

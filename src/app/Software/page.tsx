@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
 import Header from "../Header";
 import Footer from "../Footer";
+import { getCollection } from '@/lib/firebase/databaseUtils';
 
 interface SoftwareItem {
   name: string;
@@ -24,68 +25,20 @@ interface SoftwareCategory {
 export default function SoftwarePage() {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
+  const [softwareCategories, setSoftwareCategories] = useState<SoftwareCategory[]>([]);
 
   useEffect(() => {
-    setTimeout(() => {
+    getCollection('Software').then(data => {
+      if (data) {
+        setSoftwareCategories(Object.values(data));
+      }
       setLoading(false);
-    }, 2000);
+    });
   }, []);
 
   if (loading) {
     return <Loader />;
   }
-
-  const softwareCategories: SoftwareCategory[] = [
-    {
-      title: "Operating Systems",
-      items: [
-        { name: "Windows 11 Pro", icon: <FaWindows className="text-4xl text-blue-500" />, price: "$199.99" },
-        { name: "Windows 10 Pro", icon: <FaWindows className="text-4xl text-blue-500" />, price: "$149.99" },
-        { name: "macOS Ventura", icon: <FaApple className="text-4xl text-gray-700" />, price: "$29.99" },
-        { name: "Ubuntu 22.04 LTS", icon: <FaLinux className="text-4xl text-orange-500" />, price: "Free" },
-      ]
-    },
-    {
-      title: "Development Tools",
-      items: [
-        { 
-          name: "Visual Studio 2022", 
-          image: "/Software/images/Visual Studio.png",
-          price: "$499.99" 
-        },
-        { 
-          name: "PyCharm Professional", 
-          image: "/Software/images/PyCharm.png",
-          price: "$199.99" 
-        },
-        { 
-          name: "WebStorm", 
-          image: "/Software/images/WebStorm.png",
-          price: "$149.99" 
-        },
-      ]
-    },
-    {
-      title: "Security Software",
-      items: [
-        { 
-          name: "Norton 360", 
-          image: "/Software/images/Norton2.png",
-          price: "$49.99/year" 
-        },
-        { 
-          name: "McAfee Total Protection", 
-          image: "/Software/images/McAfee2.png",
-          price: "$39.99/year" 
-        },
-        { 
-          name: "Bitdefender", 
-          image: "/Software/images/Bitdefender3.png",
-          price: "$44.99/year" 
-        },
-      ]
-    }
-  ];
 
   return (
     

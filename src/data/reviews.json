@@ -1,0 +1,31 @@
+{
+  "reviews": {
+    "review_1": {
+      "id": "review_1",
+      "userId": "user_id_1",
+      "componentId": "cpu_1",
+      "rating": 5,
+      "title": "Excellent CPU for gaming and productivity",
+      "content": "This CPU handles everything I throw at it with ease. Gaming performance is outstanding, and it's great for video editing too.",
+      "createdAt": "2024-03-16T12:00:00Z",
+      "helpful": 25,
+      "images": [
+        "https://example.com/review1_1.jpg",
+        "https://example.com/review1_2.jpg"
+      ]
+    },
+    "review_2": {
+      "id": "review_2",
+      "userId": "user_id_2",
+      "componentId": "cpu_1",
+      "rating": 4,
+      "title": "Great performance but runs hot",
+      "content": "The performance is amazing, but you definitely need good cooling. My AIO keeps it under control though.",
+      "createdAt": "2024-03-15T12:00:00Z",
+      "helpful": 15,
+      "images": [
+        "https://example.com/review2_1.jpg"
+      ]
+    }
+  }
+} 
