@@ -9,7 +9,7 @@ export default function Loader() {
           <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -16" result="goo" />
         </filter>
       </svg>
-      <div className="black-hole">
+      <div className="black-hole"> 
         <ul className="gooey-container">
           <li className="bubble"></li>
           <li className="bubble"></li>
