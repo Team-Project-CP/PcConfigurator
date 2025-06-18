@@ -1,0 +1,13 @@
+{
+  "users": {
+    "user_id_1": {
+      "uid": "user_id_1",
+      "email": "user@example.com",
+      "displayName": "John Doe",
+      "photoURL": "https://example.com/photo.jpg",
+      "createdAt": "2024-03-16T12:00:00Z",
+      "lastLogin": "2024-03-16T12:00:00Z",
+      "savedConfigs": ["config_id_1", "config_id_2"]
+    }
+  }
+} 

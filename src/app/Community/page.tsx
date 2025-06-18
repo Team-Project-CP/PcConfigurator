@@ -4,9 +4,19 @@ import { useState, useEffect } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from 'react-icons/fa';
 import Header from "../Header";
 import Footer from "../Footer";
+import { getCollection } from '@/lib/firebase/databaseUtils';
 
 export default function DominoClub() {
   const [isVisible, setIsVisible] = useState(true);
+  const [users, setUsers] = useState<any[]>([]);
+
+  useEffect(() => {
+    getCollection('Users').then(data => {
+      if (data) {
+        setUsers(Object.values(data));
+      }
+    });
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -63,7 +73,7 @@ export default function DominoClub() {
                 [Placeholder for Rewards Image]
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Unlock Rewards</h3>
-              <p className="text-gray-600">Unlock rewards and exclusive experiences and perks that you won’t find anywhere else. The more you engage, the more you unlock!</p>
+              <p className="text-gray-600">Unlock rewards and exclusive experiences and perks that you won't find anywhere else. The more you engage, the more you unlock!</p>
             </div>
           </div>
         </div>
@@ -76,7 +86,7 @@ export default function DominoClub() {
             {/* Invite Your Friends */}
             <div className="bg-purple-50 p-6 rounded-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Invite Your Friends</h3>
-              <p className="text-gray-600 mb-4">Spread the word! Invite your friends to join the NZXT Club and earn Pucci Points when they sign up. The more friends you invite, the more rewards you’ll unlock!</p>
+              <p className="text-gray-600 mb-4">Spread the word! Invite your friends to join the NZXT Club and earn Pucci Points when they sign up. The more friends you invite, the more rewards you'll unlock!</p>
               <div className="w-full h-48 bg-gray-300 flex items-center justify-center">
                 [Placeholder for Friends Image]
               </div>
@@ -90,6 +100,18 @@ export default function DominoClub() {
               </div>
             </div>
           </div>
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold mb-4">Community Members</h2>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {users.map((user, idx) => (
+                <li key={idx} className="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                  <img src={user.photoURL || '/default-user.png'} alt={user.displayName || 'User'} className="w-16 h-16 rounded-full mb-2" />
+                  <span className="font-semibold">{user.displayName || user.email}</span>
+                  <span className="text-gray-500 text-sm">{user.email}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -97,7 +119,7 @@ export default function DominoClub() {
       <section className="py-16 bg-gradient-to-r from-purple-200 to-blue-200 text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Your Rewards Await</h2>
-          <p className="text-lg text-gray-700 mb-6">Join the NZXT Club today to unlock exclusive rewards and be part of one of our most exciting experiences as we continue to build a community. The more you contribute, the more you’ll grow together!</p>
+          <p className="text-lg text-gray-700 mb-6">Join the NZXT Club today to unlock exclusive rewards and be part of one of our most exciting experiences as we continue to build a community. The more you contribute, the more you'll grow together!</p>
           <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-all">
             Join the Club
           </button>

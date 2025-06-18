@@ -1,0 +1,98 @@
+{
+  "configs": {
+    "config_id_1": {
+      "id": "config_id_1",
+      "userId": "user_id_1",
+      "name": "Gaming PC Build",
+      "description": "High-end gaming configuration",
+      "createdAt": "2024-03-16T12:00:00Z",
+      "updatedAt": "2024-03-16T12:00:00Z",
+      "isPublic": true,
+      "totalPrice": 2500,
+      "components": {
+        "cpu": {
+          "id": "cpu_1",
+          "name": "Intel Core i9-13900K",
+          "price": 550,
+          "specs": {
+            "cores": 24,
+            "threads": 32,
+            "baseClock": "3.0 GHz",
+            "boostClock": "5.8 GHz"
+          }
+        },
+        "motherboard": {
+          "id": "mb_1",
+          "name": "ASUS ROG Maximus Z790",
+          "price": 450,
+          "specs": {
+            "chipset": "Z790",
+            "socket": "LGA 1700",
+            "memorySlots": 4
+          }
+        },
+        "gpu": {
+          "id": "gpu_1",
+          "name": "NVIDIA RTX 4090",
+          "price": 1600,
+          "specs": {
+            "memory": "24GB GDDR6X",
+            "boostClock": "2.52 GHz"
+          }
+        },
+        "ram": {
+          "id": "ram_1",
+          "name": "Corsair Dominator Platinum",
+          "price": 200,
+          "specs": {
+            "capacity": "32GB",
+            "speed": "DDR5-6000",
+            "modules": 2
+          }
+        },
+        "storage": {
+          "id": "storage_1",
+          "name": "Samsung 990 Pro",
+          "price": 150,
+          "specs": {
+            "capacity": "2TB",
+            "type": "NVMe SSD",
+            "readSpeed": "7450 MB/s"
+          }
+        },
+        "psu": {
+          "id": "psu_1",
+          "name": "Corsair HX1200",
+          "price": 250,
+          "specs": {
+            "wattage": "1200W",
+            "efficiency": "80+ Platinum"
+          }
+        },
+        "case": {
+          "id": "case_1",
+          "name": "Lian Li O11 Dynamic",
+          "price": 150,
+          "specs": {
+            "formFactor": "Full Tower",
+            "material": "Steel/Glass"
+          }
+        },
+        "cooling": {
+          "id": "cooling_1",
+          "name": "Arctic Liquid Freezer II",
+          "price": 100,
+          "specs": {
+            "type": "AIO",
+            "radiatorSize": "360mm"
+          }
+        }
+      },
+      "compatibility": {
+        "isCompatible": true,
+        "warnings": [],
+        "errors": []
+      }
+    }
+  }
+} 

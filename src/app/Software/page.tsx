@@ -7,7 +7,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from "../Header";
 import Footer from "../Footer";
+<<<<<<< HEAD
 import PaymentModal from '@/app/Components/PaymentModal';
+=======
+import { getCollection } from '@/lib/firebase/databaseUtils';
+>>>>>>> origin/Develop
 
 interface SoftwareItem {
   id: number;
@@ -26,19 +30,27 @@ interface SoftwareCategory {
 export default function SoftwarePage() {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
+<<<<<<< HEAD
   const [selectedSoftware, setSelectedSoftware] = useState<SoftwareItem | null>(null);
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+=======
+  const [softwareCategories, setSoftwareCategories] = useState<SoftwareCategory[]>([]);
+>>>>>>> origin/Develop
 
   useEffect(() => {
-    setTimeout(() => {
+    getCollection('Software').then(data => {
+      if (data) {
+        setSoftwareCategories(Object.values(data));
+      }
       setLoading(false);
-    }, 2000);
+    });
   }, []);
 
   if (loading) {
     return <Loader />;
   }
 
+<<<<<<< HEAD
   const softwareCategories: SoftwareCategory[] = [
     {
       title: "Operating Systems",
@@ -117,6 +129,8 @@ export default function SoftwarePage() {
     return parseFloat(price.replace(/[^0-9.]/g, ''));
   };
 
+=======
+>>>>>>> origin/Develop
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
