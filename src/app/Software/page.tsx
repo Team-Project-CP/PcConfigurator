@@ -7,11 +7,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from "../Header";
 import Footer from "../Footer";
-<<<<<<< HEAD
 import PaymentModal from '@/app/Components/PaymentModal';
-=======
-import { getCollection } from '@/lib/firebase/databaseUtils';
->>>>>>> origin/Develop
+import PaymentButton from '@/components/PaymentButton';
 
 interface SoftwareItem {
   id: number;
@@ -30,12 +27,9 @@ interface SoftwareCategory {
 export default function SoftwarePage() {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
-<<<<<<< HEAD
   const [selectedSoftware, setSelectedSoftware] = useState<SoftwareItem | null>(null);
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
-=======
   const [softwareCategories, setSoftwareCategories] = useState<SoftwareCategory[]>([]);
->>>>>>> origin/Develop
 
   useEffect(() => {
     getCollection('Software').then(data => {
@@ -49,71 +43,6 @@ export default function SoftwarePage() {
   if (loading) {
     return <Loader />;
   }
-
-<<<<<<< HEAD
-  const softwareCategories: SoftwareCategory[] = [
-    {
-      title: "Operating Systems",
-      items: [
-        { id: 1, name: "Windows 11 Pro", icon: <FaWindows className="text-4xl text-blue-500" />, price: "$199.99", description: "The latest version of Windows with enhanced security and productivity features" },
-        { id: 2, name: "Windows 10 Pro", icon: <FaWindows className="text-4xl text-blue-500" />, price: "$149.99", description: "Professional version of Windows 10 with advanced features" },
-        { id: 3, name: "macOS Ventura", icon: <FaApple className="text-4xl text-gray-700" />, price: "$29.99", description: "Latest macOS version with new features and improvements" },
-        { id: 4, name: "Ubuntu 22.04 LTS", icon: <FaLinux className="text-4xl text-orange-500" />, price: "Free", description: "Long-term support version of Ubuntu Linux" },
-      ]
-    },
-    {
-      title: "Development Tools",
-      items: [
-        { 
-          id: 5,
-          name: "Visual Studio 2022", 
-          image: "/Software/images/Visual Studio.png",
-          price: "$499.99",
-          description: "Complete IDE for .NET and C++ development"
-        },
-        { 
-          id: 6,
-          name: "PyCharm Professional", 
-          image: "/Software/images/PyCharm.png",
-          price: "$199.99",
-          description: "Professional Python IDE with advanced features"
-        },
-        { 
-          id: 7,
-          name: "WebStorm", 
-          image: "/Software/images/WebStorm.png",
-          price: "$149.99",
-          description: "Smart JavaScript IDE for modern web development"
-        },
-      ]
-    },
-    {
-      title: "Security Software",
-      items: [
-        { 
-          id: 8,
-          name: "Norton 360", 
-          image: "/Software/images/Norton2.png",
-          price: "$49.99/year",
-          description: "Complete security solution for your devices"
-        },
-        { 
-          id: 9,
-          name: "McAfee Total Protection", 
-          image: "/Software/images/McAfee2.png",
-          price: "$39.99/year",
-          description: "Comprehensive security suite for all your devices"
-        },
-        { 
-          id: 10,
-          name: "Bitdefender", 
-          image: "/Software/images/Bitdefender3.png",
-          price: "$44.99/year",
-          description: "Advanced security solution with AI protection"
-        },
-      ]
-    }
-  ];
 
   const handleBuyClick = (software: SoftwareItem) => {
     if (software.price.toLowerCase() === 'free') {
@@ -129,8 +58,6 @@ export default function SoftwarePage() {
     return parseFloat(price.replace(/[^0-9.]/g, ''));
   };
 
-=======
->>>>>>> origin/Develop
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
@@ -174,6 +101,16 @@ export default function SoftwarePage() {
                     <FaShoppingCart className="mr-2" />
                     {item.price.toLowerCase() === 'free' ? 'Download' : 'Buy Now'}
                   </button>
+                  <PaymentButton
+                    items={[{
+                      name: item.name,
+                      description: item.description,
+                      price: parseFloat(item.price.replace(/[^0-9.]/g, '')),
+                      quantity: 1,
+                      image: item.image || ''
+                    }]}
+                    className="mt-3 w-full"
+                  />
                 </div>
               ))}
             </div>

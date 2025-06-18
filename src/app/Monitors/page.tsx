@@ -6,6 +6,7 @@ import { FaHeart, FaBalanceScale, FaShoppingCart } from "react-icons/fa";
 import Link from "next/link";
 import Header from "../Header";
 import Footer from "../Footer";
+import PaymentButton from '@/components/PaymentButton';
 
 export default function MonitorsPage() {
   const [wishlist, setWishlist] = useState<number[]>([]);
@@ -142,6 +143,16 @@ export default function MonitorsPage() {
                   </button>
                 </div>
               </div>
+              <PaymentButton
+                items={[{
+                  name: monitor.name,
+                  description: monitor.description,
+                  price: monitor.price,
+                  quantity: 1,
+                  image: monitor.image
+                }]}
+                className="mt-3 w-full"
+              />
             </div>
           ))}
         </div>
