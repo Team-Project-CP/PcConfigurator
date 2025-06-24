@@ -1,63 +1,124 @@
 "use client";
-import { useParams } from "next/navigation";
-import { monitors } from "@/lib/data/monitors";
-import { FaArrowLeft } from "react-icons/fa";
-import Link from "next/link";
-import Header from "../../Header";
-import Footer from "../../Footer";
 
-export default function MonitorDetails() {
-  const { id } = useParams();
-  const monitor = monitors.find((m) => m.id === Number(id));
+import { useState, useEffect } from 'react';
+import { useParams } from 'next/navigation';
+import Link from 'next/link';
+import { FaArrowLeft, FaShoppingCart, FaHeart, FaBalanceScale } from 'react-icons/fa';
+import { monitors } from '@/lib/data/monitors';
+import PaymentModal from '@/app/Components/PaymentModal';
+
+interface Monitor {
+  id: number;
+  category: string;
+  name: string;
+  price: number;
+  image: string;
+  description: string;
+  specs: string[];
+  detailedSpecs: {
+    [key: string]: {
+      value: string | number | boolean;
+      score: number;
+      unit?: string;
+    };
+  };
+  compatibility: {
+    input?: string;
+    size?: string;
+  };
+}
+
+export default function MonitorDetail() {
+  const params = useParams();
+  const [monitor, setMonitor] = useState<Monitor | null>(null);
+  const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
+
+  useEffect(() => {
+    const monitorId = parseInt(params.id as string);
+    const foundMonitor = monitors.find(m => m.id === monitorId);
+    if (foundMonitor) {
+      setMonitor(foundMonitor);
+    }
+  }, [params.id]);
 
   if (!monitor) {
-    return <div className="text-center text-white py-20">Monitor not found</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Monitor not found</h1>
+          <Link
+            href="/Monitors"
+            className="text-purple-600 hover:text-purple-700"
+          >
+            Return to Monitors
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <main className="bg-white text-black">
-      <Header />
-
-      <section className="py-16 px-6 lg:px-20">
+    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         <Link
           href="/Monitors"
-          className="text-[#6C38CC] hover:underline flex items-center gap-2 mb-6"
+          className="inline-flex items-center text-purple-600 hover:text-purple-700 mb-8"
         >
-          <FaArrowLeft /> Back to Monitors
+          <FaArrowLeft className="mr-2" />
+          Back to Monitors
         </Link>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-          <div className="border rounded-2xl shadow-lg p-6">
-            <img
-              src={monitor.image}
-              alt={monitor.name}
-              className="w-full h-72 object-contain"
-            />
-          </div>
-
-          <div className="flex flex-col justify-between">
-            <div>
-              <h1 className="text-4xl font-bold mb-4">{monitor.name}</h1>
-              <p className="text-gray-600 text-lg mb-4">{monitor.description}</p>
-              <p className="text-[#6C38CC] font-bold text-2xl mb-6">${monitor.price}</p>
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+            <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden">
+              <img
+                src={monitor.image}
+                alt={monitor.name}
+                className="w-full h-full object-contain"
+              />
             </div>
 
-            <div className="border rounded-2xl p-4 bg-gray-100">
-              <h2 className="text-xl font-bold mb-4">Detailed Specs</h2>
-              <ul className="space-y-2">
-                {Object.entries(monitor.detailedSpecs || {}).map(([key, spec]) => (
-                  <li key={key} className="flex justify-between">
-                    <span className="text-gray-500">{key}</span>
-                    <span>{spec.value} {spec.unit || ""}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="space-y-6">
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900">{monitor.name}</h1>
+                <p className="text-lg text-gray-500 mt-2">{monitor.category}</p>
+              </div>
+
+              <div className="space-y-4">
+                <p className="text-gray-600">{monitor.description}</p>
+                <div>
+                  <h3 className="font-semibold mb-2">Specifications:</h3>
+                  <ul className="list-disc list-inside text-gray-600 space-y-1">
+                    {monitor.specs.map((spec, index) => (
+                      <li key={index}>{spec}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-4 border-t">
+                  <span className="text-2xl md:text-3xl font-bold text-purple-600">
+                    ${monitor.price}
+                  </span>
+                  <button
+                    onClick={() => setIsPaymentModalOpen(true)}
+                    className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700"
+                  >
+                    <FaShoppingCart className="mr-2" />
+                    Buy Now
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <Footer isVisible={true} />
-    </main>
+        {/* Payment Modal */}
+        <PaymentModal
+          isOpen={isPaymentModalOpen}
+          onClose={() => setIsPaymentModalOpen(false)}
+          amount={monitor.price}
+          componentName={monitor.name}
+        />
+      </div>
+    </div>
   );
 }

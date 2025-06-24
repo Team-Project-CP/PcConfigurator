@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { getCollectionFirestore, addTestComponentFirestore } from '@/lib/firebase/databaseUtils';
 import Header from "../Header";
 import Footer from "../Footer";
+import PaymentButton from "@/components/PaymentButton";
 
 // Component interface for type safety
 interface ComponentSpec {
@@ -244,6 +245,18 @@ export default function Components() {
            spec1.score < spec2.score ? 'text-red-500' : 'text-gray-600';
   };
 
+  const handleBuyNow = (component: ComponentSpec) => {
+    const items = [{
+      name: component.name,
+      description: component.description,
+      price: component.price,
+      quantity: 1,
+      image: component.image
+    }];
+
+    return items;
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -253,7 +266,7 @@ export default function Components() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       
       <Header />
 
@@ -649,6 +662,12 @@ export default function Components() {
                     </Link>
                   </div>
                 </div>
+              </div>
+              <div className="mt-4">
+                <PaymentButton 
+                  items={handleBuyNow(component)} 
+                  className="w-full"
+                />
               </div>
             </div>
           ))}

@@ -3,6 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaD
 import { useEffect, useState } from 'react';
 import Header from "../Header";
 import Footer from "../Footer";
+import PaymentButton from '@/components/PaymentButton';
 
 export default function GamingGearPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -99,6 +100,16 @@ export default function GamingGearPage() {
           <p className="text-sm text-gray-400">{product.desc}</p>
         </div>
         <p className="font-bold text-[#6C38CC] mt-4">{product.price}</p>
+        <PaymentButton
+          items={[{
+            name: product.title,
+            description: product.desc,
+            price: parseFloat(product.price.replace(/[^0-9.]/g, '')),
+            quantity: 1,
+            image: `/Gaming-Gear/images/Gaming-Gear-Bundles-Section/${product.img}`
+          }]}
+          className="mt-3 w-full"
+        />
       </div>
     ))}
   </div>
@@ -161,6 +172,16 @@ export default function GamingGearPage() {
           <p className="text-sm text-gray-400">{product.desc}</p>
         </div>
         <p className="font-bold text-[#6C38CC] mt-4">{product.price}</p>
+        <PaymentButton
+          items={[{
+            name: product.title,
+            description: product.desc,
+            price: parseFloat(product.price.replace(/[^0-9.]/g, '')),
+            quantity: 1,
+            image: `/Gaming-Gear/images/Gaming-Gear-Induvidual-Section/${product.img}`
+          }]}
+          className="mt-3 w-full"
+        />
       </div>
     ))}
   </div>
