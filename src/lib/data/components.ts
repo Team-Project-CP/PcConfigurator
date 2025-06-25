@@ -1,3 +1,17 @@
+/**
+ * components.ts
+ *
+ * Contains the ComponentSpec TypeScript interface and a list of PC hardware components with detailed specifications.
+ * The data is used for PC configuration, compatibility checks, and display in the application UI.
+ *
+ * - ComponentSpec: Describes the structure of a hardware component, including category, specs, compatibility, etc.
+ * - components: Array of available hardware components, each with detailed specs and compatibility info.
+ */
+
+/**
+ * Interface representing a PC hardware component and its detailed specifications.
+ * Used for describing CPUs, GPUs, RAM, storage, motherboards, PSUs, cooling, etc.
+ */
 export interface ComponentSpec {
   id: number;
   category: string;
@@ -23,6 +37,10 @@ export interface ComponentSpec {
   };
 }
 
+/**
+ * List of available PC hardware components with detailed specifications and compatibility information.
+ * Used for configuration, selection, and compatibility logic in the application.
+ */
 export const components: ComponentSpec[] = [
   {
     id: 1,
