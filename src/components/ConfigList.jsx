@@ -2,9 +2,20 @@
 
 import { useFirebase } from '@/providers/FirebaseProvider';
 
+/**
+ * ConfigList component
+ *
+ * Displays a list of user configurations in a responsive grid layout.
+ * Fetches configuration data from the Firebase context and shows loading state while fetching.
+ * Each configuration card displays the name, description, total price, and visibility status (public/private).
+ *
+ * @returns {JSX.Element} The rendered list of configuration cards.
+ */
 export default function ConfigList() {
+  // Get configs and loading state from Firebase context
   const { configs, loading } = useFirebase();
 
+  // Show loading message while configurations are being fetched
   if (loading) {
     return <div>Loading configurations...</div>;
   }

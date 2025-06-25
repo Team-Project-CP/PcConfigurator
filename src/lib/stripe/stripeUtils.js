@@ -1,9 +1,20 @@
+/**
+ * stripeUtils.js
+ *
+ * Utility functions for integrating Stripe Checkout in the application.
+ */
+
 import { loadStripe } from '@stripe/stripe-js';
 
-// Initialize Stripe
+// Initialize Stripe with the public key from environment variables
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
-// Create a checkout session
+/**
+ * Creates a Stripe Checkout session and redirects the user to the Stripe payment page.
+ *
+ * @param {Array<Object>} items - Array of items to purchase. Each item should include price and quantity.
+ * @returns {Promise<void>} Resolves when the redirect is initiated or throws on error.
+ */
 export const createCheckoutSession = async (items) => {
   try {
     const response = await fetch('/api/create-checkout-session', {
@@ -36,7 +47,12 @@ export const createCheckoutSession = async (items) => {
   }
 };
 
-// Format price to display
+/**
+ * Formats a number as a USD currency string.
+ *
+ * @param {number} price - The price value to format.
+ * @returns {string} The formatted price string (e.g., "$1,234.56").
+ */
 export const formatPrice = (price) => {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',

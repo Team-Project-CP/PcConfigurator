@@ -1,3 +1,16 @@
+/**
+ * data.ts
+ *
+ * Contains the products array with detailed information about pre-built gaming PCs.
+ * Each product includes specifications, features, and configuration details for use in the application UI.
+ *
+ * - products: Array of available pre-built gaming PCs, each with specs, ports, and features.
+ */
+
+/**
+ * List of available pre-built gaming PCs with detailed specifications and features.
+ * Used for display, selection, and configuration in the application.
+ */
 export const products = [
   {
     id: "1",

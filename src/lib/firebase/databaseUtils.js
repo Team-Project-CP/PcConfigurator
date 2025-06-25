@@ -15,7 +15,20 @@ import {
 import { firestore } from './init';
 import { collection, addDoc, getDocs } from 'firebase/firestore';
 
+/**
+ * databaseUtils.js
+ *
+ * Utility functions for interacting with Firebase Realtime Database and Firestore.
+ * Includes user, configuration, and component management, as well as real-time subscriptions.
+ */
+
 // Работа с пользователями
+/**
+ * Creates a new user in the Realtime Database.
+ * @param {string} userId - The unique user ID.
+ * @param {Object} userData - The user data to store.
+ * @returns {Promise<boolean>} True if successful, false otherwise.
+ */
 export const createUser = async (userId, userData) => {
   try {
     await set(ref(database, `users/${userId}`), {
@@ -30,6 +43,12 @@ export const createUser = async (userId, userData) => {
   }
 };
 
+/**
+ * Updates the role of a user in the Realtime Database.
+ * @param {string} userId - The user ID.
+ * @param {string} role - The new role to assign.
+ * @returns {Promise<boolean>} True if successful, false otherwise.
+ */
 export const updateUserRole = async (userId, role) => {
   try {
     await update(ref(database, `users/${userId}`), { role });
@@ -41,6 +60,12 @@ export const updateUserRole = async (userId, role) => {
 };
 
 // Работа с конфигурациями
+/**
+ * Creates a new configuration for a user.
+ * @param {string} userId - The user ID.
+ * @param {Object} configData - The configuration data.
+ * @returns {Promise<string|null>} The new config ID or null on error.
+ */
 export const createConfig = async (userId, configData) => {
   try {
     const configRef = push(ref(database, 'configs'));
@@ -62,6 +87,12 @@ export const createConfig = async (userId, configData) => {
   }
 };
 
+/**
+ * Updates an existing configuration.
+ * @param {string} configId - The configuration ID.
+ * @param {Object} updates - The fields to update.
+ * @returns {Promise<boolean>} True if successful, false otherwise.
+ */
 export const updateConfig = async (configId, updates) => {
   try {
     await update(ref(database, `configs/${configId}`), {
@@ -75,6 +106,12 @@ export const updateConfig = async (configId, updates) => {
   }
 };
 
+/**
+ * Adds a collaborator to a configuration.
+ * @param {string} configId - The configuration ID.
+ * @param {string} userId - The user ID to add as collaborator.
+ * @returns {Promise<boolean>} True if successful, false otherwise.
+ */
 export const addCollaborator = async (configId, userId) => {
   try {
     const configRef = ref(database, `configs/${configId}`);
@@ -94,6 +131,11 @@ export const addCollaborator = async (configId, userId) => {
 };
 
 // Работа с компонентами
+/**
+ * Adds a new component to the database.
+ * @param {Object} componentData - The component data.
+ * @returns {Promise<string|null>} The new component ID or null on error.
+ */
 export const addComponent = async (componentData) => {
   try {
     const componentRef = push(ref(database, 'components'));
@@ -113,6 +155,10 @@ export const addComponent = async (componentData) => {
 };
 
 // Добавить тестовый компонент в коллекцию Components (Firestore)
+/**
+ * Adds a test component to the Firestore 'Components' collection.
+ * @returns {Promise<string|null>} The new document ID or null on error.
+ */
 export const addTestComponentFirestore = async () => {
   const testComponent = {
     category: "CPU",
@@ -140,7 +186,11 @@ export const addTestComponentFirestore = async () => {
   }
 };
 
-// Получить все элементы из коллекции (Firestore)
+/**
+ * Gets all documents from a Firestore collection.
+ * @param {string} collectionName - The Firestore collection name.
+ * @returns {Promise<Array>} Array of documents or empty array on error.
+ */
 export const getCollectionFirestore = async (collectionName) => {
   try {
     const querySnapshot = await getDocs(collection(firestore, collectionName));
@@ -155,7 +205,11 @@ export const getCollectionFirestore = async (collectionName) => {
   }
 };
 
-// Получение данных
+/**
+ * Gets all configurations for a user from the Realtime Database.
+ * @param {string} userId - The user ID.
+ * @returns {Promise<Object|null>} The user's configs or null on error.
+ */
 export const getUserConfigs = async (userId) => {
   try {
     const configsRef = ref(database, 'configs');
@@ -168,6 +222,11 @@ export const getUserConfigs = async (userId) => {
   }
 };
 
+/**
+ * Gets all collaborative configurations for a user.
+ * @param {string} userId - The user ID.
+ * @returns {Promise<Object|null>} The collaborative configs or null on error.
+ */
 export const getCollaborativeConfigs = async (userId) => {
   try {
     const configsRef = ref(database, 'configs');
@@ -181,6 +240,12 @@ export const getCollaborativeConfigs = async (userId) => {
 };
 
 // Реал-тайм подписки
+/**
+ * Subscribes to real-time updates for a specific configuration.
+ * @param {string} configId - The configuration ID.
+ * @param {function(Object):void} callback - Callback to receive config data.
+ * @returns {function} Unsubscribe function.
+ */
 export const subscribeToConfig = (configId, callback) => {
   const configRef = ref(database, `configs/${configId}`);
   onValue(configRef, (snapshot) => {
@@ -189,6 +254,12 @@ export const subscribeToConfig = (configId, callback) => {
   return () => off(configRef);
 };
 
+/**
+ * Subscribes to real-time updates for all configs of a user.
+ * @param {string} userId - The user ID.
+ * @param {function(Object):void} callback - Callback to receive configs data.
+ * @returns {function} Unsubscribe function.
+ */
 export const subscribeToUserConfigs = (userId, callback) => {
   const configsRef = ref(database, 'configs');
   const configsQuery = query(configsRef, orderByChild('userId'), equalTo(userId));
@@ -198,7 +269,11 @@ export const subscribeToUserConfigs = (userId, callback) => {
   return () => off(configsQuery);
 };
 
-// Получить все элементы из коллекции
+/**
+ * Gets all items from a collection in the Realtime Database.
+ * @param {string} collectionName - The collection name.
+ * @returns {Promise<Object|null>} The collection data or null on error.
+ */
 export const getCollection = async (collectionName) => {
   try {
     const snapshot = await get(ref(database, collectionName));

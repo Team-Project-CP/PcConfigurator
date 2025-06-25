@@ -1,3 +1,13 @@
+/**
+ * StoreContext.tsx
+ *
+ * Provides a React context for managing cart, favorites, and compare lists in the application.
+ * Includes a provider component and a custom hook for accessing and updating store state.
+ *
+ * - StoreProvider: Wraps the app and provides cart/favorites/compare state and actions.
+ * - useStore: Custom hook to access the store context.
+ */
+
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
@@ -34,6 +44,16 @@ interface StoreContextType {
 
 const StoreContext = createContext<StoreContextType | undefined>(undefined);
 
+/**
+ * StoreProvider component
+ *
+ * Provides cart, favorites, and compare state and actions to the React context tree.
+ * Loads and saves state to localStorage for persistence.
+ *
+ * @param {Object} props - Component props
+ * @param {React.ReactNode} props.children - Child components to be wrapped by the provider.
+ * @returns {JSX.Element} The provider wrapping its children with store context.
+ */
 export function StoreProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<Product[]>([]);
   const [favorites, setFavorites] = useState<Product[]>([]);
@@ -115,6 +135,14 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
+/**
+ * useStore hook
+ *
+ * Custom hook to access the store context (cart, favorites, compare, and actions).
+ * Must be used within a StoreProvider.
+ *
+ * @returns {StoreContextType} Store context value
+ */
 export function useStore() {
   const context = useContext(StoreContext);
   if (context === undefined) {

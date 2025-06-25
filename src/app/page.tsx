@@ -1,3 +1,21 @@
+/**
+ * page.tsx
+ *
+ * Main landing page component for the application.
+ * Displays navigation, banners, product highlights, features, partner brands, and promotional sections.
+ * Includes animated transitions and loading state.
+ *
+ * - Navbar: Main exported component for the landing page.
+ */
+
+/**
+ * Navbar component (main landing page)
+ *
+ * Renders the main navigation, banners, product highlights, features, partner brands, and promotional sections.
+ * Handles loading state and animated transitions.
+ *
+ * @returns {JSX.Element} The landing page UI.
+ */
 "use client";
 import Link from "next/link"
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";

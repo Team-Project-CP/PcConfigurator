@@ -4,13 +4,28 @@ import { useState, useEffect } from "react";
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart } from "react-icons/fa";
 import Loader from "./loader";
 
+/**
+ * Header component
+ *
+ * Renders the main navigation bar, announcement bar, and authentication modal for the application.
+ * Includes responsive navigation for desktop and mobile, user authentication modal (sign in/register),
+ * and vendor logos bar. Handles loading animation and UI transitions.
+ *
+ * @returns {JSX.Element} The rendered header/navigation UI.
+ */
 export default function Header() {
+  // State for showing the loading animation
   const [loading, setLoading] = useState(true);
+  // State for controlling the visibility of the announcement and nav bar
   const [isVisible, setIsVisible] = useState(false);
+  // State for showing/hiding the authentication modal
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // State for toggling between login and register forms in the modal
   const [isLoginForm, setIsLoginForm] = useState(true);
+  // State for showing/hiding the mobile menu
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Show loader for 6 seconds, then reveal header UI
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -18,15 +33,22 @@ export default function Header() {
     }, 6000);
   }, []);
 
+  /**
+   * Toggles the authentication modal and resets to login form.
+   */
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
     setIsLoginForm(true);
   };
 
+  /**
+   * Switches between login and register forms in the modal.
+   */
   const toggleForm = () => {
     setIsLoginForm(!isLoginForm);
   };
 
+  // Show loader while loading
   if (loading) return <Loader />;
 
   return (

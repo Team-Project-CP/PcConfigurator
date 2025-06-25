@@ -4,20 +4,41 @@ import { useState, useEffect } from 'react';
 import { useFirebase } from '@/providers/FirebaseProvider';
 import { subscribeToConfig, updateConfig, addCollaborator } from '@/lib/firebase/databaseUtils';
 
+/**
+ * CollaborativeConfig component
+ *
+ * Provides a collaborative configuration editor where multiple users can view and edit a shared configuration in real-time.
+ * Allows adding collaborators by user ID and editing configuration details if the user has permission.
+ *
+ * @param {Object} props - Component props
+ * @param {string} props.configId - The unique identifier of the configuration to collaborate on.
+ * @returns {JSX.Element} The collaborative configuration editor UI.
+ */
 export default function CollaborativeConfig({ configId }) {
+  // State for the current configuration object
   const [config, setConfig] = useState(null);
+  // State for the new collaborator input field
   const [newCollaborator, setNewCollaborator] = useState('');
+  // State to toggle editing mode
   const [isEditing, setIsEditing] = useState(false);
+  // Firebase authentication context
   const { auth } = useFirebase();
 
+  // Subscribe to real-time updates for the configuration
   useEffect(() => {
     const unsubscribe = subscribeToConfig(configId, (data) => {
       setConfig(data);
     });
 
+    // Cleanup subscription on unmount
     return () => unsubscribe();
   }, [configId]);
 
+  /**
+   * Handles updating the configuration in the database.
+   * Only allows if the current user is a collaborator.
+   * @param {Object} updates - The updated configuration fields.
+   */
   const handleUpdate = async (updates) => {
     if (!config || !auth.currentUser) return;
     
@@ -31,6 +52,9 @@ export default function CollaborativeConfig({ configId }) {
     setIsEditing(false);
   };
 
+  /**
+   * Handles adding a new collaborator to the configuration.
+   */
   const handleAddCollaborator = async () => {
     if (!newCollaborator) return;
     
@@ -38,6 +62,7 @@ export default function CollaborativeConfig({ configId }) {
     setNewCollaborator('');
   };
 
+  // Show loading state while configuration is being fetched
   if (!config) return <div>Loading...</div>;
 
   return (

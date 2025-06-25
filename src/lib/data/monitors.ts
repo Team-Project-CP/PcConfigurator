@@ -1,3 +1,17 @@
+/**
+ * monitors.ts
+ *
+ * Contains the Monitor TypeScript interface and a list of monitor products with detailed specifications.
+ * The data is used for monitor selection, compatibility checks, and display in the application UI.
+ *
+ * - Monitor: Describes the structure of a monitor, including category, specs, compatibility, etc.
+ * - monitors: Array of available monitors, each with detailed specs and compatibility info.
+ */
+
+/**
+ * Interface representing a monitor and its detailed specifications.
+ * Used for describing gaming, office, home, and graphical monitors.
+ */
 export interface Monitor {
   id: number;
   category: string;
@@ -19,6 +33,10 @@ export interface Monitor {
   };
 }
 
+/**
+ * List of available monitors with detailed specifications and compatibility information.
+ * Used for configuration, selection, and compatibility logic in the application.
+ */
 export const monitors: Monitor[] = [
   {
     id: 1,

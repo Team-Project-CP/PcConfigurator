@@ -5,6 +5,24 @@ import Image from 'next/image';
 import { FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
 
+/**
+ * CompareMenu.tsx
+ *
+ * Persistent compare menu component for the application.
+ * Displays a fixed bar at the bottom of the screen with products selected for comparison.
+ * Allows users to remove products from the compare list and navigate to the comparison page.
+ *
+ * - CompareMenu: Main exported component for the compare bar.
+ */
+
+/**
+ * CompareMenu component
+ *
+ * Renders a fixed bottom bar showing products selected for comparison.
+ * Allows removal of products and navigation to the compare page.
+ *
+ * @returns {JSX.Element|null} The compare menu UI or null if no products to compare.
+ */
 export default function CompareMenu() {
   const { compare, removeFromCompare } = useStore();
 
@@ -13,6 +31,7 @@ export default function CompareMenu() {
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-4 z-50">
       <div className="max-w-7xl mx-auto">
+        {/* Header with compare count and navigation button */}
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold">Compare Products ({compare.length}/3)</h3>
           <Link 
@@ -23,6 +42,7 @@ export default function CompareMenu() {
           </Link>
         </div>
         
+        {/* List of products to compare */}
         <div className="flex gap-4 overflow-x-auto pb-2">
           {compare.map((product) => (
             <div 
@@ -41,6 +61,7 @@ export default function CompareMenu() {
                 <h4 className="font-medium text-sm truncate">{product.name}</h4>
                 <p className="text-purple-600 font-bold text-sm">${product.price}</p>
               </div>
+              {/* Remove from compare button */}
               <button
                 onClick={() => removeFromCompare(product.id)}
                 className="p-1 hover:bg-gray-200 rounded-full transition"
