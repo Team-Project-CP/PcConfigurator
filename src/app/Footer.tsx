@@ -6,15 +6,28 @@ interface FooterProps {
   isVisible: boolean;
 }
 
+/**
+ * Footer component
+ *
+ * Renders the application footer with newsletter signup, social media links, navigation links, and legal information.
+ * Includes language/country selectors, email subscription, and multiple navigation sections.
+ *
+ * @param {Object} props - Component props
+ * @param {boolean} props.isVisible - Controls the visibility and animation of the footer.
+ * @returns {JSX.Element} The rendered footer UI.
+ */
 export default function Footer({ isVisible }: FooterProps) {
   return (
     <div className={`bg-gray-900 text-white py-12 transition-all duration-1000 delay-2600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+      {/* Main container for footer content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-between mb-8">
+          {/* Newsletter and description */}
           <div className="lg:w-1/2">
             <h2 className="text-3xl font-bold mb-4">Stay In Touch</h2>
             <p className="text-gray-400 mb-6">Keep up to date on the latest releases, offers, and news from DOMINO</p>
           </div>
+          {/* Language/Country selectors and email input */}
           <div className="lg:w-1/2 flex flex-col items-start lg:items-end">
             <div className="flex space-x-4 mb-4">
               <select className="bg-gray-800 text-white px-4 py-2 rounded">
@@ -38,6 +51,7 @@ export default function Footer({ isVisible }: FooterProps) {
             </div>
           </div>
         </div>
+        {/* Terms and privacy agreement */}
         <div className="flex items-center mb-8">
           <input type="checkbox" id="terms" className="mr-2" />
           <label htmlFor="terms" className="text-gray-400 text-sm">
@@ -46,6 +60,7 @@ export default function Footer({ isVisible }: FooterProps) {
             <a href="#" className="underline">Terms & Conditions</a>
           </label>
         </div>
+        {/* Social media links */}
         <div className="flex space-x-4 mb-8">
           <a href="#" className="text-gray-400 hover:text-white"><FaFacebookF size={20} /></a>
           <a href="#" className="text-gray-400 hover:text-white"><FaTwitter size={20} /></a>
@@ -55,7 +70,9 @@ export default function Footer({ isVisible }: FooterProps) {
           <a href="#" className="text-gray-400 hover:text-white"><FaTiktok size={20} /></a>
           <a href="#" className="text-gray-400 hover:text-white"><FaDiscord size={20} /></a>
         </div>
+        {/* Navigation sections */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
+          {/* Contact section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-400">
@@ -65,6 +82,7 @@ export default function Footer({ isVisible }: FooterProps) {
               <li><a href="#" className="hover:underline">Customer Reviews</a></li>
             </ul>
           </div>
+          {/* About section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">About DOMINO</h3>
             <ul className="space-y-2 text-gray-400">
@@ -73,6 +91,7 @@ export default function Footer({ isVisible }: FooterProps) {
               <li><a href="#" className="hover:underline">Careers</a></li>
             </ul>
           </div>
+          {/* Community section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Community</h3>
             <ul className="space-y-2 text-gray-400">
@@ -81,6 +100,7 @@ export default function Footer({ isVisible }: FooterProps) {
               <li><a href="#" className="hover:underline">Newsroom & Blog</a></li>
             </ul>
           </div>
+          {/* Software section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Software</h3>
             <ul className="space-y-2 text-gray-400">
@@ -88,12 +108,14 @@ export default function Footer({ isVisible }: FooterProps) {
               <li><a href="#" className="hover:underline">CAM Feedback</a></li>
             </ul>
           </div>
+          {/* Account section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Account</h3>
             <ul className="space-y-2 text-gray-400">
               <li><a href="#" className="hover:underline">Manage Your Account</a></li>
             </ul>
           </div>
+          {/* Store section */}
           <div>
             <h3 className="text-lg font-semibold mb-4">DOMINO Store</h3>
             <ul className="space-y-2 text-gray-400">
@@ -106,6 +128,7 @@ export default function Footer({ isVisible }: FooterProps) {
             </ul>
           </div>
         </div>
+        {/* FAQ link */}
         <div className="flex justify-end">
           <a href="#" className="text-gray-400 hover:underline">FAQ</a>
         </div>

@@ -1,14 +1,31 @@
 import { useState } from 'react';
 import { createCheckoutSession, formatPrice } from '@/lib/stripe/stripeUtils';
 
+/**
+ * PaymentButton component
+ *
+ * Renders a styled button that initiates a payment process for the provided items using Stripe Checkout.
+ * Shows a loading spinner while processing the payment.
+ *
+ * @param {Object} props - Component props
+ * @param {Array<{price: number, quantity?: number}>} props.items - Array of items to be purchased. Each item should have a price and optional quantity.
+ * @param {string} [props.className] - Additional CSS classes for the button.
+ * @returns {JSX.Element} The payment button element.
+ */
 export default function PaymentButton({ items, className = '' }) {
+  // State to track loading status during payment processing
   const [isLoading, setIsLoading] = useState(false);
 
+  /**
+   * Handles the payment process by creating a Stripe Checkout session.
+   * Shows a loading spinner and handles errors.
+   */
   const handlePayment = async () => {
     try {
       setIsLoading(true);
       await createCheckoutSession(items);
     } catch (error) {
+      // Log and alert on payment error
       console.error('Payment error:', error);
       alert('Произошла ошибка при обработке платежа. Пожалуйста, попробуйте снова.');
     } finally {
@@ -16,6 +33,7 @@ export default function PaymentButton({ items, className = '' }) {
     }
   };
 
+  // Calculate the total amount for all items
   const totalAmount = items.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
 
   return (
