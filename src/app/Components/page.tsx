@@ -1,3 +1,13 @@
+/**
+ * page.tsx (Components Page)
+ *
+ * Main page for browsing, filtering, and comparing PC components.
+ * Includes category filtering, price range, detailed specs, manufacturer filter, sorting, quick view, compare, and wishlist features.
+ * Fetches component data from Firestore and displays a list of available components with advanced filtering and comparison options.
+ *
+ * - Components: Main exported page component for the components catalog.
+ */
+
 "use client";
 import { useState, useEffect } from "react";
 import { FaSearch, FaQuestionCircle, FaUser, FaShoppingCart, FaFilter, FaSort, FaEye, FaBalanceScale, FaHeart, FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaTwitch, FaTiktok, FaDiscord } from "react-icons/fa";
@@ -61,6 +71,14 @@ const fetchRecommendations = async (component: ComponentSpec): Promise<Component
   });
 };
 
+/**
+ * Components page component
+ *
+ * Renders the components catalog with filtering, sorting, comparison, and wishlist features.
+ * Fetches data from Firestore and manages UI state for all catalog interactions.
+ *
+ * @returns {JSX.Element} The components catalog UI.
+ */
 export default function Components() {
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
