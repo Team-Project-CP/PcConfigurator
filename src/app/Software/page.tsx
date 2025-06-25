@@ -9,6 +9,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 import PaymentModal from '@/app/Components/PaymentModal';
 import PaymentButton from '@/components/PaymentButton';
+import { getCollectionFirestore } from '@/lib/firebase/databaseUtils';
 
 interface SoftwareItem {
   id: number;
@@ -32,10 +33,8 @@ export default function SoftwarePage() {
   const [softwareCategories, setSoftwareCategories] = useState<SoftwareCategory[]>([]);
 
   useEffect(() => {
-    getCollection('Software').then(data => {
-      if (data) {
-        setSoftwareCategories(Object.values(data));
-      }
+    getCollectionFirestore('Software').then(data => {
+      setSoftwareCategories(data);
       setLoading(false);
     });
   }, []);
