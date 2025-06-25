@@ -7,103 +7,21 @@ import Footer from '../Footer';
 import Loader from '../loader';
 import { FaTruck, FaShieldAlt, FaUndo, FaHeadset } from 'react-icons/fa';
 import PaymentButton from '@/components/PaymentButton';
+import { getCollectionFirestore } from '@/lib/firebase/databaseUtils';
 
 const DealsPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [loading, setLoading] = useState(true);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [deals, setDeals] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => {
+    getCollectionFirestore('Deals').then(data => {
+      setDeals(data);
       setLoading(false);
       setIsVisible(true);
-    }, 6000);
+    });
   }, []);
-
-  // Sample deals data - in a real application, this would come from an API or database
-  const deals = [
-    {
-      id: 1,
-      title: 'Gaming PC Bundle',
-      description: 'High-performance gaming PC with RGB lighting and premium components',
-      originalPrice: 1999.99,
-      discountedPrice: 1499.99,
-      image: '/Deals/GamingPCBundle.png',
-      endDate: '2024-04-30',
-    },
-    {
-      id: 2,
-      title: 'Gaming Monitor Deal',
-      description: '27" 144Hz Gaming Monitor with HDR support',
-      originalPrice: 399.99,
-      discountedPrice: 299.99,
-      image: '/Deals/GamingMonitorDeal.png',
-      endDate: '2024-04-25',
-    },
-    {
-      id: 3,
-      title: 'Gaming Mouse & Keyboard Combo',
-      description: 'RGB Mechanical Keyboard and High-DPI Gaming Mouse Set',
-      originalPrice: 249.99,
-      discountedPrice: 179.99,
-      image: '/Deals/MouseKeyboardCombo.png',
-      endDate: '2024-04-28',
-    },
-    {
-      id: 4,
-      title: 'Gaming Headset Pro',
-      description: '7.1 Surround Sound Gaming Headset with Noise-Cancelling Mic',
-      originalPrice: 159.99,
-      discountedPrice: 119.99,
-      image: '/Deals/GamingHeadset.png',
-      endDate: '2024-04-27',
-    },
-    {
-      id: 5,
-      title: 'Gaming Chair Elite',
-      description: 'Ergonomic Gaming Chair with Lumbar Support and Adjustable Armrests',
-      originalPrice: 499.99,
-      discountedPrice: 349.99,
-      image: '/Deals/GamingChair.png',
-      endDate: '2024-05-01',
-    },
-    {
-      id: 6,
-      title: 'Gaming Mousepad XXL',
-      description: 'Extra Large RGB Gaming Mousepad with Non-Slip Base',
-      originalPrice: 49.99,
-      discountedPrice: 29.99,
-      image: '/Deals/GamingMousepad.png',
-      endDate: '2024-04-26',
-    },
-    {
-      id: 7,
-      title: 'Gaming PC Upgrade Kit',
-      description: 'CPU, RAM, and SSD Upgrade Bundle for Gaming PCs',
-      originalPrice: 799.99,
-      discountedPrice: 599.99,
-      image: '/Deals/PCUpgrade Kit.png',
-      endDate: '2024-04-29',
-    },
-    {
-      id: 8,
-      title: 'Gaming Desk Setup',
-      description: 'Complete Gaming Desk with Cable Management and RGB Lighting',
-      originalPrice: 349.99,
-      discountedPrice: 249.99,
-      image: '/Deals/GamingDesk.png',
-      endDate: '2024-05-02',
-    },
-    {
-      id: 9,
-      title: 'Gaming Console Bundle',
-      description: 'Next-Gen Gaming Console with Extra Controller and Popular Game',
-      originalPrice: 699.99,
-      discountedPrice: 549.99,
-      image: '/Deals/ConsoleBundle.png',
-      endDate: '2024-04-28',
-    }
-  ];
 
   if (loading) return <Loader />;
 
